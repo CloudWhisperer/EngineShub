@@ -12,6 +12,7 @@ namespace myengine
 		static std::shared_ptr<Core> initialize();
 		void start();
 		void stop();
+		~Core();
 		std::shared_ptr<Entity> addEntity();
 
 	private:
