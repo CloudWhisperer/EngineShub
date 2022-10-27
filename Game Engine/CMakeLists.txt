@@ -4,13 +4,11 @@ project(MYENGINE)
 
 include_directories(
     src
-    src/contrib/includestuff/SDL2
-    src/contrib/includestuff/GL
+    contrib/include
 )
 
 link_directories(
- ${PROJECT_SOURCE_DIR}/src/contrib/includestuff/SDL2/lib
- ${PROJECT_SOURCE_DIR}/src/contrib/includestuff/glew/lib
+ ${PROJECT_SOURCE_DIR}/contrib/lib
 )
 
 add_library(myengine
@@ -26,9 +24,9 @@ add_library(myengine
     src/myengine/Component.cpp
 
     src/myengine/TriangleRenderer.h
-    #src/myengine/TriangleRenderer.cpp
+    src/myengine/TriangleRenderer.cpp
 )
-target_link_libraries(myengine SDL2 SDL2main)
+target_link_libraries(myengine SDL2 SDL2main rend)
 
 add_executable(game
     src/game/main.cpp
@@ -52,12 +50,4 @@ add_library(rend
  src/rend/Texture.cpp
  src/rend/rendmath.cpp
 )
-target_link_libraries(rend GLEW GL)
-
-add_library(myengine
- src/myengine/Core.cpp
- src/myengine/Entity.cpp
- src/myengine/Component.cpp
- src/myengine/TriangleRenderer.cpp
-)
-target_link_libraries(myengine rend SDL2)
+target_link_libraries(rend GLEW32 OpenGL32)

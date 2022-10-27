@@ -20,6 +20,7 @@ std::shared_ptr<Core> core = Core::initialize();
 
 std::shared_ptr<Entity> e = core->addEntity();
 e->addComponent<Player>();
+e->addComponent<TriangleRenderer>();
 
 core->start();
 

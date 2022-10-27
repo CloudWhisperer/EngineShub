@@ -1,6 +1,7 @@
 #include <memory>
 #include <list>
-#include <SDL.h>
+#include <SDL2/SDL.h>
+#include <vector>
 
 namespace myengine
 {
@@ -17,10 +18,11 @@ namespace myengine
 
 	private:
 		bool m_running;
-		std::list<std::shared_ptr<Entity> > m_entities;
+		std::vector<std::shared_ptr<Entity> > m_entities;
 		std::weak_ptr<Core>m_self;
 		std::weak_ptr<Core>rtn;
 		SDL_Window* m_window;
 		SDL_GLContext m_context;
+		SDL_Event e;
 	};
 }

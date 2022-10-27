@@ -1,7 +1,8 @@
 #include "Core.h"
 #include "Entity.h"
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include <stdexcept>
+#include "TriangleRenderer.h"
 
 namespace myengine 
 {
@@ -41,11 +42,30 @@ namespace myengine
 
 		while (m_running)
 		{
-			for (auto it = m_entities.begin();
-				it != m_entities.end(); ++it)
+			while (SDL_PollEvent(&e) != 0)
 			{
-				(*it)->tick();
+				if (e.type == SDL_QUIT)
+				{
+					m_running = false;
+				}
 			}
+
+			for (size_t ei = 0; ei < m_entities.size(); ei++)
+			{
+				m_entities.at(ei)->tick();
+			}
+
+			rend::Renderer r(640, 480);
+			r.clear();
+
+			for (size_t ei = 0; ei < m_entities.size(); ei++)
+			{
+				m_entities.at(ei)->display();
+			}
+
+
+
+			SDL_GL_SwapWindow(m_window);
 		}
 	}
 
