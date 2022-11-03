@@ -1,0 +1,178 @@
+\hypertarget{structrend_1_1_buffer}{}\doxysection{rend\+::Buffer Struct Reference}
+\label{structrend_1_1_buffer}\index{rend::Buffer@{rend::Buffer}}
+
+
+{\ttfamily \#include $<$Buffer.\+h$>$}
+
+Inheritance diagram for rend\+::Buffer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structrend_1_1_buffer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_buffer_a464e32453098ab3f0cfa8f74973d8309}{Buffer}} ()
+\item 
+\mbox{\hyperlink{structrend_1_1_buffer_aef92e6a503ef204b95aebc6965025940}{$\sim$\+Buffer}} ()
+\item 
+\mbox{\hyperlink{structrend_1_1_buffer_a204bf2db0e386a72e13b9d4faeef8dc0}{Buffer}} (const \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} \& \mbox{\hyperlink{structrend_1_1_buffer_ae0499b0ef7a97698093f71ecde8a1c75}{operator=}} (const \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} \&\+\_\+other)
+\item 
+void \mbox{\hyperlink{structrend_1_1_buffer_a424fc28b0ecf5b9e1de250c8ce4c2987}{add}} (float \+\_\+value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_buffer_a6a1cc6bb384b6ca7a9db613e82d650d9}{add}} (const \mbox{\hyperlink{group__core__vector_ga6ebf1ff1f152ff34c800b6997d5f311f}{vec2}} \&\+\_\+value)
+\item 
+void \mbox{\hyperlink{structrend_1_1_buffer_af61697f60af55c4001964a7916a1070a}{add}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{vec3}} \&\+\_\+value)
+\item 
+int \mbox{\hyperlink{structrend_1_1_buffer_a78efabe121b9538c201a36f2176bde93}{components}} () const
+\item 
+size\+\_\+t \mbox{\hyperlink{structrend_1_1_buffer_adfddd5547b0179b65b0e14024a04267b}{size}} () const
+\item 
+void \mbox{\hyperlink{structrend_1_1_buffer_ad5b5aabd289c8516d76a0e74bb57d22e}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+GLuint \mbox{\hyperlink{structrend_1_1_buffer_ae58e51f6900e510648e29a6fa791895f}{id}} ()
+\item 
+bool \mbox{\hyperlink{structrend_1_1_buffer_a82d842b44ed7d6a02239b1995cb65f36}{dirty}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLuint $>$ \mbox{\hyperlink{structrend_1_1_buffer_a708ba3aae4c36c519c03dff6c775cd52}{m\+\_\+id}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ bool $>$ \mbox{\hyperlink{structrend_1_1_buffer_ab14317ac0b700a2baf6a65d579681b31}{m\+\_\+dirty}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ size\+\_\+t $>$ \mbox{\hyperlink{structrend_1_1_buffer_afae4da4437fac840e2cd319bf17618a1}{m\+\_\+components}}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ float $>$ \mbox{\hyperlink{structrend_1_1_buffer_a87da92e8433a3fb49f24a44416c536af}{m\+\_\+data}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structrend_1_1_buffer_a7f6d32679b0011db91372f4224db2177}{Mesh}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_buffer_a464e32453098ab3f0cfa8f74973d8309}\label{structrend_1_1_buffer_a464e32453098ab3f0cfa8f74973d8309}} 
+\index{rend::Buffer@{rend::Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rend\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_aef92e6a503ef204b95aebc6965025940}\label{structrend_1_1_buffer_aef92e6a503ef204b95aebc6965025940}} 
+\index{rend::Buffer@{rend::Buffer}!````~Buffer@{$\sim$Buffer}}
+\index{````~Buffer@{$\sim$Buffer}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{$\sim$Buffer()}{~Buffer()}}
+{\footnotesize\ttfamily rend\+::\+Buffer\+::$\sim$\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_a204bf2db0e386a72e13b9d4faeef8dc0}\label{structrend_1_1_buffer_a204bf2db0e386a72e13b9d4faeef8dc0}} 
+\index{rend::Buffer@{rend::Buffer}!Buffer@{Buffer}}
+\index{Buffer@{Buffer}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{Buffer()}{Buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rend\+::\+Buffer\+::\+Buffer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} \&}]{\+\_\+copy }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_buffer_a6a1cc6bb384b6ca7a9db613e82d650d9}\label{structrend_1_1_buffer_a6a1cc6bb384b6ca7a9db613e82d650d9}} 
+\index{rend::Buffer@{rend::Buffer}!add@{add}}
+\index{add@{add}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily void rend\+::\+Buffer\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga6ebf1ff1f152ff34c800b6997d5f311f}{vec2}} \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_af61697f60af55c4001964a7916a1070a}\label{structrend_1_1_buffer_af61697f60af55c4001964a7916a1070a}} 
+\index{rend::Buffer@{rend::Buffer}!add@{add}}
+\index{add@{add}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily void rend\+::\+Buffer\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{vec3}} \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_a424fc28b0ecf5b9e1de250c8ce4c2987}\label{structrend_1_1_buffer_a424fc28b0ecf5b9e1de250c8ce4c2987}} 
+\index{rend::Buffer@{rend::Buffer}!add@{add}}
+\index{add@{add}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily void rend\+::\+Buffer\+::add (\begin{DoxyParamCaption}\item[{float}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_ad5b5aabd289c8516d76a0e74bb57d22e}\label{structrend_1_1_buffer_ad5b5aabd289c8516d76a0e74bb57d22e}} 
+\index{rend::Buffer@{rend::Buffer}!clear@{clear}}
+\index{clear@{clear}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void rend\+::\+Buffer\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_a78efabe121b9538c201a36f2176bde93}\label{structrend_1_1_buffer_a78efabe121b9538c201a36f2176bde93}} 
+\index{rend::Buffer@{rend::Buffer}!components@{components}}
+\index{components@{components}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{components()}{components()}}
+{\footnotesize\ttfamily int rend\+::\+Buffer\+::components (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_a82d842b44ed7d6a02239b1995cb65f36}\label{structrend_1_1_buffer_a82d842b44ed7d6a02239b1995cb65f36}} 
+\index{rend::Buffer@{rend::Buffer}!dirty@{dirty}}
+\index{dirty@{dirty}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{dirty()}{dirty()}}
+{\footnotesize\ttfamily bool rend\+::\+Buffer\+::dirty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_ae58e51f6900e510648e29a6fa791895f}\label{structrend_1_1_buffer_ae58e51f6900e510648e29a6fa791895f}} 
+\index{rend::Buffer@{rend::Buffer}!id@{id}}
+\index{id@{id}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily GLuint rend\+::\+Buffer\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_ae0499b0ef7a97698093f71ecde8a1c75}\label{structrend_1_1_buffer_ae0499b0ef7a97698093f71ecde8a1c75}} 
+\index{rend::Buffer@{rend::Buffer}!operator=@{operator=}}
+\index{operator=@{operator=}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} \& rend\+::\+Buffer\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_adfddd5547b0179b65b0e14024a04267b}\label{structrend_1_1_buffer_adfddd5547b0179b65b0e14024a04267b}} 
+\index{rend::Buffer@{rend::Buffer}!size@{size}}
+\index{size@{size}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily size\+\_\+t rend\+::\+Buffer\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_buffer_a7f6d32679b0011db91372f4224db2177}\label{structrend_1_1_buffer_a7f6d32679b0011db91372f4224db2177}} 
+\index{rend::Buffer@{rend::Buffer}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{Mesh}{Mesh}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrend_1_1_buffer_afae4da4437fac840e2cd319bf17618a1}\label{structrend_1_1_buffer_afae4da4437fac840e2cd319bf17618a1}} 
+\index{rend::Buffer@{rend::Buffer}!m\_components@{m\_components}}
+\index{m\_components@{m\_components}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{m\_components}{m\_components}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$size\+\_\+t$>$ rend\+::\+Buffer\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_a87da92e8433a3fb49f24a44416c536af}\label{structrend_1_1_buffer_a87da92e8433a3fb49f24a44416c536af}} 
+\index{rend::Buffer@{rend::Buffer}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$float$>$ rend\+::\+Buffer\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_ab14317ac0b700a2baf6a65d579681b31}\label{structrend_1_1_buffer_ab14317ac0b700a2baf6a65d579681b31}} 
+\index{rend::Buffer@{rend::Buffer}!m\_dirty@{m\_dirty}}
+\index{m\_dirty@{m\_dirty}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{m\_dirty}{m\_dirty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$bool$>$ rend\+::\+Buffer\+::m\+\_\+dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_buffer_a708ba3aae4c36c519c03dff6c775cd52}\label{structrend_1_1_buffer_a708ba3aae4c36c519c03dff6c775cd52}} 
+\index{rend::Buffer@{rend::Buffer}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!rend::Buffer@{rend::Buffer}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLuint$>$ rend\+::\+Buffer\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_buffer_8h}{Buffer.\+h}}\item 
+src/rend/\mbox{\hyperlink{_buffer_8cpp}{Buffer.\+cpp}}\end{DoxyCompactItemize}

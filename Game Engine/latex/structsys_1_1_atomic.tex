@@ -1,0 +1,119 @@
+\hypertarget{structsys_1_1_atomic}{}\doxysection{sys\+::Atomic\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structsys_1_1_atomic}\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Atomic.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic_a8d8e047236c889c6a54873cfeddc6322}{Atomic}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic_a995826399734de381bde3fd162776544}{$\sim$\+Atomic}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic_aa8062dfcd739d6844ad264d57e7d7290}{operator T}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}} \& \mbox{\hyperlink{structsys_1_1_atomic_ad1ee4b9cc727be029e15a55b5449cfc2}{operator++}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}} \& \mbox{\hyperlink{structsys_1_1_atomic_a18f9478e36e61e7e876ce6c572e43ba5}{operator-\/-\/}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic_ab0d9e9ce0ecd8be28ee879466741c51f}{Atomic}} (const \mbox{\hyperlink{structsys_1_1_atomic}{Atomic}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}} \& \mbox{\hyperlink{structsys_1_1_atomic_a65d8efb30d9f179bd536ac1003fee599}{operator=}} (const \mbox{\hyperlink{structsys_1_1_atomic}{Atomic}} \&\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_atomic_a17195f21f4817dd82812c5bf7a1e5a90}{m\+\_\+value}}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{structsys_1_1_atomic_a23076e06316a902832e08a625f349c9e}{m\+\_\+lock}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ bool $>$ \mbox{\hyperlink{structsys_1_1_atomic_a16a30a617ca9f673e9b4c6cc99d88d4b}{m\+\_\+active}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_atomic_a8d8e047236c889c6a54873cfeddc6322}\label{structsys_1_1_atomic_a8d8e047236c889c6a54873cfeddc6322}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!Atomic@{Atomic}}
+\index{Atomic@{Atomic}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Atomic()}{Atomic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::\+Atomic}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_a995826399734de381bde3fd162776544}\label{structsys_1_1_atomic_a995826399734de381bde3fd162776544}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!````~Atomic@{$\sim$Atomic}}
+\index{````~Atomic@{$\sim$Atomic}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Atomic()}{~Atomic()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}}}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_ab0d9e9ce0ecd8be28ee879466741c51f}\label{structsys_1_1_atomic_ab0d9e9ce0ecd8be28ee879466741c51f}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!Atomic@{Atomic}}
+\index{Atomic@{Atomic}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Atomic()}{Atomic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::\+Atomic (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_atomic}{Atomic}}$<$ T $>$ \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_atomic_aa8062dfcd739d6844ad264d57e7d7290}\label{structsys_1_1_atomic_aa8062dfcd739d6844ad264d57e7d7290}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!operator T@{operator T}}
+\index{operator T@{operator T}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator T()}{operator T()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::operator T}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_ad1ee4b9cc727be029e15a55b5449cfc2}\label{structsys_1_1_atomic_ad1ee4b9cc727be029e15a55b5449cfc2}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}}$<$ T $>$ \& \mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::operator++}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_a18f9478e36e61e7e876ce6c572e43ba5}\label{structsys_1_1_atomic_a18f9478e36e61e7e876ce6c572e43ba5}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}}$<$ T $>$ \& \mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::operator-\/-\/}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_a65d8efb30d9f179bd536ac1003fee599}\label{structsys_1_1_atomic_a65d8efb30d9f179bd536ac1003fee599}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_atomic}{Atomic}} \& \mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_atomic}{Atomic}}$<$ T $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_atomic_a16a30a617ca9f673e9b4c6cc99d88d4b}\label{structsys_1_1_atomic_a16a30a617ca9f673e9b4c6cc99d88d4b}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!m\_active@{m\_active}}
+\index{m\_active@{m\_active}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_active}{m\_active}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$bool$>$ \mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::m\+\_\+active\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_a23076e06316a902832e08a625f349c9e}\label{structsys_1_1_atomic_a23076e06316a902832e08a625f349c9e}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!m\_lock@{m\_lock}}
+\index{m\_lock@{m\_lock}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lock}{m\_lock}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::m\+\_\+lock\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_atomic_a17195f21f4817dd82812c5bf7a1e5a90}\label{structsys_1_1_atomic_a17195f21f4817dd82812c5bf7a1e5a90}} 
+\index{sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}!m\_value@{m\_value}}
+\index{m\_value@{m\_value}!sys::Atomic$<$ T $>$@{sys::Atomic$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_value}{m\_value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$T$>$ \mbox{\hyperlink{structsys_1_1_atomic}{sys\+::\+Atomic}}$<$ T $>$\+::m\+\_\+value\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_atomic_8h}{Atomic.\+h}}\end{DoxyCompactItemize}

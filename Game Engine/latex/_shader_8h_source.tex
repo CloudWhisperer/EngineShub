@@ -1,0 +1,46 @@
+\hypertarget{_shader_8h_source}{}\doxysection{Shader.\+h}
+\label{_shader_8h_source}\index{src/rend/Shader.h@{src/rend/Shader.h}}
+\mbox{\hyperlink{_shader_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <GL/glew.h>}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_string_8h}{sys/String.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{sys/Ptr.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{sys/Zero.h}}"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_shader}{Shader}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12   \mbox{\hyperlink{structrend_1_1_shader}{Shader}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\& \_vertPath, \textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\& \_fragPath);}
+\DoxyCodeLine{13   \mbox{\hyperlink{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}{\string~Shader}}();}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15   GLuint \mbox{\hyperlink{structrend_1_1_shader_aebd7cceba1a13800da7cd37e65d5c995}{id}}();}
+\DoxyCodeLine{16   GLint \mbox{\hyperlink{structrend_1_1_shader_ad3d7ce977db31bfb3612f3f03b345e6c}{projectionLoc}}();}
+\DoxyCodeLine{17   GLint \mbox{\hyperlink{structrend_1_1_shader_a4c9795a00f210edcaeb33efb3531c579}{modelLoc}}();}
+\DoxyCodeLine{18   GLint \mbox{\hyperlink{structrend_1_1_shader_a68fda0e3c3b4891653c3464af098645f}{viewLoc}}();}
+\DoxyCodeLine{19   GLint \mbox{\hyperlink{structrend_1_1_shader_a5f1627eabf69bda623aa548df4d43b72}{texture0Loc}}();}
+\DoxyCodeLine{20   GLint \mbox{\hyperlink{structrend_1_1_shader_a0389e992ccc2091134536aefdf7416c0}{texture1Loc}}();}
+\DoxyCodeLine{21   GLint \mbox{\hyperlink{structrend_1_1_shader_ab9b58888153f1741454f30316d86a027}{colorLoc}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{private}:}
+\DoxyCodeLine{24   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLuint>}} \mbox{\hyperlink{structrend_1_1_shader_aaa77b296d4509ffa323e1bac03dfdeae}{m\_id}};}
+\DoxyCodeLine{25   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLint>}} \mbox{\hyperlink{structrend_1_1_shader_acbd88b9038d6c3fb7931adad7fe8cc7f}{m\_projectionLoc}};}
+\DoxyCodeLine{26   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLint>}} \mbox{\hyperlink{structrend_1_1_shader_a3fa273b1f61ee492b7ff7ec439b2a828}{m\_viewLoc}};}
+\DoxyCodeLine{27   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLint>}} \mbox{\hyperlink{structrend_1_1_shader_a5ac50fd1ad7d3f5aa736be28c41ee5b4}{m\_modelLoc}};}
+\DoxyCodeLine{28   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLint>}} \mbox{\hyperlink{structrend_1_1_shader_ad3f3576a5ba2d9b658486d1ebd772971}{m\_texture0Loc}};}
+\DoxyCodeLine{29   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLint>}} \mbox{\hyperlink{structrend_1_1_shader_a23104473bbf78692b2c8570a1808c2e0}{m\_texture1Loc}};}
+\DoxyCodeLine{30   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLint>}} \mbox{\hyperlink{structrend_1_1_shader_a8c3bc3a473a9907ec6ae61deb08dce4e}{m\_colorLoc}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   \mbox{\hyperlink{structsys_1_1_string}{sys::String}} \mbox{\hyperlink{structrend_1_1_shader_aa7069994edae353add4af94ad22c5485}{m\_vertSrc}};}
+\DoxyCodeLine{33   \mbox{\hyperlink{structsys_1_1_string}{sys::String}} \mbox{\hyperlink{structrend_1_1_shader_ac496ab8a09eb20faa722a400d9b05967}{m\_fragSrc}};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35   \mbox{\hyperlink{structrend_1_1_shader_a7c1d34e575b6d578cee88f04e5a3dd8f}{Shader}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_shader}{Shader}}\& \_copy);}
+\DoxyCodeLine{36   \mbox{\hyperlink{structrend_1_1_shader}{Shader}}\& \mbox{\hyperlink{structrend_1_1_shader_a7747fff42dc872d762169dc9955c2c6e}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_shader}{Shader}}\& \_other);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,57 @@
+\hypertarget{_model_8h_source}{}\doxysection{Model.\+h}
+\label{_model_8h_source}\index{src/rend/Model.h@{src/rend/Model.h}}
+\mbox{\hyperlink{_model_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_mesh_8h}{Mesh.h}}"{}}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_texture_8h}{Texture.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rendmath_8h}{rendmath.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{sys/Ptr.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_list_8h}{sys/List.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_string_8h}{sys/String.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_8h}{sys/Vector.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{sys/Zero.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{struct }Texture;}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_material_group}{MaterialGroup}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18   \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \mbox{\hyperlink{structrend_1_1_material_group_a6f48e85b7ba7c511e560ba3ad63eb8be}{mesh}};}
+\DoxyCodeLine{19   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Texture>}} \mbox{\hyperlink{structrend_1_1_material_group_a8751a50843ddaa87ef10f87d1e2aee34}{texture}};}
+\DoxyCodeLine{20 \};}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_part}{Part}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24   \mbox{\hyperlink{structsys_1_1_string}{sys::String}} \mbox{\hyperlink{structrend_1_1_part_a5668d84898a8f2ca0eca0397a8fbecd0}{name}};}
+\DoxyCodeLine{25   \mbox{\hyperlink{structsys_1_1_list}{sys::List<MaterialGroup>}} \mbox{\hyperlink{structrend_1_1_part_a97981b32de27e4df984b17b0db412efb}{mgs}};}
+\DoxyCodeLine{26   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_part_afbf2b622437c6e88b0bd06fe331090a5}{offset}};}
+\DoxyCodeLine{27   \mbox{\hyperlink{structglm_1_1vec}{vec4}} \mbox{\hyperlink{structrend_1_1_part_a487a24f6e44821c8bc9157fda5825b45}{color}};}
+\DoxyCodeLine{28 \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_model}{Model}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32   \mbox{\hyperlink{structrend_1_1_model}{Model}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\& \_path);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{sys::List<Part>::Iterator}} \mbox{\hyperlink{structrend_1_1_model_a5e3c49443913f21d0adb7c72f63c0d85}{partsBegin}}();}
+\DoxyCodeLine{35   \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{sys::List<Part>::Iterator}} \mbox{\hyperlink{structrend_1_1_model_a92745f66ed5764d137c2d087f2cd79d8}{partsEnd}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structrend_1_1_model_a1f9766e31b841d3488c24e52d7f91aad}{intersect}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_ray}{Ray}}\& \_ray) \textcolor{keyword}{const};}
+\DoxyCodeLine{38   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Part>}} \mbox{\hyperlink{structrend_1_1_model_a1f9766e31b841d3488c24e52d7f91aad}{intersect}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_ray}{Ray}}\& \_ray, \textcolor{keywordtype}{float}\& \_distance) \textcolor{keyword}{const};}
+\DoxyCodeLine{39   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_model_add81d26a1b9130c5536a9937ca5ba472}{color}}(\mbox{\hyperlink{structglm_1_1vec}{vec4}} \_color);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42   \mbox{\hyperlink{structsys_1_1_list}{sys::List<Texture>}} \mbox{\hyperlink{structrend_1_1_model_a4e148f4e92cc15fccc0c048dc07534b9}{m\_textures}};}
+\DoxyCodeLine{43   \mbox{\hyperlink{structsys_1_1_list}{sys::List<Part>}} \mbox{\hyperlink{structrend_1_1_model_a9e81f55f3521d8adbc455ca5369dc1f9}{m\_parts}};}
+\DoxyCodeLine{44   \mbox{\hyperlink{structsys_1_1_vector}{sys::Vector<Face>}} \mbox{\hyperlink{structrend_1_1_model_a93465517519aaa7109eb60c093d775bd}{m\_faces}};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_model_a07d0c0ffbf4757a5520863d17af27b7d}{load}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\& \_path);}
+\DoxyCodeLine{47   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_model_ad261eb589e6c3780d9a2f7fe3df10daf}{center\_parts}}();}
+\DoxyCodeLine{48 \};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \}}
+\DoxyCodeLine{51 }
+
+\end{DoxyCode}

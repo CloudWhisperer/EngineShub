@@ -1,0 +1,233 @@
+\hypertarget{_thread_pool_8h_source}{}\doxysection{Thread\+Pool.\+h}
+\label{_thread_pool_8h_source}\index{src/rend/sys/ThreadPool.h@{src/rend/sys/ThreadPool.h}}
+\mbox{\hyperlink{_thread_pool_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{Zero.h}}"{}}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_unique_8h}{Unique.h}}"{}}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifndef SYS\_DEBUG}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{    \#define WIN32\_LEAN\_AND\_MEAN}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{    \#define NOMINMAX}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{    \#include <windows.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{    \#include <pthread.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{    \#include <semaphore.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_8h}{Vector.h}}"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_thread_pool}{ThreadPool}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26   \mbox{\hyperlink{structsys_1_1_thread_pool_aac717cb1a0ad3ee24c98ee48932f0340}{ThreadPool}}()}
+\DoxyCodeLine{27   \{}
+\DoxyCodeLine{28     \textcolor{keywordtype}{size\_t} ideal = 1;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef SYS\_DEBUG}}
+\DoxyCodeLine{31     ideal = std::thread::hardware\_concurrency();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     std::cout << \textcolor{stringliteral}{"{}Starting "{}} << ideal << \textcolor{stringliteral}{"{} threads"{}} << std::endl;}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.resize(ideal);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keywordflow}{for}(\textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<Unit>::Iterator}} it =}
+\DoxyCodeLine{39       \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.begin(); it != \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.end(); ++it)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41       it-\/>userdata = \mbox{\hyperlink{structsys_1_1_unique_a7041df47fed8591196466a7d30fedfab}{Unique<T>::make}}();}
+\DoxyCodeLine{42       it-\/>tp = \textcolor{keyword}{this};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#ifndef SYS\_DEBUG}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{46       it-\/>start = CreateSemaphore(NULL, 0, 1, NULL);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48       \textcolor{keywordflow}{if}(it-\/>start == NULL)}
+\DoxyCodeLine{49       \{}
+\DoxyCodeLine{50         \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{51       \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53       it-\/>stop = CreateSemaphore(NULL, 0, 1, NULL);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55       \textcolor{keywordflow}{if}(it-\/>stop == NULL)}
+\DoxyCodeLine{56       \{}
+\DoxyCodeLine{57         \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{58       \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60       it-\/>thread = CreateThread(NULL, 0, (LPTHREAD\_START\_ROUTINE)entry, (LPVOID)(\textcolor{keywordtype}{void} *)\&(*it), 0, NULL);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62       \textcolor{keywordflow}{if}(it-\/>thread == NULL)}
+\DoxyCodeLine{63       \{}
+\DoxyCodeLine{64         \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{65       \}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{67       \textcolor{keywordflow}{if}(sem\_init(\&it-\/>start, 0, 0) == -\/1)}
+\DoxyCodeLine{68       \{}
+\DoxyCodeLine{69         \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{70       \}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72       \textcolor{keywordflow}{if}(sem\_init(\&it-\/>stop, 0, 0) == -\/1)}
+\DoxyCodeLine{73       \{}
+\DoxyCodeLine{74         \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{75       \}}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77       \textcolor{keywordflow}{if}(pthread\_create(\&it-\/>thread, NULL, entry,}
+\DoxyCodeLine{78         (\textcolor{keywordtype}{void} *)\&(*it)) != 0)}
+\DoxyCodeLine{79       \{}
+\DoxyCodeLine{80         it-\/>thread = pthread\_self();}
+\DoxyCodeLine{81         \textcolor{keywordflow}{throw} std::exception();}
+\DoxyCodeLine{82       \}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{85     \}}
+\DoxyCodeLine{86   \}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88   \mbox{\hyperlink{structsys_1_1_thread_pool_a7be2e9a6b2fc3ac523eea0cc0fec1b26}{\string~ThreadPool}}()}
+\DoxyCodeLine{89   \{}
+\DoxyCodeLine{90     \mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\_func}} = NULL;}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#ifndef SYS\_DEBUG}}
+\DoxyCodeLine{93     \textcolor{keywordflow}{for}(\textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<Unit>::Iterator}} it =}
+\DoxyCodeLine{94       \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.begin(); it != \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.end(); ++it)}
+\DoxyCodeLine{95     \{}
+\DoxyCodeLine{96 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{97       ReleaseSemaphore(it-\/>start, 1, NULL);}
+\DoxyCodeLine{98       WaitForSingleObject(it-\/>thread, INFINITE);}
+\DoxyCodeLine{99       CloseHandle(it-\/>thread);}
+\DoxyCodeLine{100       CloseHandle(it-\/>start);}
+\DoxyCodeLine{101       CloseHandle(it-\/>stop);}
+\DoxyCodeLine{102 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{103       sem\_post(\&it-\/>start);}
+\DoxyCodeLine{104       pthread\_join(it-\/>thread, NULL);}
+\DoxyCodeLine{105       sem\_destroy(\&it-\/>start);}
+\DoxyCodeLine{106       sem\_destroy(\&it-\/>stop);}
+\DoxyCodeLine{107 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{110   \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structsys_1_1_thread_pool_a339c7ee410b54ef2172ec6296a95162c}{size}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{113 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.size();}
+\DoxyCodeLine{115   \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{comment}{/*}}
+\DoxyCodeLine{118 \textcolor{comment}{  Ptr<T> at(size\_t idx)}}
+\DoxyCodeLine{119 \textcolor{comment}{  \{}}
+\DoxyCodeLine{120 \textcolor{comment}{    return m\_units[idx].userdata;}}
+\DoxyCodeLine{121 \textcolor{comment}{  \}}}
+\DoxyCodeLine{122 \textcolor{comment}{*/}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} \mbox{\hyperlink{structsys_1_1_thread_pool_a8ed972844f60becfda86ffb8db32db35}{at}}(\textcolor{keywordtype}{size\_t} idx)\textcolor{keyword}{ const}}
+\DoxyCodeLine{125 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{126     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}[idx].userdata;}
+\DoxyCodeLine{127   \}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_thread_pool_a664025bd22e2083e011663c170c46a02}{execute}}(\textcolor{keywordtype}{void} (*\_func)(T\&))}
+\DoxyCodeLine{130   \{}
+\DoxyCodeLine{131     \mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\_func}} = \_func;}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{134     \_func(*\mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}[0].userdata);}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{136     \textcolor{keywordflow}{for}(\textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<Unit>::Iterator}} it =}
+\DoxyCodeLine{137       \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.begin(); it != \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.end(); ++it)}
+\DoxyCodeLine{138     \{}
+\DoxyCodeLine{139 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{140       ReleaseSemaphore(it-\/>start, 1, NULL);}
+\DoxyCodeLine{141 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{142       sem\_post(\&it-\/>start);}
+\DoxyCodeLine{143 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146     \textcolor{keywordflow}{for}(\textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<Unit>::Iterator}} it =}
+\DoxyCodeLine{147       \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.begin(); it != \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}}.end(); ++it)}
+\DoxyCodeLine{148     \{}
+\DoxyCodeLine{149 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{150       WaitForSingleObject(it-\/>stop, INFINITE);}
+\DoxyCodeLine{151 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{152       sem\_wait(\&it-\/>stop);}
+\DoxyCodeLine{153 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157     \mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\_func}} = NULL;}
+\DoxyCodeLine{158   \}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{keyword}{private}:}
+\DoxyCodeLine{161   \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit}{Unit}}}
+\DoxyCodeLine{162   \{}
+\DoxyCodeLine{163     \mbox{\hyperlink{structsys_1_1_unique}{Unique<T>}} \mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit_a6e712782cc8cc339309f22873f19bb4f}{userdata}};}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#ifndef SYS\_DEBUG}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{166     HANDLE thread;}
+\DoxyCodeLine{167     HANDLE start;}
+\DoxyCodeLine{168     HANDLE stop;}
+\DoxyCodeLine{169 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{170     pthread\_t thread;}
+\DoxyCodeLine{171     sem\_t start;}
+\DoxyCodeLine{172     sem\_t stop;}
+\DoxyCodeLine{173 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{175     \mbox{\hyperlink{structsys_1_1_thread_pool}{ThreadPool}} *\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit_adc9ce718198de14b9c16e35a8a30ebad}{tp}};}
+\DoxyCodeLine{176   \};}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178   \mbox{\hyperlink{structsys_1_1_thread_pool_a0db9a48bf75c13f9c73b1910bd81a683}{ThreadPool}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_thread_pool}{ThreadPool}}\& \_copy);}
+\DoxyCodeLine{179   \mbox{\hyperlink{structsys_1_1_thread_pool}{ThreadPool}}\& \mbox{\hyperlink{structsys_1_1_thread_pool_abc7000bb618f19f6127f6a563542a6a5}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_thread_pool}{ThreadPool}}\& \_other);}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181   \mbox{\hyperlink{structsys_1_1_vector}{Vector<Unit>}} \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\_units}};}
+\DoxyCodeLine{182   \mbox{\hyperlink{structsys_1_1_zero}{Zero}}<void (*)(T\&)> \mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\_func}};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#ifndef SYS\_DEBUG}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{186   \textcolor{keyword}{static} DWORD WINAPI entry(LPVOID ptr)}
+\DoxyCodeLine{187   \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{188   \textcolor{keyword}{static} \textcolor{keywordtype}{void} *entry(\textcolor{keywordtype}{void} *ptr)}
+\DoxyCodeLine{189   \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{190   \{}
+\DoxyCodeLine{191     \mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit}{Unit}} *tu = (\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit}{Unit}}*)ptr;}
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193     \textcolor{keywordflow}{while}(\textcolor{keyword}{true})}
+\DoxyCodeLine{194     \{}
+\DoxyCodeLine{195 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{196       WaitForSingleObject(tu-\/>start, INFINITE);}
+\DoxyCodeLine{197 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{198       sem\_wait(\&tu-\/>start);}
+\DoxyCodeLine{199 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201       \textcolor{keywordflow}{if}(!tu-\/>\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit_adc9ce718198de14b9c16e35a8a30ebad}{tp}}-\/>\mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\_func}})}
+\DoxyCodeLine{202       \{}
+\DoxyCodeLine{203         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{204       \}}
+\DoxyCodeLine{205       \textcolor{keywordflow}{else}}
+\DoxyCodeLine{206       \{}
+\DoxyCodeLine{207         \textcolor{comment}{// TODO: Zero<T> is awkward for function pointers.}}
+\DoxyCodeLine{208         \textcolor{comment}{//static\_cast<void (*)(T\&)>(tu-\/>tp-\/>m\_func)(*tu-\/>userdata);}}
+\DoxyCodeLine{209         void (*func)(T\&) = tu-\/>\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit_adc9ce718198de14b9c16e35a8a30ebad}{tp}}-\/>\mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\_func}};}
+\DoxyCodeLine{210         func(*tu-\/>\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit_a6e712782cc8cc339309f22873f19bb4f}{userdata}});}
+\DoxyCodeLine{211       \}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 \textcolor{preprocessor}{  \#ifdef \_WIN32}}
+\DoxyCodeLine{214       ReleaseSemaphore(tu-\/>stop, 1, NULL);}
+\DoxyCodeLine{215 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{216       sem\_post(\&tu-\/>stop);}
+\DoxyCodeLine{217 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{218     \}}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{221   \}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224 \};}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \}}
+\DoxyCodeLine{227 }
+
+\end{DoxyCode}

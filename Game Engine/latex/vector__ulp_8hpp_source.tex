@@ -1,0 +1,46 @@
+\hypertarget{vector__ulp_8hpp_source}{}\doxysection{vector\+\_\+ulp.\+hpp}
+\label{vector__ulp_8hpp_source}\index{src/rend/glm/ext/vector\_ulp.hpp@{src/rend/glm/ext/vector\_ulp.hpp}}
+\mbox{\hyperlink{vector__ulp_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{comment}{// Dependencies}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}../ext/scalar\_ulp.hpp"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_EXT\_vector\_ulp extension included"{}})}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{35     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{36     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_a30bc0280e7cefd159867b1aa5050b94a}{nextFloat}}(vec<L, T, Q> \textcolor{keyword}{const}\& x);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{45     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{46     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_a30bc0280e7cefd159867b1aa5050b94a}{nextFloat}}(vec<L, T, Q> \textcolor{keyword}{const}\& x, \textcolor{keywordtype}{int} ULPs);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{55     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{56     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_a30bc0280e7cefd159867b1aa5050b94a}{nextFloat}}(vec<L, T, Q> \textcolor{keyword}{const}\& x, vec<L, int, Q> \textcolor{keyword}{const}\& ULPs);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{65     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{66     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_a25320ace5b3e239405077912eb4e7bf9}{prevFloat}}(vec<L, T, Q> \textcolor{keyword}{const}\& x);}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{75     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{76     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_a25320ace5b3e239405077912eb4e7bf9}{prevFloat}}(vec<L, T, Q> \textcolor{keyword}{const}\& x, \textcolor{keywordtype}{int} ULPs);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{85     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{86     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} vec<L, T, Q> \mbox{\hyperlink{namespaceglm_a25320ace5b3e239405077912eb4e7bf9}{prevFloat}}(vec<L, T, Q> \textcolor{keyword}{const}\& x, vec<L, int, Q> \textcolor{keyword}{const}\& ULPs);}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{94     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{95     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, int, Q>}} \mbox{\hyperlink{namespaceglm_a9f531d81a978cdffac7c8257d513f59b}{floatDistance}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, float, Q>}} \textcolor{keyword}{const}\& x, \mbox{\hyperlink{structglm_1_1vec}{vec<L, float, Q>}} \textcolor{keyword}{const}\& y);}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{103     \textcolor{keyword}{template}<length\_t L, \textcolor{keyword}{typename} T, qualifier Q>}
+\DoxyCodeLine{104     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} \mbox{\hyperlink{structglm_1_1vec}{vec<L, int64, Q>}} \mbox{\hyperlink{namespaceglm_a9f531d81a978cdffac7c8257d513f59b}{floatDistance}}(\mbox{\hyperlink{structglm_1_1vec}{vec<L, double, Q>}} \textcolor{keyword}{const}\& x, \mbox{\hyperlink{structglm_1_1vec}{vec<L, double, Q>}} \textcolor{keyword}{const}\& y);}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{107 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{vector__ulp_8inl}{vector\_ulp.inl}}"{}}}
+
+\end{DoxyCode}

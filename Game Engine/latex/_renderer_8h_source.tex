@@ -1,0 +1,83 @@
+\hypertarget{_renderer_8h_source}{}\doxysection{Renderer.\+h}
+\label{_renderer_8h_source}\index{src/rend/Renderer.h@{src/rend/Renderer.h}}
+\mbox{\hyperlink{_renderer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REND\_RENDERER\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REND\_RENDERER\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rendmath_8h}{rendmath.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{sys/Zero.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{sys/Ptr.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{struct }Shader;}
+\DoxyCodeLine{13 \textcolor{keyword}{struct }Mesh;}
+\DoxyCodeLine{14 \textcolor{keyword}{struct }Texture;}
+\DoxyCodeLine{15 \textcolor{keyword}{struct }RenderTexture;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_renderer}{Renderer}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19   \mbox{\hyperlink{structrend_1_1_renderer}{Renderer}}(\textcolor{keywordtype}{int} \_width, \textcolor{keywordtype}{int} \_height);}
+\DoxyCodeLine{20   \mbox{\hyperlink{structrend_1_1_renderer}{Renderer}}(\mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<RenderTexture>}} \_renderTexture);}
+\DoxyCodeLine{21   \textcolor{keyword}{virtual} \mbox{\hyperlink{structrend_1_1_renderer_a3761c68dcab04de1b8d4c4924f5cefee}{\string~Renderer}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a3588902d7e30986ebc201545049f875b}{render}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Shader>}} \mbox{\hyperlink{structrend_1_1_renderer_ab3b0fb8c2c12a7e252a21f18781314c1}{shader}}();}
+\DoxyCodeLine{26   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_ab3b0fb8c2c12a7e252a21f18781314c1}{shader}}(\mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Shader>}} \_shader);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Mesh>}} \mbox{\hyperlink{structrend_1_1_renderer_a09b13305c2d02a44b0455eda62bf2083}{mesh}}();}
+\DoxyCodeLine{29   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a09b13305c2d02a44b0455eda62bf2083}{mesh}}(\mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Mesh>}} \_mesh);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a28264aa0101e0f95327f9be5c8d8e2fc}{texture}}(\mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Texture>}} \_texture);}
+\DoxyCodeLine{32   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_ad7b0c41cf92d8e2fe3a5703ebc8bcd6b}{texture1}}(\mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Texture>}} \_texture);}
+\DoxyCodeLine{33   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a03afd7c01187f637a3b4cbc399bcb042}{color}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1vec}{vec3}}\& \_color);}
+\DoxyCodeLine{34   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a03afd7c01187f637a3b4cbc399bcb042}{color}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1vec}{vec4}}\& \_color);}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a342140cd7b7704e89eb6f2c640dc2c2a}{projection}}();}
+\DoxyCodeLine{37   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a342140cd7b7704e89eb6f2c640dc2c2a}{projection}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1mat}{mat4}}\& \_projection);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a4d6a2a143fa58ea73a546d2a970a64a8}{model}}();}
+\DoxyCodeLine{40   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a4d6a2a143fa58ea73a546d2a970a64a8}{model}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1mat}{mat4}}\& \_model);}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a786dc6f7a9874d4e5fb96459c3284fa5}{view}}();}
+\DoxyCodeLine{43   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a786dc6f7a9874d4e5fb96459c3284fa5}{view}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1mat}{mat4}}\& \_view);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a24a6e3115f168784a48978718554c341}{backfaceCull}}(\textcolor{keywordtype}{bool} \_backfaceCull);}
+\DoxyCodeLine{46   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_acdb25a3345083f4bcb00bd41816b1ca9}{depthTest}}(\textcolor{keywordtype}{bool} \_depthTest);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a8828836fedc6535fa3f8ddaad92ce83d}{clearColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1vec}{vec3}}\& \_clearColor);}
+\DoxyCodeLine{49   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a131379450fb6c5fde438d9511633f9c5}{clear}}(\textcolor{keywordtype}{bool} \_color = \textcolor{keyword}{true});}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_a210f0e8d4a1824fa7e5251b1dcdd8b8d}{blend}}(\textcolor{keywordtype}{bool} \_blend);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53   \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \mbox{\hyperlink{structrend_1_1_renderer_a3caddf46559a6c3d1e544c543cdaffa2}{raycast}}(\textcolor{keywordtype}{int} \_x, \textcolor{keywordtype}{int} \_y);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{56   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<RenderTexture>}} \mbox{\hyperlink{structrend_1_1_renderer_a3d468abd1b3f329b2428f161a7422126}{m\_renderTexture}};}
+\DoxyCodeLine{57   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Shader>}} \mbox{\hyperlink{structrend_1_1_renderer_a394af426483297dcdfb4060503d4489e}{m\_shader}};}
+\DoxyCodeLine{58   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Mesh>}} \mbox{\hyperlink{structrend_1_1_renderer_a3edf4e0d33f6d5fbcc221c5e7cc594f3}{m\_mesh}};}
+\DoxyCodeLine{59   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Texture>}} \mbox{\hyperlink{structrend_1_1_renderer_adef550bab2bb0dff91f5933067b62d17}{m\_texture}};}
+\DoxyCodeLine{60   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Texture>}} \mbox{\hyperlink{structrend_1_1_renderer_a6dc17f7f14542aae1381fb069b280ff2}{m\_texture1}};}
+\DoxyCodeLine{61   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_af679c1c93c9808ff8650d5d0505cdabc}{m\_projection}};}
+\DoxyCodeLine{62   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_a12e7d7d615b1452c0c7c6ae267ab2c32}{m\_view}};}
+\DoxyCodeLine{63   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_renderer_aa9072951938fd0316b770888761ea9f7}{m\_model}};}
+\DoxyCodeLine{64   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<bool>}} \mbox{\hyperlink{structrend_1_1_renderer_a525eefb6bdec3315bf406aeaa40828df}{m\_depthTest}};}
+\DoxyCodeLine{65   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<bool>}} \mbox{\hyperlink{structrend_1_1_renderer_a5ead27d5447682f6976f4fde8b17066e}{m\_backfaceCull}};}
+\DoxyCodeLine{66   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<bool>}} \mbox{\hyperlink{structrend_1_1_renderer_a995f5c10c5976e8cc922141bab9cfd48}{m\_blend}};}
+\DoxyCodeLine{67   \mbox{\hyperlink{structglm_1_1vec}{vec4}} \mbox{\hyperlink{structrend_1_1_renderer_a9a1137cf89696cfa0d46a6e4b3b743b0}{m\_clearColor}};}
+\DoxyCodeLine{68   \mbox{\hyperlink{structglm_1_1vec}{vec4}} \mbox{\hyperlink{structrend_1_1_renderer_af5717be47c300f017bc9e7975397ba66}{m\_color}};}
+\DoxyCodeLine{69   \mbox{\hyperlink{structglm_1_1vec}{ivec2}} \mbox{\hyperlink{structrend_1_1_renderer_adb6b1c04d86ee42dc010fd4225cc526c}{m\_windowSize}};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_renderer_ab59712f58d27e48665d9090c4cd6b8b1}{initialize}}();}
+\DoxyCodeLine{72 \};}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{77 }
+
+\end{DoxyCode}

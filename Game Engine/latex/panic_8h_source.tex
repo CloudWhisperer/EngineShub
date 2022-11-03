@@ -1,0 +1,27 @@
+\hypertarget{panic_8h_source}{}\doxysection{panic.\+h}
+\label{panic_8h_source}\index{src/rend/sys/panic.h@{src/rend/sys/panic.h}}
+\mbox{\hyperlink{panic_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_PANIC\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_PANIC\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{11 \textcolor{keywordtype}{void} \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(T \_message, T \_unused = \textcolor{stringliteral}{"{}"{}})}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* message = \_message;}
+\DoxyCodeLine{14   printf(\textcolor{stringliteral}{"{}Panic: \%s\(\backslash\)n"{}}, message);}
+\DoxyCodeLine{15   abort();}
+\DoxyCodeLine{16 \}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 }
+
+\end{DoxyCode}

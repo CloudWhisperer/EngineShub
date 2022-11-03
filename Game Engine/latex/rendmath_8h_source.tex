@@ -1,0 +1,39 @@
+\hypertarget{rendmath_8h_source}{}\doxysection{rendmath.\+h}
+\label{rendmath_8h_source}\index{src/rend/rendmath.h@{src/rend/rendmath.h}}
+\mbox{\hyperlink{rendmath_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REND\_MATH\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REND\_MATH\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define GLM\_FORCE\_CTOR\_INIT}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glm_8hpp}{glm/glm.hpp}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{ext_8hpp}{glm/ext.hpp}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{gtx_2quaternion_8hpp}{glm/gtx/quaternion.hpp}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{intersect_8hpp}{glm/gtx/intersect.hpp}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{using namespace }\mbox{\hyperlink{namespaceglm}{glm}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_ray}{Ray}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_ray_a2005907de476d3cde936291493b21720}{origin}};}
+\DoxyCodeLine{18   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_ray_a42dbb4476c5ac8bb58bfe0a639e9a32d}{direction}};}
+\DoxyCodeLine{19 \};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_triangle}{Triangle}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_triangle_a69fb8f5d5e84aebca1bf8fd5c9b21471}{a}};}
+\DoxyCodeLine{24   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_triangle_ac0299acf20fed3e869afa140986a9c55}{b}};}
+\DoxyCodeLine{25   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_triangle_ae799d7340e33e03c2792bc002fd829e3}{c}};}
+\DoxyCodeLine{26 \};}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{namespacerend_a086da553bf33e5737a8d7fb48c502d65}{rotate\_xyz}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1mat}{mat4}}\& \_m, \textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1vec}{vec3}}\& \_angle);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{33 }
+
+\end{DoxyCode}

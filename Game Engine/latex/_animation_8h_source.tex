@@ -1,0 +1,47 @@
+\hypertarget{_animation_8h_source}{}\doxysection{Animation.\+h}
+\label{_animation_8h_source}\index{src/rend/Animation.h@{src/rend/Animation.h}}
+\mbox{\hyperlink{_animation_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rendmath_8h}{rendmath.h}}"{}}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_8h}{sys/Vector.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{sys/Ptr.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{struct }Part;}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_transform}{Transform}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Part>}} \mbox{\hyperlink{structrend_1_1_transform_a9ab3cbf4664f17cb691d6404cf5f4701}{part}};}
+\DoxyCodeLine{14   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_transform_af1f65d47c8758a3f365b2b5407b7259a}{translation}};}
+\DoxyCodeLine{15   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_transform_ac36301d3d395f08e3b9b01044a95b149}{rotation}};}
+\DoxyCodeLine{16   \mbox{\hyperlink{structglm_1_1qua}{quat}} \mbox{\hyperlink{structrend_1_1_transform_a5afdbadb4947ef34bd4745ac0232d2c6}{rot}};}
+\DoxyCodeLine{17   \mbox{\hyperlink{structglm_1_1vec}{vec3}} \mbox{\hyperlink{structrend_1_1_transform_ac60b71f1494ea0a2cd4991c2c7ed3dc0}{scale}};}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_frame}{Frame}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Transform>}} \mbox{\hyperlink{structrend_1_1_frame_a51e34c27845ba6daf94525c1be5cc527}{transform}}(\mbox{\hyperlink{structrend_1_1_part}{Part}}\& \_part, \textcolor{keywordtype}{bool} \_add);}
+\DoxyCodeLine{23   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Transform>}} \mbox{\hyperlink{structrend_1_1_frame_a51e34c27845ba6daf94525c1be5cc527}{transform}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_part}{Part}}\& \_part);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keyword}{private}:}
+\DoxyCodeLine{26   \mbox{\hyperlink{structsys_1_1_vector}{sys::Vector<Transform>}} \mbox{\hyperlink{structrend_1_1_frame_a692d0521392b7a6f9303ffee874bf3e4}{m\_transforms}};}
+\DoxyCodeLine{27 \};}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_animation}{Animation}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31   \mbox{\hyperlink{structrend_1_1_animation_a30fc500a6054958311fd3defbca19ea4}{Animation}}();}
+\DoxyCodeLine{32   \mbox{\hyperlink{structsys_1_1_ptr}{sys::Ptr<Frame>}} \mbox{\hyperlink{structrend_1_1_animation_a99fb152ee0111f553b0d49515a02929e}{frame}}(\textcolor{keywordtype}{int} \_frame);}
+\DoxyCodeLine{33   \mbox{\hyperlink{structglm_1_1mat}{mat4}} \mbox{\hyperlink{structrend_1_1_animation_a17f9ffaa6f6dc22ade31583c4f3b60b2}{model}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_part}{Part}}\& \_part, \textcolor{keywordtype}{float} \_frame);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keyword}{private}:}
+\DoxyCodeLine{36   \mbox{\hyperlink{structsys_1_1_vector}{sys::Vector<Frame>}} \mbox{\hyperlink{structrend_1_1_animation_a48a9c0f8a7ed69ffd9f80b770771f31b}{m\_frames}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \}}
+\DoxyCodeLine{41 }
+
+\end{DoxyCode}

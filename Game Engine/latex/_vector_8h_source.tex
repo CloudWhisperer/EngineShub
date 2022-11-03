@@ -1,0 +1,593 @@
+\hypertarget{_vector_8h_source}{}\doxysection{Vector.\+h}
+\label{_vector_8h_source}\index{src/rend/sys/Vector.h@{src/rend/sys/Vector.h}}
+\mbox{\hyperlink{_vector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_VECTOR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_VECTOR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{Ptr.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{Zero.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_lock_8h}{Lock.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <new>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifdef \_WIN32}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{  \#include <BaseTsd.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{  \#define ssize\_t SSIZE\_T}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{19 \textcolor{keyword}{struct }Ref;}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{22 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_vector}{Vector}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{EnablePtr}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24   \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}}}
+\DoxyCodeLine{25   \{}
+\DoxyCodeLine{26     Iterator\& \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2746834f1ebdbc5ccdec2bd1192d2c85}{operator++}}();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ad33d6e756bcf49a20bf747b2b4e321c4}{operator!=}}(\textcolor{keyword}{const} Iterator\& \_other) \textcolor{keyword}{const};}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a58047d5d9d6d06cd98d5befce27f7d98}{operator==}}(\textcolor{keyword}{const} Iterator\& \_other) \textcolor{keyword}{const};}
+\DoxyCodeLine{29     \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a9d925733a05ce1638602659e0bce8848}{operator-\/>}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{30     \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a538ac502454bcdf9c4f1c00a226fba3e}{operator*}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32   \textcolor{keyword}{private}:}
+\DoxyCodeLine{33     \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{34     \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_vector}{Vector}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \mbox{\hyperlink{structsys_1_1_zero}{Zero<size\_t>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}};}
+\DoxyCodeLine{37     \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<const Vector>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}};}
+\DoxyCodeLine{38     \mbox{\hyperlink{structsys_1_1_zero}{Zero<bool>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}};}
+\DoxyCodeLine{39     \mbox{\hyperlink{structsys_1_1_lock}{Lock}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a276e42b773493f2b9e723a4aef12674c}{m\_lock}};}
+\DoxyCodeLine{40   \};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \mbox{\hyperlink{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}{Vector}}();}
+\DoxyCodeLine{43   \mbox{\hyperlink{structsys_1_1_vector_adba44d2a935e8a3628c7d3a6a8a7ca62}{Vector}}(\textcolor{keywordtype}{size\_t} \_size);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45   \mbox{\hyperlink{structsys_1_1_vector_a8440b64e366ce04f3e64c2e14dbac57a}{Vector}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_vector}{Vector}}\& \_copy);}
+\DoxyCodeLine{46   \mbox{\hyperlink{structsys_1_1_vector}{Vector}}\& \mbox{\hyperlink{structsys_1_1_vector_a045cd7655b32bee02c04d1aa3cb940be}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_vector}{Vector}}\& \_other);}
+\DoxyCodeLine{47   \mbox{\hyperlink{structsys_1_1_vector_a79b6b9b6e921f1803c655383ebc13ced}{\string~Vector}}();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{50   T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{operator[]}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_index);}
+\DoxyCodeLine{51   \textcolor{keyword}{const} T\& \mbox{\hyperlink{structsys_1_1_vector_ae03e387b12fb8c8a4346e30a942f78e8}{operator[]}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_index) \textcolor{keyword}{const};}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{53   T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{operator[]}}(\textcolor{keywordtype}{size\_t} \_index);}
+\DoxyCodeLine{54   \textcolor{keyword}{const} T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{operator[]}}(\textcolor{keywordtype}{size\_t} \_index) \textcolor{keyword}{const};}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} \mbox{\hyperlink{structsys_1_1_vector_a3def998a75ed02ba36e172a8d804a32c}{get}}(\textcolor{keywordtype}{size\_t} \_index);}
+\DoxyCodeLine{58   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<const T>}} \mbox{\hyperlink{structsys_1_1_vector_a6af92983deea7bce0face98ca2e7dbde}{get}}(\textcolor{keywordtype}{size\_t} \_index) \textcolor{keyword}{const};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} \mbox{\hyperlink{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}{push}}(\textcolor{keyword}{const} T\& \_value);}
+\DoxyCodeLine{61   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a504adc82bf3b0bc60823dafd161577aa}{clear}}();}
+\DoxyCodeLine{62   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{resize}}(\textcolor{keywordtype}{size\_t} \_size);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66   T* \mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   Iterator \mbox{\hyperlink{structsys_1_1_vector_a44a7b2597392ff058fbdcaba1c04041d}{begin}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{69   Iterator \mbox{\hyperlink{structsys_1_1_vector_a1d2f79011bdee414554f30b0a126a7ac}{end}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{70   Iterator \mbox{\hyperlink{structsys_1_1_vector_a25610c136fb95e162e92377510581b77}{erase}}(Iterator\& \_it);}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a23924df8b7c27e0ffc0adbd9d40fa1ea}{sort}}(\textcolor{keywordtype}{bool} (*\_func)(T\&, T\&));}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74 \textcolor{keyword}{private}:}
+\DoxyCodeLine{75   \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}} \mbox{\hyperlink{structsys_1_1_vector_a6da887298360781299ebd9f72f8c51f6}{m\_locallock}};}
+\DoxyCodeLine{76   \mbox{\hyperlink{structsys_1_1_zero}{Zero<size\_t>}} \mbox{\hyperlink{structsys_1_1_vector_ad16a38a8fd5d64b213ef18580dc2042c}{m\_total}};}
+\DoxyCodeLine{77   \mbox{\hyperlink{structsys_1_1_zero}{Zero<T*>}} \mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}};}
+\DoxyCodeLine{78   \mbox{\hyperlink{structsys_1_1_zero}{Zero<size\_t>}} \mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a5d14785fe8168dda8ad19abc6f6546f9}{check\_lock}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{81   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a2d9d416e962c84921d0b219e449e5779}{allocate}}(\textcolor{keywordtype}{size\_t} \_size);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}{quicksort}}(\textcolor{keywordtype}{int} \_low, \textcolor{keywordtype}{int} \_high, \textcolor{keywordtype}{bool} (*\_func)(T\&, T\&));}
+\DoxyCodeLine{84   \textcolor{keywordtype}{int} \mbox{\hyperlink{structsys_1_1_vector_ade93aa5ceec3b859aeef905309ade160}{partition}}(\textcolor{keywordtype}{int} \_low, \textcolor{keywordtype}{int} \_high, \textcolor{keywordtype}{bool} (*\_func)(T\&, T\&));}
+\DoxyCodeLine{85   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_vector_a25450e09cf839682506f1329d19ac205}{compareFunc}}(T\& \_a, T\& \_b);}
+\DoxyCodeLine{86   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}{swap}}(T\& \_a, T\& \_b);}
+\DoxyCodeLine{87 \};}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \textcolor{comment}{/* Implementation */}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{panic_8h}{panic.h}}"{}}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{96 \{}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{99 \mbox{\hyperlink{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}{Vector<T>::Vector}}() :}
+\DoxyCodeLine{100   m\_total(8),}
+\DoxyCodeLine{101   m\_raw(static\_cast<T*>(calloc(m\_total, sizeof(T))))}
+\DoxyCodeLine{102 \{}
+\DoxyCodeLine{103   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}})}
+\DoxyCodeLine{104   \{}
+\DoxyCodeLine{105     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Failed to allocate initial space"{}});}
+\DoxyCodeLine{106   \}}
+\DoxyCodeLine{107 \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{110 \mbox{\hyperlink{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}{Vector<T>::Vector}}(\textcolor{keywordtype}{size\_t} \_size)}
+\DoxyCodeLine{111 \{}
+\DoxyCodeLine{112   resize(\_size);}
+\DoxyCodeLine{113 \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{116 \mbox{\hyperlink{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}{Vector<T>::Vector}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_vector}{Vector}}\& \_copy) :}
+\DoxyCodeLine{117   m\_total(\_copy.m\_size),}
+\DoxyCodeLine{118   m\_raw(static\_cast<T*>(calloc(m\_total, sizeof(T))))}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}})}
+\DoxyCodeLine{121   \{}
+\DoxyCodeLine{122     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Failed to allocate initial space"{}});}
+\DoxyCodeLine{123   \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125   \textcolor{keywordflow}{try}}
+\DoxyCodeLine{126   \{}
+\DoxyCodeLine{127     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} ei = 0; ei < \_copy.\mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}}; ++ei)}
+\DoxyCodeLine{128     \{}
+\DoxyCodeLine{129       \textcolor{keyword}{new}(\&\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}}[ei]) T(\_copy.\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}}[ei]);}
+\DoxyCodeLine{130       ++\mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}};}
+\DoxyCodeLine{131     \}}
+\DoxyCodeLine{132   \}}
+\DoxyCodeLine{133   \textcolor{keywordflow}{catch}(...)}
+\DoxyCodeLine{134   \{}
+\DoxyCodeLine{135     \textcolor{comment}{/* TODO: Can use clear() */}}
+\DoxyCodeLine{136     \textcolor{keywordflow}{for}(ssize\_t ei = \mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}} -\/ 1; ei >= 0; -\/-\/ei)}
+\DoxyCodeLine{137     \{}
+\DoxyCodeLine{138       \mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}}[ei].\string~T();}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141     free(\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}});}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143     \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{144   \}}
+\DoxyCodeLine{145 \}}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{148 \mbox{\hyperlink{structsys_1_1_vector}{Vector<T>}}\& \mbox{\hyperlink{structsys_1_1_vector_a045cd7655b32bee02c04d1aa3cb940be}{Vector<T>::operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_vector}{Vector}}\& \_other)}
+\DoxyCodeLine{149 \{}
+\DoxyCodeLine{150   check\_lock();}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{152   \textcolor{keywordtype}{size\_t} total = \_other.\mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}};}
+\DoxyCodeLine{153   T* raw = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(calloc(total, \textcolor{keyword}{sizeof}(T)));}
+\DoxyCodeLine{154   \textcolor{keywordtype}{size\_t} size = 0;}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156   \textcolor{keywordflow}{if}(!raw)}
+\DoxyCodeLine{157   \{}
+\DoxyCodeLine{158     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Failed to allocate initial space"{}});}
+\DoxyCodeLine{159   \}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161   \textcolor{keywordflow}{try}}
+\DoxyCodeLine{162   \{}
+\DoxyCodeLine{163     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} ei = 0; ei < \_other.\mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}}; ++ei)}
+\DoxyCodeLine{164     \{}
+\DoxyCodeLine{165       \textcolor{keyword}{new}(\&raw[ei]) T(\_other.\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}}[ei]);}
+\DoxyCodeLine{166       ++size;}
+\DoxyCodeLine{167     \}}
+\DoxyCodeLine{168   \}}
+\DoxyCodeLine{169   \textcolor{keywordflow}{catch}(...)}
+\DoxyCodeLine{170   \{}
+\DoxyCodeLine{171     \textcolor{keywordflow}{for}(ssize\_t ei = size -\/ 1; ei >= 0; -\/-\/ei)}
+\DoxyCodeLine{172     \{}
+\DoxyCodeLine{173       raw[ei].\string~T();}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176     free(raw);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178     \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{179   \}}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181   clear();}
+\DoxyCodeLine{182   free(m\_raw);}
+\DoxyCodeLine{183   m\_size = size;}
+\DoxyCodeLine{184   m\_raw = raw;}
+\DoxyCodeLine{185   m\_total = total;}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{188 \}}
+\DoxyCodeLine{189 }
+\DoxyCodeLine{190 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{191 \mbox{\hyperlink{structsys_1_1_vector_a79b6b9b6e921f1803c655383ebc13ced}{Vector<T>::\string~Vector}}()}
+\DoxyCodeLine{192 \{}
+\DoxyCodeLine{193   clear();}
+\DoxyCodeLine{194   free(m\_raw);}
+\DoxyCodeLine{195 \}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{198 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{199 T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{Vector<T>::operator[]}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_index)}
+\DoxyCodeLine{200 \{}
+\DoxyCodeLine{201   \_index.\mbox{\hyperlink{structsys_1_1_index_lock_a810306eabbf569ca6123f821ca78c98c}{lock}}(\&m\_locallock);}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203   \textcolor{keywordflow}{if}(\_index >= m\_size)}
+\DoxyCodeLine{204   \{}
+\DoxyCodeLine{205     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Index out of bounds"{}});}
+\DoxyCodeLine{206   \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208   \textcolor{keywordflow}{return} m\_raw[\_index];}
+\DoxyCodeLine{209 \}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{212 \textcolor{keyword}{const} T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{Vector<T>::operator[]}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_index)\textcolor{keyword}{ const}}
+\DoxyCodeLine{213 \textcolor{keyword}{}\{}
+\DoxyCodeLine{214   \_index.\mbox{\hyperlink{structsys_1_1_index_lock_a810306eabbf569ca6123f821ca78c98c}{lock}}(\&m\_locallock);}
+\DoxyCodeLine{215 }
+\DoxyCodeLine{216   \textcolor{keywordflow}{if}(\_index >= m\_size)}
+\DoxyCodeLine{217   \{}
+\DoxyCodeLine{218     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Index out of bounds"{}});}
+\DoxyCodeLine{219   \}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221   \textcolor{keywordflow}{return} m\_raw[\_index];}
+\DoxyCodeLine{222 \}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{224 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{225 T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{Vector<T>::operator[]}}(\textcolor{keywordtype}{size\_t} \_index)}
+\DoxyCodeLine{226 \{}
+\DoxyCodeLine{227   \textcolor{keywordflow}{return} m\_raw[\_index];}
+\DoxyCodeLine{228 \}}
+\DoxyCodeLine{229      }
+\DoxyCodeLine{230 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{231 \textcolor{keyword}{const} T\& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{Vector<T>::operator[]}}(\textcolor{keywordtype}{size\_t} \_index)\textcolor{keyword}{ const}}
+\DoxyCodeLine{232 \textcolor{keyword}{}\{ }
+\DoxyCodeLine{233   \textcolor{keywordflow}{return} m\_raw[\_index];}
+\DoxyCodeLine{234 \}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{238 \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} \mbox{\hyperlink{structsys_1_1_vector_a3def998a75ed02ba36e172a8d804a32c}{Vector<T>::get}}(\textcolor{keywordtype}{size\_t} \_index)}
+\DoxyCodeLine{239 \{}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{241   \textcolor{keywordflow}{if}(\_index >= m\_size)}
+\DoxyCodeLine{242   \{}
+\DoxyCodeLine{243     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Index out of bounds"{}});}
+\DoxyCodeLine{244   \}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} rtn;}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249   rtn.\mbox{\hyperlink{structsys_1_1_ptr_a44d21e9ed464a28e114933ea7c445df6}{m\_ptr}} = \&m\_raw[\_index];}
+\DoxyCodeLine{250   rtn.\mbox{\hyperlink{structsys_1_1_ptr_a98a9e0d72aa47ac048fd3d790a0c9ea5}{m\_lock}}.\mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\&m\_locallock);}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{253 \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{256 \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<const T>}} \mbox{\hyperlink{structsys_1_1_vector_a3def998a75ed02ba36e172a8d804a32c}{Vector<T>::get}}(\textcolor{keywordtype}{size\_t} \_index)\textcolor{keyword}{ const}}
+\DoxyCodeLine{257 \textcolor{keyword}{}\{}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{259   \textcolor{keywordflow}{if}(\_index >= m\_size)}
+\DoxyCodeLine{260   \{}
+\DoxyCodeLine{261     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Index out of bounds"{}});}
+\DoxyCodeLine{262   \}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<const T>}} rtn;}
+\DoxyCodeLine{266 }
+\DoxyCodeLine{267   rtn.\mbox{\hyperlink{structsys_1_1_ptr_a44d21e9ed464a28e114933ea7c445df6}{m\_ptr}} = \&m\_raw[\_index];}
+\DoxyCodeLine{268   rtn.\mbox{\hyperlink{structsys_1_1_ptr_a98a9e0d72aa47ac048fd3d790a0c9ea5}{m\_lock}}.\mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\&m\_locallock);}
+\DoxyCodeLine{269 }
+\DoxyCodeLine{270   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{271 \}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{274 \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} \mbox{\hyperlink{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}{Vector<T>::push}}(\textcolor{keyword}{const} T\& \_value)}
+\DoxyCodeLine{275 \{}
+\DoxyCodeLine{276   check\_lock();}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{278   \textcolor{keywordtype}{size\_t} size = m\_size;}
+\DoxyCodeLine{279   allocate(size + 1);}
+\DoxyCodeLine{280   \textcolor{keyword}{new}(\&m\_raw[size]) T(\_value);}
+\DoxyCodeLine{281   ++m\_size;}
+\DoxyCodeLine{282 }
+\DoxyCodeLine{283   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<T>}} rtn;}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285   rtn.\mbox{\hyperlink{structsys_1_1_ptr_a44d21e9ed464a28e114933ea7c445df6}{m\_ptr}} = \&m\_raw[size];}
+\DoxyCodeLine{286   rtn.\mbox{\hyperlink{structsys_1_1_ptr_a98a9e0d72aa47ac048fd3d790a0c9ea5}{m\_lock}}.\mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\&m\_locallock);}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{289 \}}
+\DoxyCodeLine{290 }
+\DoxyCodeLine{291 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{292 \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{Vector<T>::size}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{293 \textcolor{keyword}{}\{}
+\DoxyCodeLine{294   \textcolor{keywordflow}{return} m\_size;}
+\DoxyCodeLine{295 \}}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{297 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{298 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a504adc82bf3b0bc60823dafd161577aa}{Vector<T>::clear}}()}
+\DoxyCodeLine{299 \{}
+\DoxyCodeLine{300   check\_lock();}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{302   \textcolor{keywordflow}{for}(ssize\_t ei = m\_size -\/ 1; ei >= 0; -\/-\/ei)}
+\DoxyCodeLine{303   \{}
+\DoxyCodeLine{304     m\_raw[ei].\string~T();}
+\DoxyCodeLine{305   \}}
+\DoxyCodeLine{306 }
+\DoxyCodeLine{307   m\_size = 0;}
+\DoxyCodeLine{308 \}}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{310 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{311 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{Vector<T>::resize}}(\textcolor{keywordtype}{size\_t} \_size)}
+\DoxyCodeLine{312 \{}
+\DoxyCodeLine{313   check\_lock();}
+\DoxyCodeLine{314 }
+\DoxyCodeLine{315   \textcolor{keywordflow}{if}(\_size > m\_size)}
+\DoxyCodeLine{316   \{}
+\DoxyCodeLine{317     allocate(\_size);}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{319     \textcolor{keywordflow}{while}(m\_size != \_size)}
+\DoxyCodeLine{320     \{}
+\DoxyCodeLine{321       \textcolor{keyword}{new}(\&m\_raw[m\_size]) T();}
+\DoxyCodeLine{322       ++m\_size;}
+\DoxyCodeLine{323     \}}
+\DoxyCodeLine{324   \}}
+\DoxyCodeLine{325   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\_size < m\_size)}
+\DoxyCodeLine{326   \{}
+\DoxyCodeLine{327     \textcolor{keywordflow}{while}(m\_size != \_size)}
+\DoxyCodeLine{328     \{}
+\DoxyCodeLine{329       m\_raw[m\_size -\/ 1].\string~T();}
+\DoxyCodeLine{330       -\/-\/m\_size;}
+\DoxyCodeLine{331     \}}
+\DoxyCodeLine{332   \}}
+\DoxyCodeLine{333 \}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{336 \textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<T>::Iterator}} \mbox{\hyperlink{structsys_1_1_vector_a25610c136fb95e162e92377510581b77}{Vector<T>::erase}}(\textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<T>::Iterator}}\& \_it)}
+\DoxyCodeLine{337 \{}
+\DoxyCodeLine{338   \textcolor{keywordflow}{if}(\_it.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}})}
+\DoxyCodeLine{339   \{}
+\DoxyCodeLine{340     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Attempt to erase end iterator"{}});}
+\DoxyCodeLine{341   \}}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{343   \textcolor{keywordflow}{if}(!m\_size)}
+\DoxyCodeLine{344   \{}
+\DoxyCodeLine{345     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Attempt to erase from zero sized vector"{}});}
+\DoxyCodeLine{346   \}}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{348   \textcolor{keywordtype}{size\_t} index = \_it.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}};}
+\DoxyCodeLine{349   \_it = \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<T>::Iterator}}();}
+\DoxyCodeLine{350 }
+\DoxyCodeLine{351   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = index; i < m\_size -\/ 1; ++i)}
+\DoxyCodeLine{352   \{}
+\DoxyCodeLine{353     \textcolor{comment}{// TODO: Which is best?}}
+\DoxyCodeLine{354     \textcolor{comment}{//m\_raw[i] = m\_raw[i + 1];}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{356     m\_raw[i].\string~T();}
+\DoxyCodeLine{357     \textcolor{keyword}{new}(\&m\_raw[i]) T(m\_raw[i + 1]);}
+\DoxyCodeLine{358   \}}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360   resize(m\_size -\/ 1);}
+\DoxyCodeLine{361   \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} rtn(begin());}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{363   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = 0; i < index; ++i)}
+\DoxyCodeLine{364   \{}
+\DoxyCodeLine{365     ++rtn;}
+\DoxyCodeLine{366   \}}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368   \_it = end();}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{370   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{371 \}}
+\DoxyCodeLine{372 }
+\DoxyCodeLine{373 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{374 \textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<T>::Iterator}} \mbox{\hyperlink{structsys_1_1_vector_a44a7b2597392ff058fbdcaba1c04041d}{Vector<T>::begin}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{375 \textcolor{keyword}{}\{}
+\DoxyCodeLine{376   \textcolor{keywordflow}{if}(!m\_size)}
+\DoxyCodeLine{377   \{}
+\DoxyCodeLine{378     \textcolor{keywordflow}{return} end();}
+\DoxyCodeLine{379   \}}
+\DoxyCodeLine{380 }
+\DoxyCodeLine{381   \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} rtn;}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383   rtn.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}} = 0;}
+\DoxyCodeLine{384   rtn.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}} = \textcolor{keyword}{this};}
+\DoxyCodeLine{385   rtn.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a276e42b773493f2b9e723a4aef12674c}{m\_lock}}.\mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\&m\_locallock);}
+\DoxyCodeLine{386 }
+\DoxyCodeLine{387   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{388 \}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{390 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{391 \textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<T>::Iterator}} \mbox{\hyperlink{structsys_1_1_vector_a1d2f79011bdee414554f30b0a126a7ac}{Vector<T>::end}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{392 \textcolor{keyword}{}\{}
+\DoxyCodeLine{393   \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} rtn;}
+\DoxyCodeLine{394 }
+\DoxyCodeLine{395   \textcolor{comment}{/* TODO: m\_size might be 0! */}}
+\DoxyCodeLine{396   rtn.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}} = m\_size -\/ 1;}
+\DoxyCodeLine{397   rtn.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}} = \textcolor{keyword}{this};}
+\DoxyCodeLine{398   rtn.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{400   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{401 \}}
+\DoxyCodeLine{402 }
+\DoxyCodeLine{403 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{404 \textcolor{keyword}{typename} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Vector<T>::Iterator}}\& \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2746834f1ebdbc5ccdec2bd1192d2c85}{Vector<T>::Iterator::operator++}}()}
+\DoxyCodeLine{405 \{}
+\DoxyCodeLine{406   \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}} >= \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}}-\/>size())}
+\DoxyCodeLine{407   \{}
+\DoxyCodeLine{408     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Iteration would go past end"{}});}
+\DoxyCodeLine{409   \}}
+\DoxyCodeLine{410 }
+\DoxyCodeLine{411   \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}})}
+\DoxyCodeLine{412   \{}
+\DoxyCodeLine{413     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Iteration past end"{}});}
+\DoxyCodeLine{414   \}}
+\DoxyCodeLine{415 }
+\DoxyCodeLine{416   ++\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}};}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418   \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}} >= \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}}-\/>m\_size)}
+\DoxyCodeLine{419   \{}
+\DoxyCodeLine{420     \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{421     -\/-\/\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}};}
+\DoxyCodeLine{422   \}}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{424   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{425 \}}
+\DoxyCodeLine{426 }
+\DoxyCodeLine{427 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{428 \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ad33d6e756bcf49a20bf747b2b4e321c4}{Vector<T>::Iterator::operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{429 \textcolor{keyword}{}\{}
+\DoxyCodeLine{430   \textcolor{keywordtype}{bool} rtn = m\_index == \_other.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}} \&\&}
+\DoxyCodeLine{431     m\_end == \_other.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}} \&\&}
+\DoxyCodeLine{432     m\_owner == \_other.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}};}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{434   \textcolor{keywordflow}{return} !rtn;}
+\DoxyCodeLine{435 \}}
+\DoxyCodeLine{436 }
+\DoxyCodeLine{437 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{438 \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a58047d5d9d6d06cd98d5befce27f7d98}{Vector<T>::Iterator::operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{439 \textcolor{keyword}{}\{}
+\DoxyCodeLine{440   \textcolor{keywordtype}{bool} rtn = m\_index == \_other.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a2b68d34524678340b994ece378dde927}{m\_index}} \&\&}
+\DoxyCodeLine{441     m\_end == \_other.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_ac989aa8f797d00b04635439434e5f40c}{m\_end}} \&\&}
+\DoxyCodeLine{442     m\_owner == \_other.\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a924355eb4c7772532ba980bc1d17a381}{m\_owner}};}
+\DoxyCodeLine{443 }
+\DoxyCodeLine{444   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{445 \}}
+\DoxyCodeLine{446 }
+\DoxyCodeLine{447 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{448 \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a9d925733a05ce1638602659e0bce8848}{Vector<T>::Iterator::operator-\/>}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{449 \textcolor{keyword}{}\{}
+\DoxyCodeLine{450   \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}}(\&m\_owner-\/>m\_raw[m\_index],}
+\DoxyCodeLine{451     \&m\_owner-\/>m\_locallock);}
+\DoxyCodeLine{452 \}}
+\DoxyCodeLine{453 }
+\DoxyCodeLine{454 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{455 \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>}} \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator_a538ac502454bcdf9c4f1c00a226fba3e}{Vector<T>::Iterator::operator*}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{456 \textcolor{keyword}{}\{}
+\DoxyCodeLine{457   \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>}}(\&m\_owner-\/>m\_raw[m\_index],}
+\DoxyCodeLine{458     \&m\_owner-\/>m\_locallock);}
+\DoxyCodeLine{459 \}}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{461 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{462 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a5d14785fe8168dda8ad19abc6f6546f9}{Vector<T>::check\_lock}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{463 \textcolor{keyword}{}\{}
+\DoxyCodeLine{464   \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_vector_a6da887298360781299ebd9f72f8c51f6}{m\_locallock}}.\mbox{\hyperlink{structsys_1_1_lock_block_aee725716ba4ea49dcf33b596e978a14b}{count}}() != 0)}
+\DoxyCodeLine{465   \{}
+\DoxyCodeLine{466     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Invalidating locked resource"{}});}
+\DoxyCodeLine{467   \}}
+\DoxyCodeLine{468 \}}
+\DoxyCodeLine{469 }
+\DoxyCodeLine{470 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{471 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a2d9d416e962c84921d0b219e449e5779}{Vector<T>::allocate}}(\textcolor{keywordtype}{size\_t} \_size)}
+\DoxyCodeLine{472 \{}
+\DoxyCodeLine{473   \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_vector_ad16a38a8fd5d64b213ef18580dc2042c}{m\_total}} >= \_size)}
+\DoxyCodeLine{474   \{}
+\DoxyCodeLine{475     \textcolor{keywordflow}{return};}
+\DoxyCodeLine{476   \}}
+\DoxyCodeLine{477 }
+\DoxyCodeLine{478   \textcolor{keywordtype}{size\_t} ns = 8;}
+\DoxyCodeLine{479 }
+\DoxyCodeLine{480   \textcolor{keywordflow}{while}(ns < \_size)}
+\DoxyCodeLine{481   \{}
+\DoxyCodeLine{482     ns *= 2;}
+\DoxyCodeLine{483   \}}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{485   \textcolor{keywordtype}{size\_t} total = ns;}
+\DoxyCodeLine{486   T* raw = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(calloc(total, \textcolor{keyword}{sizeof}(T)));}
+\DoxyCodeLine{487   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}} = 0;}
+\DoxyCodeLine{488 }
+\DoxyCodeLine{489   \textcolor{keywordflow}{if}(!raw)}
+\DoxyCodeLine{490   \{}
+\DoxyCodeLine{491     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Failed to allocate initial space"{}});}
+\DoxyCodeLine{492   \}}
+\DoxyCodeLine{493 }
+\DoxyCodeLine{494   \textcolor{keywordflow}{try}}
+\DoxyCodeLine{495   \{}
+\DoxyCodeLine{496     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} ei = 0; ei < \mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}}; ++ei)}
+\DoxyCodeLine{497     \{}
+\DoxyCodeLine{498       \textcolor{keyword}{new}(\&raw[ei]) T(\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}}[ei]);}
+\DoxyCodeLine{499       ++\mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}};}
+\DoxyCodeLine{500     \}}
+\DoxyCodeLine{501   \}}
+\DoxyCodeLine{502   \textcolor{keywordflow}{catch}(...)}
+\DoxyCodeLine{503   \{}
+\DoxyCodeLine{504     \textcolor{keywordflow}{for}(ssize\_t ei = \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}} -\/ 1; ei >= 0; -\/-\/ei)}
+\DoxyCodeLine{505     \{}
+\DoxyCodeLine{506       raw[ei].\string~T();}
+\DoxyCodeLine{507     \}}
+\DoxyCodeLine{508 }
+\DoxyCodeLine{509     free(raw);}
+\DoxyCodeLine{510 }
+\DoxyCodeLine{511     \textcolor{keywordflow}{throw};}
+\DoxyCodeLine{512   \}}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{514   \mbox{\hyperlink{structsys_1_1_vector_a504adc82bf3b0bc60823dafd161577aa}{clear}}();}
+\DoxyCodeLine{515   free(\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}});}
+\DoxyCodeLine{516   \mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\_size}} = \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}};}
+\DoxyCodeLine{517   \mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}} = raw;}
+\DoxyCodeLine{518   \mbox{\hyperlink{structsys_1_1_vector_ad16a38a8fd5d64b213ef18580dc2042c}{m\_total}} = total;}
+\DoxyCodeLine{519 \}}
+\DoxyCodeLine{520 }
+\DoxyCodeLine{521 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{522 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a23924df8b7c27e0ffc0adbd9d40fa1ea}{Vector<T>::sort}}(\textcolor{keywordtype}{bool} (*\_func)(T\&, T\&))}
+\DoxyCodeLine{523 \{}
+\DoxyCodeLine{524   \mbox{\hyperlink{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}{quicksort}}(0, \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}}() -\/ 1, \_func);}
+\DoxyCodeLine{525 \}}
+\DoxyCodeLine{526 }
+\DoxyCodeLine{527 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{528 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}{Vector<T>::swap}}(T\& \_a, T\& \_b)}
+\DoxyCodeLine{529 \{}
+\DoxyCodeLine{530   T t = \_a;}
+\DoxyCodeLine{531   \_a = \_b;}
+\DoxyCodeLine{532   \_b = t;}
+\DoxyCodeLine{533 \}}
+\DoxyCodeLine{534 }
+\DoxyCodeLine{535 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{536 \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_vector_a25450e09cf839682506f1329d19ac205}{Vector<T>::compareFunc}}(T\& \_a, T\& \_b)}
+\DoxyCodeLine{537 \{}
+\DoxyCodeLine{538   \textcolor{keywordflow}{if}(\_a > \_b)}
+\DoxyCodeLine{539   \{}
+\DoxyCodeLine{540     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{541   \}}
+\DoxyCodeLine{542 }
+\DoxyCodeLine{543   \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{544 \}}
+\DoxyCodeLine{545 }
+\DoxyCodeLine{546 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{547 \textcolor{keywordtype}{int} \mbox{\hyperlink{structsys_1_1_vector_ade93aa5ceec3b859aeef905309ade160}{Vector<T>::partition}}(\textcolor{keywordtype}{int} \_low, \textcolor{keywordtype}{int} \_high, \textcolor{keywordtype}{bool} (*\_func)(T\&, T\&))}
+\DoxyCodeLine{548 \{}
+\DoxyCodeLine{549   \textcolor{keywordtype}{int} i = \_low -\/ 1;}
+\DoxyCodeLine{550   \mbox{\hyperlink{structsys_1_1_vector}{Vector<T>}}\& \mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}} = *\textcolor{keyword}{this};}
+\DoxyCodeLine{551 }
+\DoxyCodeLine{552   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = \_low; j <= \_high -\/ 1; ++j)}
+\DoxyCodeLine{553   \{}
+\DoxyCodeLine{554     \textcolor{keywordflow}{if}(\_func(\mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}}[j], \mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}}[\_high]))}
+\DoxyCodeLine{555     \{}
+\DoxyCodeLine{556       ++i;}
+\DoxyCodeLine{557       \mbox{\hyperlink{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}{swap}}(\mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}}[i], \mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}}[j]);}
+\DoxyCodeLine{558     \}}
+\DoxyCodeLine{559   \}}
+\DoxyCodeLine{560 }
+\DoxyCodeLine{561   \mbox{\hyperlink{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}{swap}}(\mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}}[i + 1], \mbox{\hyperlink{_private_8h_a211343b9c64dbd216c5bbd6c1409f11d}{self}}[\_high]);}
+\DoxyCodeLine{562 }
+\DoxyCodeLine{563   \textcolor{keywordflow}{return} i + 1;}
+\DoxyCodeLine{564 \}}
+\DoxyCodeLine{565 }
+\DoxyCodeLine{566 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{567 T* \mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{Vector<T>::unsafe\_raw}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{568 \textcolor{keyword}{}\{}
+\DoxyCodeLine{569   \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\_raw}}[0];}
+\DoxyCodeLine{570 \}}
+\DoxyCodeLine{571 }
+\DoxyCodeLine{572 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{573 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}{Vector<T>::quicksort}}(\textcolor{keywordtype}{int} \_low, \textcolor{keywordtype}{int} \_high, \textcolor{keywordtype}{bool} (*\_func)(T\&, T\&))}
+\DoxyCodeLine{574 \{}
+\DoxyCodeLine{575   \textcolor{keywordflow}{if}(\_low < \_high)}
+\DoxyCodeLine{576   \{}
+\DoxyCodeLine{577     \textcolor{keywordtype}{int} pivot = \mbox{\hyperlink{structsys_1_1_vector_ade93aa5ceec3b859aeef905309ade160}{partition}}(\_low, \_high, \_func);}
+\DoxyCodeLine{578 }
+\DoxyCodeLine{579     \mbox{\hyperlink{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}{quicksort}}(\_low, pivot -\/ 1, \_func);}
+\DoxyCodeLine{580     \mbox{\hyperlink{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}{quicksort}}(pivot + 1, \_high, \_func);}
+\DoxyCodeLine{581   \}}
+\DoxyCodeLine{582 \}}
+\DoxyCodeLine{583 }
+\DoxyCodeLine{584 \}}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{587 }
+
+\end{DoxyCode}

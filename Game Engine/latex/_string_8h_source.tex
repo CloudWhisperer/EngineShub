@@ -1,0 +1,229 @@
+\hypertarget{_string_8h_source}{}\doxysection{String.\+h}
+\label{_string_8h_source}\index{src/rend/sys/String.h@{src/rend/sys/String.h}}
+\mbox{\hyperlink{_string_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_STRING\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_STRING\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_8h}{Vector.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{Ptr.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{panic_8h}{panic.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{_string_8h}{string.h}}>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#define SYS\_TAKE\_RAW                 \(\backslash\)}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{  size\_t len = strlen(\_value);       \(\backslash\)}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{  m\_data.resize(len + 1);            \(\backslash\)}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{                                     \(\backslash\)}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{  for(size\_t ci = 0; ci < len; ++ci) \(\backslash\)}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{  \{                                  \(\backslash\)}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{    m\_data[ci] = \_value[ci];         \(\backslash\)}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{  \}                                  \(\backslash\)}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{                                     \(\backslash\)}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{  m\_data[m\_data.size() -\/ 1] = 0;     \(\backslash\)}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{}}
+\DoxyCodeLine{21 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{22 \{}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_string}{String}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{EnablePtr}}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26   \mbox{\hyperlink{structsys_1_1_string_a62649577bae65a176b7601829cab5e1c}{String}}()}
+\DoxyCodeLine{27   \{}
+\DoxyCodeLine{28     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}{push}}(0);}
+\DoxyCodeLine{29   \}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31   \mbox{\hyperlink{structsys_1_1_string_a08a1cbff4d2531d6e4359b91c4c7f613}{String}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_value)}
+\DoxyCodeLine{32   \{}
+\DoxyCodeLine{33     \mbox{\hyperlink{_string_8h_a547a41675d74fdf4b847f6744ea8823c}{SYS\_TAKE\_RAW}}}
+\DoxyCodeLine{34   \}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36   \mbox{\hyperlink{structsys_1_1_string}{String}}\& \mbox{\hyperlink{structsys_1_1_string_a41ee7d2db584ecabf3e60b65e82d034a}{operator=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_value)}
+\DoxyCodeLine{37   \{}
+\DoxyCodeLine{38     \mbox{\hyperlink{_string_8h_a547a41675d74fdf4b847f6744ea8823c}{SYS\_TAKE\_RAW}}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{41   \}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   \mbox{\hyperlink{structsys_1_1_string}{String}}\& \mbox{\hyperlink{structsys_1_1_string_adb3f520173919502696e84c2e5a99e8c}{operator+=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_value)}
+\DoxyCodeLine{44   \{}
+\DoxyCodeLine{45     \textcolor{keywordtype}{size\_t} len = \_value.\mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}();}
+\DoxyCodeLine{46     \textcolor{keywordtype}{size\_t} cs = \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}();}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{resize}}(cs + len + 1);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} ci = 0; ci < len; ++ci)}
+\DoxyCodeLine{51     \{}
+\DoxyCodeLine{52       \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[cs + ci] = \_value[ci];}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}}() -\/ 1] = 0;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{58   \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60   \mbox{\hyperlink{structsys_1_1_string}{String}}\& \mbox{\hyperlink{structsys_1_1_string_ab6d4f20cfc8f3bc963c036e0110e4823}{operator+=}}(\textcolor{keywordtype}{char} \_value)}
+\DoxyCodeLine{61   \{}
+\DoxyCodeLine{62     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}}() -\/ 1] = \_value;}
+\DoxyCodeLine{63     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}{push}}(0);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{66   \}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68   \mbox{\hyperlink{structsys_1_1_string}{String}}\& \mbox{\hyperlink{structsys_1_1_string_a66740aa12bed0218b007ab965e6487dd}{operator+=}}(\textcolor{keyword}{const} \textcolor{keywordtype}{char}* \_value)}
+\DoxyCodeLine{69   \{}
+\DoxyCodeLine{70     \textcolor{keywordtype}{size\_t} len = strlen(\_value);}
+\DoxyCodeLine{71     \textcolor{keywordtype}{size\_t} cs = \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}();}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{resize}}(cs + len + 1);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} ci = 0; ci < len; ++ci)}
+\DoxyCodeLine{76     \{}
+\DoxyCodeLine{77       \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[cs + ci] = \_value[ci];}
+\DoxyCodeLine{78     \}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}}() -\/ 1] = 0;}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{83   \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_string_a895e08ae75146b5334ba64c7f516259a}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{86 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{87     \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}(), \_other.\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}()) == 0)}
+\DoxyCodeLine{88     \{}
+\DoxyCodeLine{89       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{90     \}}
+\DoxyCodeLine{91 }
+\DoxyCodeLine{92     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{93   \}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{95   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_string_a5d1159053d697b9a5d4bdc55fefe2a91}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{96 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{97     \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}(), \_other.\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}()) != 0)}
+\DoxyCodeLine{98     \{}
+\DoxyCodeLine{99       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{100     \}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{103   \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_string_afc5b974577e895fd1e844a81045b5847}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{106 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{107     \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}(), \_other.\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}()) < 0)}
+\DoxyCodeLine{108     \{}
+\DoxyCodeLine{109       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{113   \}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_string_adf0556e0117ea9594b08dd915abe84e2}{operator>}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{116 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}(), \_other.\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}()) > 0)}
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{123   \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_string_a1e9a61f456f72bb325e2932a90388aea}{operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{126 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{127     \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}(), \_other.\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}()) <= 0)}
+\DoxyCodeLine{128     \{}
+\DoxyCodeLine{129       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{130     \}}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{132     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{133   \}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_string_a85270ebf07fd353e66772760b232f353}{operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{136 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{137     \textcolor{keywordflow}{if}(strcmp(\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}(), \_other.\mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}()) >= 0)}
+\DoxyCodeLine{138     \{}
+\DoxyCodeLine{139       \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{140     \}}
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{143   \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145   \textcolor{keywordtype}{char}\& \mbox{\hyperlink{structsys_1_1_string_aa337841a3a2676e1331f7971d0e19417}{operator[]}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_index)}
+\DoxyCodeLine{146   \{}
+\DoxyCodeLine{147     \textcolor{keywordflow}{if}(\_index >= \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}())}
+\DoxyCodeLine{148     \{}
+\DoxyCodeLine{149       printf(\textcolor{stringliteral}{"{}Character index out of bounds \%i, \%i"{}}, (\textcolor{keywordtype}{int})\_index, (\textcolor{keywordtype}{int})\mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}());}
+\DoxyCodeLine{150       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Character index out of bounds"{}});}
+\DoxyCodeLine{151     \}}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[\_index];}
+\DoxyCodeLine{154   \}}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156   \textcolor{keyword}{const} \textcolor{keywordtype}{char}\& \mbox{\hyperlink{structsys_1_1_string_ab2d71dede45a9864b114067558a0cbb7}{operator[]}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_index)\textcolor{keyword}{ const}}
+\DoxyCodeLine{157 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{158     \textcolor{keywordflow}{if}(\_index >= \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}())}
+\DoxyCodeLine{159     \{}
+\DoxyCodeLine{160       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Character (const) index out of bounds"{}});}
+\DoxyCodeLine{161     \}}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[\_index];}
+\DoxyCodeLine{164   \}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{167 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{168     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}}() -\/ 1;}
+\DoxyCodeLine{169   \}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_string_abd94d9f294462ef6b87acbcd0f7e36a7}{resize}}(\textcolor{keywordtype}{size\_t} \_newSize)}
+\DoxyCodeLine{172   \{}
+\DoxyCodeLine{173     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{resize}}(\_newSize + 1);}
+\DoxyCodeLine{174     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[\_newSize] = 0;}
+\DoxyCodeLine{175   \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_string_aa8a83da0fad476b938a00cd18b9cf3b4}{clear}}()}
+\DoxyCodeLine{178   \{}
+\DoxyCodeLine{179     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{resize}}(1);}
+\DoxyCodeLine{180     \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[0] = 0;}
+\DoxyCodeLine{181   \}}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{183   \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{structsys_1_1_string_ac8f19f6869d650281b91279fd0ac6a52}{unsafe\_raw}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{184 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{185     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}.\mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\_raw}}();}
+\DoxyCodeLine{186   \}}
+\DoxyCodeLine{187 }
+\DoxyCodeLine{188   \mbox{\hyperlink{structsys_1_1_string}{String}} \mbox{\hyperlink{structsys_1_1_string_a9565aa78a708b8433a065c100f1f891a}{substring}}(\textcolor{keywordtype}{size\_t} \_begin, \textcolor{keywordtype}{size\_t} \_count)\textcolor{keyword}{ const}}
+\DoxyCodeLine{189 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{190     \textcolor{keywordflow}{if}(\_begin + \_count > \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}())}
+\DoxyCodeLine{191     \{}
+\DoxyCodeLine{192       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Substring out of bounds"{}});}
+\DoxyCodeLine{193     \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195     \mbox{\hyperlink{structsys_1_1_string}{String}} rtn;}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t} i = \_begin; i < \_begin + \_count; ++i)}
+\DoxyCodeLine{198     \{}
+\DoxyCodeLine{199       rtn += \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}}[i];}
+\DoxyCodeLine{200     \}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202     \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{203   \}}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205   \mbox{\hyperlink{structsys_1_1_string}{String}} \mbox{\hyperlink{structsys_1_1_string_a182a207fd4ec1c7d441ef2c9032fb7ee}{substring}}(\textcolor{keywordtype}{size\_t} \_begin)\textcolor{keyword}{ const}}
+\DoxyCodeLine{206 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{207     \textcolor{keywordflow}{if}(\_begin > \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}())}
+\DoxyCodeLine{208     \{}
+\DoxyCodeLine{209       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Substring begins out of bounds"{}});}
+\DoxyCodeLine{210     \}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_string_a9565aa78a708b8433a065c100f1f891a}{substring}}(\_begin, \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}}() -\/ \_begin);}
+\DoxyCodeLine{213   \}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \textcolor{keyword}{private}:}
+\DoxyCodeLine{216   \mbox{\hyperlink{structsys_1_1_vector}{Vector<char>}} \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\_data}};}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 \};}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 \}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{223 }
+
+\end{DoxyCode}

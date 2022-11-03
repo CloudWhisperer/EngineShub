@@ -1,0 +1,53 @@
+\hypertarget{_list_8h}{}\doxysection{src/rend/sys/\+List.h File Reference}
+\label{_list_8h}\index{src/rend/sys/List.h@{src/rend/sys/List.h}}
+{\ttfamily \#include \char`\"{}Ptr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}panic.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List$<$ T $>$}}
+\item 
+struct \mbox{\hyperlink{structsys_1_1_list_1_1_node}{sys\+::\+List$<$ T $>$\+::\+Node}}
+\item 
+struct \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{sys\+::\+List$<$ T $>$\+::\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesys}{sys}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_list_8h_a026c6dcce48984c6b3fdd42995bf7057}{REF\+\_\+\+LIST\+\_\+\+ATTACH}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_list_8h_a026c6dcce48984c6b3fdd42995bf7057}\label{_list_8h_a026c6dcce48984c6b3fdd42995bf7057}} 
+\index{List.h@{List.h}!REF\_LIST\_ATTACH@{REF\_LIST\_ATTACH}}
+\index{REF\_LIST\_ATTACH@{REF\_LIST\_ATTACH}!List.h@{List.h}}
+\doxysubsubsection{\texorpdfstring{REF\_LIST\_ATTACH}{REF\_LIST\_ATTACH}}
+{\footnotesize\ttfamily \#define REF\+\_\+\+LIST\+\_\+\+ATTACH}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{if}(m\_last)                      \(\backslash\)}
+\DoxyCodeLine{  \{                               \(\backslash\)}
+\DoxyCodeLine{    node-\/>m\_prev = m\_last;        \(\backslash\)}
+\DoxyCodeLine{    m\_last-\/>m\_next = node;        \(\backslash\)}
+\DoxyCodeLine{    m\_last = node;                \(\backslash\)}
+\DoxyCodeLine{  \}                               \(\backslash\)}
+\DoxyCodeLine{  \textcolor{keywordflow}{else}                            \(\backslash\)}
+\DoxyCodeLine{  \{                               \(\backslash\)}
+\DoxyCodeLine{    m\_first = node;               \(\backslash\)}
+\DoxyCodeLine{    m\_last = node;                \(\backslash\)}
+\DoxyCodeLine{  \}                               \(\backslash\)}
+\DoxyCodeLine{                                  \(\backslash\)}
+\DoxyCodeLine{  Ptr<T> rtn;                     \(\backslash\)}
+\DoxyCodeLine{  rtn.m\_ptr = \&node-\/>m\_value;     \(\backslash\)}
+\DoxyCodeLine{  rtn.m\_lock.lock(\&node-\/>m\_lock); \(\backslash\)}
+\DoxyCodeLine{                                  \(\backslash\)}
+\DoxyCodeLine{  \textcolor{keywordflow}{return} rtn;}
+
+\end{DoxyCode}

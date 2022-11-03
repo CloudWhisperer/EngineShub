@@ -1,0 +1,200 @@
+\hypertarget{structsys_1_1_string}{}\doxysection{sys\+::String Struct Reference}
+\label{structsys_1_1_string}\index{sys::String@{sys::String}}
+
+
+{\ttfamily \#include $<$String.\+h$>$}
+
+Inheritance diagram for sys\+::String\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structsys_1_1_string}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_string_a62649577bae65a176b7601829cab5e1c}{String}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_string_a08a1cbff4d2531d6e4359b91c4c7f613}{String}} (const char $\ast$\+\_\+value)
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \& \mbox{\hyperlink{structsys_1_1_string_a41ee7d2db584ecabf3e60b65e82d034a}{operator=}} (const char $\ast$\+\_\+value)
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \& \mbox{\hyperlink{structsys_1_1_string_adb3f520173919502696e84c2e5a99e8c}{operator+=}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+value)
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \& \mbox{\hyperlink{structsys_1_1_string_ab6d4f20cfc8f3bc963c036e0110e4823}{operator+=}} (char \+\_\+value)
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \& \mbox{\hyperlink{structsys_1_1_string_a66740aa12bed0218b007ab965e6487dd}{operator+=}} (const char $\ast$\+\_\+value)
+\item 
+bool \mbox{\hyperlink{structsys_1_1_string_a895e08ae75146b5334ba64c7f516259a}{operator==}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+other) const
+\item 
+bool \mbox{\hyperlink{structsys_1_1_string_a5d1159053d697b9a5d4bdc55fefe2a91}{operator!=}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+other) const
+\item 
+bool \mbox{\hyperlink{structsys_1_1_string_afc5b974577e895fd1e844a81045b5847}{operator$<$}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+other) const
+\item 
+bool \mbox{\hyperlink{structsys_1_1_string_adf0556e0117ea9594b08dd915abe84e2}{operator$>$}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+other) const
+\item 
+bool \mbox{\hyperlink{structsys_1_1_string_a1e9a61f456f72bb325e2932a90388aea}{operator$<$=}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+other) const
+\item 
+bool \mbox{\hyperlink{structsys_1_1_string_a85270ebf07fd353e66772760b232f353}{operator$>$=}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+other) const
+\item 
+char \& \mbox{\hyperlink{structsys_1_1_string_aa337841a3a2676e1331f7971d0e19417}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&\+\_\+index)
+\item 
+const char \& \mbox{\hyperlink{structsys_1_1_string_ab2d71dede45a9864b114067558a0cbb7}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&\+\_\+index) const
+\item 
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}{length}} () const
+\item 
+void \mbox{\hyperlink{structsys_1_1_string_abd94d9f294462ef6b87acbcd0f7e36a7}{resize}} (size\+\_\+t \+\_\+new\+Size)
+\item 
+void \mbox{\hyperlink{structsys_1_1_string_aa8a83da0fad476b938a00cd18b9cf3b4}{clear}} ()
+\item 
+const char $\ast$ \mbox{\hyperlink{structsys_1_1_string_ac8f19f6869d650281b91279fd0ac6a52}{unsafe\+\_\+raw}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \mbox{\hyperlink{structsys_1_1_string_a9565aa78a708b8433a065c100f1f891a}{substring}} (size\+\_\+t \+\_\+begin, size\+\_\+t \+\_\+count) const
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \mbox{\hyperlink{structsys_1_1_string_a182a207fd4ec1c7d441ef2c9032fb7ee}{substring}} (size\+\_\+t \+\_\+begin) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ char $>$ \mbox{\hyperlink{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}{m\+\_\+data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_string_a62649577bae65a176b7601829cab5e1c}\label{structsys_1_1_string_a62649577bae65a176b7601829cab5e1c}} 
+\index{sys::String@{sys::String}!String@{String}}
+\index{String@{String}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sys\+::\+String\+::\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a08a1cbff4d2531d6e4359b91c4c7f613}\label{structsys_1_1_string_a08a1cbff4d2531d6e4359b91c4c7f613}} 
+\index{sys::String@{sys::String}!String@{String}}
+\index{String@{String}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{String()}{String()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sys\+::\+String\+::\+String (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_string_aa8a83da0fad476b938a00cd18b9cf3b4}\label{structsys_1_1_string_aa8a83da0fad476b938a00cd18b9cf3b4}} 
+\index{sys::String@{sys::String}!clear@{clear}}
+\index{clear@{clear}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void sys\+::\+String\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}\label{structsys_1_1_string_a0345dc0d93558747627338c230e69f69}} 
+\index{sys::String@{sys::String}!length@{length}}
+\index{length@{length}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{length()}{length()}}
+{\footnotesize\ttfamily size\+\_\+t sys\+::\+String\+::length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a5d1159053d697b9a5d4bdc55fefe2a91}\label{structsys_1_1_string_a5d1159053d697b9a5d4bdc55fefe2a91}} 
+\index{sys::String@{sys::String}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool sys\+::\+String\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_ab6d4f20cfc8f3bc963c036e0110e4823}\label{structsys_1_1_string_ab6d4f20cfc8f3bc963c036e0110e4823}} 
+\index{sys::String@{sys::String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} \& sys\+::\+String\+::operator+= (\begin{DoxyParamCaption}\item[{char}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a66740aa12bed0218b007ab965e6487dd}\label{structsys_1_1_string_a66740aa12bed0218b007ab965e6487dd}} 
+\index{sys::String@{sys::String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} \& sys\+::\+String\+::operator+= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_adb3f520173919502696e84c2e5a99e8c}\label{structsys_1_1_string_adb3f520173919502696e84c2e5a99e8c}} 
+\index{sys::String@{sys::String}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} \& sys\+::\+String\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_afc5b974577e895fd1e844a81045b5847}\label{structsys_1_1_string_afc5b974577e895fd1e844a81045b5847}} 
+\index{sys::String@{sys::String}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool sys\+::\+String\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a1e9a61f456f72bb325e2932a90388aea}\label{structsys_1_1_string_a1e9a61f456f72bb325e2932a90388aea}} 
+\index{sys::String@{sys::String}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool sys\+::\+String\+::operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a41ee7d2db584ecabf3e60b65e82d034a}\label{structsys_1_1_string_a41ee7d2db584ecabf3e60b65e82d034a}} 
+\index{sys::String@{sys::String}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} \& sys\+::\+String\+::operator= (\begin{DoxyParamCaption}\item[{const char $\ast$}]{\+\_\+value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a895e08ae75146b5334ba64c7f516259a}\label{structsys_1_1_string_a895e08ae75146b5334ba64c7f516259a}} 
+\index{sys::String@{sys::String}!operator==@{operator==}}
+\index{operator==@{operator==}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool sys\+::\+String\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_adf0556e0117ea9594b08dd915abe84e2}\label{structsys_1_1_string_adf0556e0117ea9594b08dd915abe84e2}} 
+\index{sys::String@{sys::String}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool sys\+::\+String\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a85270ebf07fd353e66772760b232f353}\label{structsys_1_1_string_a85270ebf07fd353e66772760b232f353}} 
+\index{sys::String@{sys::String}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool sys\+::\+String\+::operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_aa337841a3a2676e1331f7971d0e19417}\label{structsys_1_1_string_aa337841a3a2676e1331f7971d0e19417}} 
+\index{sys::String@{sys::String}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily char \& sys\+::\+String\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&}]{\+\_\+index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_ab2d71dede45a9864b114067558a0cbb7}\label{structsys_1_1_string_ab2d71dede45a9864b114067558a0cbb7}} 
+\index{sys::String@{sys::String}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const char \& sys\+::\+String\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&}]{\+\_\+index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_abd94d9f294462ef6b87acbcd0f7e36a7}\label{structsys_1_1_string_abd94d9f294462ef6b87acbcd0f7e36a7}} 
+\index{sys::String@{sys::String}!resize@{resize}}
+\index{resize@{resize}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void sys\+::\+String\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+new\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a182a207fd4ec1c7d441ef2c9032fb7ee}\label{structsys_1_1_string_a182a207fd4ec1c7d441ef2c9032fb7ee}} 
+\index{sys::String@{sys::String}!substring@{substring}}
+\index{substring@{substring}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{substring()}{substring()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} sys\+::\+String\+::substring (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+begin }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_a9565aa78a708b8433a065c100f1f891a}\label{structsys_1_1_string_a9565aa78a708b8433a065c100f1f891a}} 
+\index{sys::String@{sys::String}!substring@{substring}}
+\index{substring@{substring}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{substring()}{substring()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} sys\+::\+String\+::substring (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+begin,  }\item[{size\+\_\+t}]{\+\_\+count }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_string_ac8f19f6869d650281b91279fd0ac6a52}\label{structsys_1_1_string_ac8f19f6869d650281b91279fd0ac6a52}} 
+\index{sys::String@{sys::String}!unsafe\_raw@{unsafe\_raw}}
+\index{unsafe\_raw@{unsafe\_raw}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{unsafe\_raw()}{unsafe\_raw()}}
+{\footnotesize\ttfamily const char $\ast$ sys\+::\+String\+::unsafe\+\_\+raw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}\label{structsys_1_1_string_ad8cb1d6fb548c0541d7da80eb49f4523}} 
+\index{sys::String@{sys::String}!m\_data@{m\_data}}
+\index{m\_data@{m\_data}!sys::String@{sys::String}}
+\doxysubsubsection{\texorpdfstring{m\_data}{m\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$char$>$ sys\+::\+String\+::m\+\_\+data\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_string_8h}{String.\+h}}\end{DoxyCompactItemize}

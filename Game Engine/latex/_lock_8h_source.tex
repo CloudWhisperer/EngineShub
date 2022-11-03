@@ -1,0 +1,288 @@
+\hypertarget{_lock_8h_source}{}\doxysection{Lock.\+h}
+\label{_lock_8h_source}\index{src/rend/sys/Lock.h@{src/rend/sys/Lock.h}}
+\mbox{\hyperlink{_lock_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_LOCK\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_LOCK\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{panic_8h}{panic.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{Zero.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <typeinfo>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{14 \textcolor{comment}{ * LockBlock}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ * Acts as a store for the lock count which can be incremented and}}
+\DoxyCodeLine{17 \textcolor{comment}{ * decremented.}}
+\DoxyCodeLine{18 \textcolor{comment}{ ***************************************************************************/}}
+\DoxyCodeLine{19 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21   \mbox{\hyperlink{structsys_1_1_lock_block_af0e3bf9514704e6ca0ff07be45fd34ae}{LockBlock}}()}
+\DoxyCodeLine{22   \{ \}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24   \mbox{\hyperlink{structsys_1_1_lock_block_a5d6f7d56a7b3a93bf236e62a73875906}{\string~LockBlock}}()}
+\DoxyCodeLine{25   \{}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{27     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_block_aead2b8e3dfc289c794566986c5ba0ac8}{m\_count}} != 0)}
+\DoxyCodeLine{28     \{}
+\DoxyCodeLine{29       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Resource is locked during destruction"{}});}
+\DoxyCodeLine{30     \}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{32   \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \textcolor{keywordtype}{int} \mbox{\hyperlink{structsys_1_1_lock_block_aee725716ba4ea49dcf33b596e978a14b}{count}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{35 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{36     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_lock_block_aead2b8e3dfc289c794566986c5ba0ac8}{m\_count}};}
+\DoxyCodeLine{37   \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_lock_block_ae23d986b6b54bca7ba15882ae9b25b34}{increment}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{40 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{42     ++\mbox{\hyperlink{structsys_1_1_lock_block_aead2b8e3dfc289c794566986c5ba0ac8}{m\_count}};}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{44   \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_lock_block_a98de6d67eca1df19371fba6666985b44}{decrement}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{47 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{structsys_1_1_lock_block_aead2b8e3dfc289c794566986c5ba0ac8}{m\_count}})}
+\DoxyCodeLine{50     \{}
+\DoxyCodeLine{51       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Cannot decrease count less than 0"{}});}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     -\/-\/\mbox{\hyperlink{structsys_1_1_lock_block_aead2b8e3dfc289c794566986c5ba0ac8}{m\_count}};}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{56   \}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58   \textcolor{keyword}{mutable} \mbox{\hyperlink{structsys_1_1_zero}{Zero<const char*>}} \mbox{\hyperlink{structsys_1_1_lock_block_a32832f70994c0475c1f722c8fed81b3a}{type\_name}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{keyword}{private}:}
+\DoxyCodeLine{61   \textcolor{keyword}{mutable} \mbox{\hyperlink{structsys_1_1_zero}{Zero<int>}} \mbox{\hyperlink{structsys_1_1_lock_block_aead2b8e3dfc289c794566986c5ba0ac8}{m\_count}};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{63   \mbox{\hyperlink{structsys_1_1_lock_block_ad7194f09680875afb94f0f8811c27a56}{LockBlock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}\& \_copy);}
+\DoxyCodeLine{64   \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}\& \mbox{\hyperlink{structsys_1_1_lock_block_a7aa3872a9bf76f4040511ebf4b1c3234}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}\& \_other);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \};}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_lock}{Lock}}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70   \mbox{\hyperlink{structsys_1_1_lock_a90eb83fc9ee235763c368b3625baec4d}{Lock}}()}
+\DoxyCodeLine{71   \{ \}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73   \mbox{\hyperlink{structsys_1_1_lock_aad2799738b1abfa17e99501c0cfbf61f}{Lock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock}{Lock}}\& \_copy) :}
+\DoxyCodeLine{74     \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}(\_copy.\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}})}
+\DoxyCodeLine{75   \{}
+\DoxyCodeLine{76     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}})}
+\DoxyCodeLine{77     \{}
+\DoxyCodeLine{78       \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>increment();}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80   \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   \mbox{\hyperlink{structsys_1_1_lock_ad181060b0c643d09c2eb8e9947ff4a86}{Lock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_block) :}
+\DoxyCodeLine{83     \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}(\_block)}
+\DoxyCodeLine{84   \{}
+\DoxyCodeLine{85     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}})}
+\DoxyCodeLine{86     \{}
+\DoxyCodeLine{87       \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>increment();}
+\DoxyCodeLine{88     \}}
+\DoxyCodeLine{89   \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91   \mbox{\hyperlink{structsys_1_1_lock}{Lock}}\& \mbox{\hyperlink{structsys_1_1_lock_ab59b981cd4fe3999ea81def26dcd781d}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock}{Lock}}\& \_other)}
+\DoxyCodeLine{92   \{}
+\DoxyCodeLine{93     \textcolor{keywordflow}{if}(\textcolor{keyword}{this} != \&\_other)}
+\DoxyCodeLine{94     \{}
+\DoxyCodeLine{95       \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}) \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>decrement();}
+\DoxyCodeLine{96       \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}} = \_other.\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}};}
+\DoxyCodeLine{97       \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}) \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>increment();}
+\DoxyCodeLine{98     \}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100     \textcolor{comment}{//lock(\_other.m\_block);}}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{103   \}}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105   \mbox{\hyperlink{structsys_1_1_lock_a5eccdde0a6bec55e0857a919ae530375}{\string~Lock}}()}
+\DoxyCodeLine{106   \{}
+\DoxyCodeLine{107     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}})}
+\DoxyCodeLine{108     \{}
+\DoxyCodeLine{109       \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>decrement();}
+\DoxyCodeLine{110     \}}
+\DoxyCodeLine{111   \}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_block)\textcolor{keyword}{ const}}
+\DoxyCodeLine{114 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{115     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}} == \_block) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}})}
+\DoxyCodeLine{118     \{}
+\DoxyCodeLine{119       \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>decrement();}
+\DoxyCodeLine{120     \}}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122     \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}} = \_block;}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}})}
+\DoxyCodeLine{125     \{}
+\DoxyCodeLine{126       \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}}-\/>increment();}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128   \}}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{130   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_lock_aba49da3046f9fa8ed67460da74f9c47d}{lock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}\& \_block)\textcolor{keyword}{ const}}
+\DoxyCodeLine{131 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{132     \mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\&\_block);}
+\DoxyCodeLine{133   \}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135   \textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \mbox{\hyperlink{structsys_1_1_lock_ad948184426f1f9a8c336483ec5fd03c0}{block}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{136 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}};}
+\DoxyCodeLine{138   \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{140 \textcolor{keyword}{private}:}
+\DoxyCodeLine{141   \textcolor{keyword}{mutable} \mbox{\hyperlink{structsys_1_1_zero}{Zero<const LockBlock*>}} \mbox{\hyperlink{structsys_1_1_lock_aba3d27018db8c4734f01cb1cc5ba2602}{m\_block}};}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143 \};}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{146 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}};}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{149 \textcolor{comment}{ * PtrLock}}
+\DoxyCodeLine{150 \textcolor{comment}{ *}}
+\DoxyCodeLine{151 \textcolor{comment}{ * Hooks into the operator-\/> dereference and creates a wrapper object that}}
+\DoxyCodeLine{152 \textcolor{comment}{ * forwards through the T* but also increments a lock throughout the}}
+\DoxyCodeLine{153 \textcolor{comment}{ * lifespan of the object.}}
+\DoxyCodeLine{154 \textcolor{comment}{ ***************************************************************************/}}
+\DoxyCodeLine{155 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{156 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock}}}
+\DoxyCodeLine{157 \{}
+\DoxyCodeLine{158   \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock}}(T* \_ptr, \textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_lock);}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160   T* \mbox{\hyperlink{structsys_1_1_ptr_lock_a2f402749b7920d9e5b51fce01bd75983}{operator-\/>}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{keyword}{private}:}
+\DoxyCodeLine{163   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{164   \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}};}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{166   \mbox{\hyperlink{structsys_1_1_zero}{Zero<T*>}} \mbox{\hyperlink{structsys_1_1_ptr_lock_ab9df6547039dc0e6059c3848ea746976}{m\_ptr}};}
+\DoxyCodeLine{167   \mbox{\hyperlink{structsys_1_1_lock}{Lock}} \mbox{\hyperlink{structsys_1_1_ptr_lock_a899947ab62b1603e4791f1c77a7c3493}{m\_lock}};}
+\DoxyCodeLine{168 \};}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170 \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{171 \textcolor{comment}{ * RefLock}}
+\DoxyCodeLine{172 \textcolor{comment}{ ***************************************************************************/}}
+\DoxyCodeLine{173 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{174 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ref}{Ref}};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{177 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock}}}
+\DoxyCodeLine{178 \{}
+\DoxyCodeLine{179   \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock}}(T* \_ptr, \textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_lock);}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181   \textcolor{keyword}{operator} T\&() \textcolor{keyword}{const};}
+\DoxyCodeLine{182   T* \mbox{\hyperlink{structsys_1_1_ref_lock_a29777537acfd8ab52d3c7e139140cbc8}{operator\&}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184   \textcolor{comment}{// TODO: This one required?}}
+\DoxyCodeLine{185   T* \mbox{\hyperlink{structsys_1_1_ref_lock_a07a638f359a4b1741b40c8d3c8a9696b}{operator-\/>}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{keyword}{private}:}
+\DoxyCodeLine{188   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{189   \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ref}{Ref}};}
+\DoxyCodeLine{190 }
+\DoxyCodeLine{191   \mbox{\hyperlink{structsys_1_1_zero}{Zero<T*>}} \mbox{\hyperlink{structsys_1_1_ref_lock_a2da5c2d5ace12115241c91968a4ff09f}{m\_ptr}};}
+\DoxyCodeLine{192   \mbox{\hyperlink{structsys_1_1_lock}{Lock}} \mbox{\hyperlink{structsys_1_1_ref_lock_aa47581341c1a811a0fd12f2f2a5a443a}{m\_lock}};}
+\DoxyCodeLine{193 \};}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{195 \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{196 \textcolor{comment}{ * IndexLock}}
+\DoxyCodeLine{197 \textcolor{comment}{ *}}
+\DoxyCodeLine{198 \textcolor{comment}{ * Hooks into the array operator[] in that it creates a temporary object}}
+\DoxyCodeLine{199 \textcolor{comment}{ * which passes through an array index variable whilst at the same time}}
+\DoxyCodeLine{200 \textcolor{comment}{ * incrementing the lock during the lifespan of the wrapper object.}}
+\DoxyCodeLine{201 \textcolor{comment}{ ***************************************************************************/}}
+\DoxyCodeLine{202 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}}
+\DoxyCodeLine{203 \{}
+\DoxyCodeLine{204   \mbox{\hyperlink{structsys_1_1_index_lock_a284e0023530088e0a9461f036a436d9e}{IndexLock}}(\textcolor{keywordtype}{size\_t} \_index) :}
+\DoxyCodeLine{205     \mbox{\hyperlink{structsys_1_1_index_lock_aa20a6ab8b89ff613b5d277539ea09ef2}{m\_index}}(\_index)}
+\DoxyCodeLine{206   \{ \}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208   \textcolor{keyword}{operator} size\_t()\textcolor{keyword}{ const}}
+\DoxyCodeLine{209 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{210     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_index_lock_aa20a6ab8b89ff613b5d277539ea09ef2}{m\_index}};}
+\DoxyCodeLine{211   \}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_index_lock_a810306eabbf569ca6123f821ca78c98c}{lock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_lock)\textcolor{keyword}{ const}}
+\DoxyCodeLine{214 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{215     \mbox{\hyperlink{structsys_1_1_index_lock_a216dd4e74d8f915df1772db5f832bc5e}{m\_lock}}.\mbox{\hyperlink{structsys_1_1_lock_a6eee95ce58cd510f14621b183378c370}{lock}}(\_lock);}
+\DoxyCodeLine{216   \}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{218 \textcolor{keyword}{private}:}
+\DoxyCodeLine{219   \mbox{\hyperlink{structsys_1_1_zero}{Zero<size\_t>}} \mbox{\hyperlink{structsys_1_1_index_lock_aa20a6ab8b89ff613b5d277539ea09ef2}{m\_index}};}
+\DoxyCodeLine{220   \mbox{\hyperlink{structsys_1_1_lock}{Lock}} \mbox{\hyperlink{structsys_1_1_index_lock_a216dd4e74d8f915df1772db5f832bc5e}{m\_lock}};}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222   \mbox{\hyperlink{structsys_1_1_index_lock_a1eb0847f7d192ec13c1146b622d4c226}{IndexLock}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_copy);}
+\DoxyCodeLine{223   \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \mbox{\hyperlink{structsys_1_1_index_lock_a650f405a2623dad2b59f97625e80ec9e}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_index_lock}{IndexLock}}\& \_other);}
+\DoxyCodeLine{224 \};}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 \}}
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228 \textcolor{comment}{/* Implementation */}}
+\DoxyCodeLine{229 }
+\DoxyCodeLine{230 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{231 \{}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233 \textcolor{comment}{/***************************************************************************}}
+\DoxyCodeLine{234 \textcolor{comment}{ * PtrLock}}
+\DoxyCodeLine{235 \textcolor{comment}{ *}}
+\DoxyCodeLine{236 \textcolor{comment}{ * Construct PtrLock by assigning all variables. The internal lock also}}
+\DoxyCodeLine{237 \textcolor{comment}{ * increments the LockBlock reference count.}}
+\DoxyCodeLine{238 \textcolor{comment}{ ***************************************************************************/}}
+\DoxyCodeLine{239 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{240 \mbox{\hyperlink{structsys_1_1_ptr_lock_aee0e8a8cc528ffa6cfa72c5fa25e00f1}{PtrLock<T>::PtrLock}}(T* \_ptr, \textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_lock) :}
+\DoxyCodeLine{241   m\_ptr(\_ptr),}
+\DoxyCodeLine{242   m\_lock(\_lock)}
+\DoxyCodeLine{243 \{ \}}
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{246 T* \mbox{\hyperlink{structsys_1_1_ptr_lock_a2f402749b7920d9e5b51fce01bd75983}{PtrLock<T>::operator-\/>}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{247 \textcolor{keyword}{}\{}
+\DoxyCodeLine{248   \textcolor{keywordflow}{if}(!m\_ptr) \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Attempting to dereference NULL pointer"{}});}
+\DoxyCodeLine{249   \textcolor{keywordflow}{return} m\_ptr;}
+\DoxyCodeLine{250 \}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{253 \mbox{\hyperlink{structsys_1_1_ref_lock_a419fa34813fa50f54c62b91d399738d1}{RefLock<T>::RefLock}}(T* \_ptr, \textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* \_lock) :}
+\DoxyCodeLine{254   m\_ptr(\_ptr),}
+\DoxyCodeLine{255   m\_lock(\_lock)}
+\DoxyCodeLine{256 \{ \}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{259 \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>::operator}} T\&() \textcolor{keyword}{const}}
+\DoxyCodeLine{260 \{}
+\DoxyCodeLine{261   \textcolor{keywordflow}{if}(!m\_ptr) \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Attempting to dereference NULL pointer"{}});}
+\DoxyCodeLine{262   \textcolor{keywordflow}{return} *m\_ptr;}
+\DoxyCodeLine{263 \}}
+\DoxyCodeLine{264 }
+\DoxyCodeLine{265 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{266 T* \mbox{\hyperlink{structsys_1_1_ref_lock_a29777537acfd8ab52d3c7e139140cbc8}{RefLock<T>::operator\&}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{267 \textcolor{keyword}{}\{}
+\DoxyCodeLine{268   \textcolor{keywordflow}{if}(!m\_ptr) \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Attempting to dereference NULL pointer"{}});}
+\DoxyCodeLine{269   \textcolor{keywordflow}{return} m\_ptr;}
+\DoxyCodeLine{270 \}}
+\DoxyCodeLine{271 }
+\DoxyCodeLine{272 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{273 T* \mbox{\hyperlink{structsys_1_1_ref_lock_a07a638f359a4b1741b40c8d3c8a9696b}{RefLock<T>::operator-\/>}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{274 \textcolor{keyword}{}\{}
+\DoxyCodeLine{275   \textcolor{keywordflow}{if}(!m\_ptr) \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Attempting to dereference NULL pointer"{}});}
+\DoxyCodeLine{276   \textcolor{keywordflow}{return} *m\_ptr;}
+\DoxyCodeLine{277 \}}
+\DoxyCodeLine{278 }
+\DoxyCodeLine{279 \}}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{282 }
+
+\end{DoxyCode}

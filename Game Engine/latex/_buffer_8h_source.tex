@@ -1,0 +1,50 @@
+\hypertarget{_buffer_8h_source}{}\doxysection{Buffer.\+h}
+\label{_buffer_8h_source}\index{src/rend/Buffer.h@{src/rend/Buffer.h}}
+\mbox{\hyperlink{_buffer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rendmath_8h}{rendmath.h}}"{}}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <GL/glew.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{sys/Ptr.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{sys/Zero.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_8h}{sys/Vector.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{struct }Mesh;}
+\DoxyCodeLine{13 \textcolor{keyword}{struct }Buffer;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17   \mbox{\hyperlink{structrend_1_1_buffer_a464e32453098ab3f0cfa8f74973d8309}{Buffer}}();}
+\DoxyCodeLine{18   \mbox{\hyperlink{structrend_1_1_buffer_aef92e6a503ef204b95aebc6965025940}{\string~Buffer}}();}
+\DoxyCodeLine{19   \mbox{\hyperlink{structrend_1_1_buffer_a464e32453098ab3f0cfa8f74973d8309}{Buffer}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}\& \_copy);}
+\DoxyCodeLine{20   \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}\& \mbox{\hyperlink{structrend_1_1_buffer_ae0499b0ef7a97698093f71ecde8a1c75}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}\& \_other);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_buffer_a424fc28b0ecf5b9e1de250c8ce4c2987}{add}}(\textcolor{keywordtype}{float} \_value);}
+\DoxyCodeLine{23   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_buffer_a424fc28b0ecf5b9e1de250c8ce4c2987}{add}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1vec}{vec2}}\& \_value);}
+\DoxyCodeLine{24   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_buffer_a424fc28b0ecf5b9e1de250c8ce4c2987}{add}}(\textcolor{keyword}{const} \mbox{\hyperlink{structglm_1_1vec}{vec3}}\& \_value);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{keywordtype}{int} \mbox{\hyperlink{structrend_1_1_buffer_a78efabe121b9538c201a36f2176bde93}{components}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{27   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{structrend_1_1_buffer_adfddd5547b0179b65b0e14024a04267b}{size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{28   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_buffer_ad5b5aabd289c8516d76a0e74bb57d22e}{clear}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{31   \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_mesh}{Mesh}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLuint>}} \mbox{\hyperlink{structrend_1_1_buffer_a708ba3aae4c36c519c03dff6c775cd52}{m\_id}};}
+\DoxyCodeLine{34   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<bool>}} \mbox{\hyperlink{structrend_1_1_buffer_ab14317ac0b700a2baf6a65d579681b31}{m\_dirty}};}
+\DoxyCodeLine{35   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<size\_t>}} \mbox{\hyperlink{structrend_1_1_buffer_afae4da4437fac840e2cd319bf17618a1}{m\_components}};}
+\DoxyCodeLine{36   \mbox{\hyperlink{structsys_1_1_vector}{sys::Vector<float>}} \mbox{\hyperlink{structrend_1_1_buffer_a87da92e8433a3fb49f24a44416c536af}{m\_data}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38   GLuint \mbox{\hyperlink{structrend_1_1_buffer_ae58e51f6900e510648e29a6fa791895f}{id}}();}
+\DoxyCodeLine{39   \textcolor{keywordtype}{bool} \mbox{\hyperlink{structrend_1_1_buffer_a82d842b44ed7d6a02239b1995cb65f36}{dirty}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \}}
+\DoxyCodeLine{44 }
+
+\end{DoxyCode}

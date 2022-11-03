@@ -1,0 +1,150 @@
+\hypertarget{structmyengine_1_1_core}{}\doxysection{myengine\+::Core Struct Reference}
+\label{structmyengine_1_1_core}\index{myengine::Core@{myengine::Core}}
+
+
+{\ttfamily \#include $<$Core.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structmyengine_1_1_core_ad30b81f4e6ca3cc018e6c529904fdb3f}{start}} ()
+\begin{DoxyCompactList}\small\item\em runs the engine \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structmyengine_1_1_core_a4f1818b9d6fbf66e8c3b246fa1f2d965}{stop}} ()
+\begin{DoxyCompactList}\small\item\em stops the engine \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structmyengine_1_1_core_af8293765bd17b1e0003df3820fa38990}{$\sim$\+Core}} ()
+\begin{DoxyCompactList}\small\item\em deconstructs everything that needs to be removed to save memory leaks \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_abf2eea4d6b0d3788761ea11f34c4981d}{add\+Entity}} ()
+\begin{DoxyCompactList}\small\item\em runs the entity function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_a60646236bab8f92a381ce2d43806e813}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em intialises the core which makes the window, etc \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}{m\+\_\+running}}
+\begin{DoxyCompactList}\small\item\em boolean to check if the engine is running \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}} $>$ $>$ \mbox{\hyperlink{structmyengine_1_1_core_af0c11fddba430e3b02fc05b4e6e04135}{m\+\_\+entities}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_ae82b7b0c2f95c869b82ea2082b6e5e37}{m\+\_\+self}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_a611c7efd669b6140df37b75e6c27c010}{rtn}}
+\item 
+SDL\+\_\+\+Window $\ast$ \mbox{\hyperlink{structmyengine_1_1_core_a1e3bb28ce6b0f676d3cf8b89a8bcf2d9}{m\+\_\+window}}
+\item 
+SDL\+\_\+\+GLContext \mbox{\hyperlink{structmyengine_1_1_core_a29a296628fff741a57ec51646cc105f5}{m\+\_\+context}}
+\item 
+SDL\+\_\+\+Event \mbox{\hyperlink{structmyengine_1_1_core_a14c3fcccfa702373ea1bd090ff196a1e}{e}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_core_af8293765bd17b1e0003df3820fa38990}\label{structmyengine_1_1_core_af8293765bd17b1e0003df3820fa38990}} 
+\index{myengine::Core@{myengine::Core}!````~Core@{$\sim$Core}}
+\index{````~Core@{$\sim$Core}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{$\sim$Core()}{~Core()}}
+{\footnotesize\ttfamily myengine\+::\+Core\+::$\sim$\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+deconstructs everything that needs to be removed to save memory leaks 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_core_abf2eea4d6b0d3788761ea11f34c4981d}\label{structmyengine_1_1_core_abf2eea4d6b0d3788761ea11f34c4981d}} 
+\index{myengine::Core@{myengine::Core}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}} $>$ myengine\+::\+Core\+::add\+Entity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+runs the entity function 
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a60646236bab8f92a381ce2d43806e813}\label{structmyengine_1_1_core_a60646236bab8f92a381ce2d43806e813}} 
+\index{myengine::Core@{myengine::Core}!initialize@{initialize}}
+\index{initialize@{initialize}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ myengine\+::\+Core\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+intialises the core which makes the window, etc 
+
+\mbox{\Hypertarget{structmyengine_1_1_core_ad30b81f4e6ca3cc018e6c529904fdb3f}\label{structmyengine_1_1_core_ad30b81f4e6ca3cc018e6c529904fdb3f}} 
+\index{myengine::Core@{myengine::Core}!start@{start}}
+\index{start@{start}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void myengine\+::\+Core\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+runs the engine 
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a4f1818b9d6fbf66e8c3b246fa1f2d965}\label{structmyengine_1_1_core_a4f1818b9d6fbf66e8c3b246fa1f2d965}} 
+\index{myengine::Core@{myengine::Core}!stop@{stop}}
+\index{stop@{stop}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void myengine\+::\+Core\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+stops the engine 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_core_a14c3fcccfa702373ea1bd090ff196a1e}\label{structmyengine_1_1_core_a14c3fcccfa702373ea1bd090ff196a1e}} 
+\index{myengine::Core@{myengine::Core}!e@{e}}
+\index{e@{e}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{e}{e}}
+{\footnotesize\ttfamily SDL\+\_\+\+Event myengine\+::\+Core\+::e\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a29a296628fff741a57ec51646cc105f5}\label{structmyengine_1_1_core_a29a296628fff741a57ec51646cc105f5}} 
+\index{myengine::Core@{myengine::Core}!m\_context@{m\_context}}
+\index{m\_context@{m\_context}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_context}{m\_context}}
+{\footnotesize\ttfamily SDL\+\_\+\+GLContext myengine\+::\+Core\+::m\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_af0c11fddba430e3b02fc05b4e6e04135}\label{structmyengine_1_1_core_af0c11fddba430e3b02fc05b4e6e04135}} 
+\index{myengine::Core@{myengine::Core}!m\_entities@{m\_entities}}
+\index{m\_entities@{m\_entities}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_entities}{m\_entities}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_entity}{Entity}}$>$ $>$ myengine\+::\+Core\+::m\+\_\+entities\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}\label{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}} 
+\index{myengine::Core@{myengine::Core}!m\_running@{m\_running}}
+\index{m\_running@{m\_running}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_running}{m\_running}}
+{\footnotesize\ttfamily bool myengine\+::\+Core\+::m\+\_\+running\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+boolean to check if the engine is running 
+
+\mbox{\Hypertarget{structmyengine_1_1_core_ae82b7b0c2f95c869b82ea2082b6e5e37}\label{structmyengine_1_1_core_ae82b7b0c2f95c869b82ea2082b6e5e37}} 
+\index{myengine::Core@{myengine::Core}!m\_self@{m\_self}}
+\index{m\_self@{m\_self}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_self}{m\_self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_core}{Core}}$>$ myengine\+::\+Core\+::m\+\_\+self\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a1e3bb28ce6b0f676d3cf8b89a8bcf2d9}\label{structmyengine_1_1_core_a1e3bb28ce6b0f676d3cf8b89a8bcf2d9}} 
+\index{myengine::Core@{myengine::Core}!m\_window@{m\_window}}
+\index{m\_window@{m\_window}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_window}{m\_window}}
+{\footnotesize\ttfamily SDL\+\_\+\+Window$\ast$ myengine\+::\+Core\+::m\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a611c7efd669b6140df37b75e6c27c010}\label{structmyengine_1_1_core_a611c7efd669b6140df37b75e6c27c010}} 
+\index{myengine::Core@{myengine::Core}!rtn@{rtn}}
+\index{rtn@{rtn}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{rtn}{rtn}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_core}{Core}}$>$ myengine\+::\+Core\+::rtn\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/myengine/\mbox{\hyperlink{_core_8h}{Core.\+h}}\item 
+src/myengine/\mbox{\hyperlink{_core_8cpp}{Core.\+cpp}}\end{DoxyCompactItemize}

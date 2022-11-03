@@ -1,0 +1,82 @@
+\hypertarget{structmyengine_1_1_entity}{}\doxysection{myengine\+::Entity Struct Reference}
+\label{structmyengine_1_1_entity}\index{myengine::Entity@{myengine::Entity}}
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a514e500995795a71aeea15f447856b9e}{add\+Component}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structmyengine_1_1_entity_ab0a125079867c099760260086386f4c2}{tick}} ()
+\begin{DoxyCompactList}\small\item\em calculates the tick rate of the engine  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{structmyengine_1_1_entity_a314cad9c9602f79c668048ec7e544d44}{display}} ()
+\begin{DoxyCompactList}\small\item\em displays the tick rate of the engine in the command prompt  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}{m\+\_\+components}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_entity_acd0789873af2006e142a579250891ce8}{Core}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_entity_a514e500995795a71aeea15f447856b9e}\label{structmyengine_1_1_entity_a514e500995795a71aeea15f447856b9e}} 
+\index{myengine::Entity@{myengine::Entity}!addComponent@{addComponent}}
+\index{addComponent@{addComponent}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{addComponent()}{addComponent()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ myengine\+::\+Entity\+::add\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_entity_a314cad9c9602f79c668048ec7e544d44}\label{structmyengine_1_1_entity_a314cad9c9602f79c668048ec7e544d44}} 
+\index{myengine::Entity@{myengine::Entity}!display@{display}}
+\index{display@{display}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily void myengine\+::\+Entity\+::display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+displays the tick rate of the engine in the command prompt  
+
+\mbox{\Hypertarget{structmyengine_1_1_entity_ab0a125079867c099760260086386f4c2}\label{structmyengine_1_1_entity_ab0a125079867c099760260086386f4c2}} 
+\index{myengine::Entity@{myengine::Entity}!tick@{tick}}
+\index{tick@{tick}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily void myengine\+::\+Entity\+::tick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+calculates the tick rate of the engine  
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_entity_acd0789873af2006e142a579250891ce8}\label{structmyengine_1_1_entity_acd0789873af2006e142a579250891ce8}} 
+\index{myengine::Entity@{myengine::Entity}!Core@{Core}}
+\index{Core@{Core}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{Core}{Core}}
+{\footnotesize\ttfamily friend struct \mbox{\hyperlink{structmyengine_1_1_core}{Core}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}\label{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}} 
+\index{myengine::Entity@{myengine::Entity}!m\_components@{m\_components}}
+\index{m\_components@{m\_components}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_components}{m\_components}}
+{\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_component}{Component}}$>$ $>$ myengine\+::\+Entity\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/myengine/\mbox{\hyperlink{_entity_8h}{Entity.\+h}}\item 
+src/myengine/\mbox{\hyperlink{_entity_8cpp}{Entity.\+cpp}}\end{DoxyCompactItemize}

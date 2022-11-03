@@ -1,0 +1,39 @@
+\hypertarget{_entity_8h_source}{}\doxysection{Entity.\+h}
+\label{_entity_8h_source}\index{src/myengine/Entity.h@{src/myengine/Entity.h}}
+\mbox{\hyperlink{_entity_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemyengine}{myengine}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{keyword}{struct }Component;}
+\DoxyCodeLine{7     \textcolor{keyword}{struct }Core;}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_entity}{Entity}}}
+\DoxyCodeLine{10     \{}
+\DoxyCodeLine{11         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{12         std::shared\_ptr<T> \mbox{\hyperlink{structmyengine_1_1_entity_a514e500995795a71aeea15f447856b9e}{addComponent}}()}
+\DoxyCodeLine{13         \{}
+\DoxyCodeLine{14             std::shared\_ptr<T> rtn = std::make\_shared<T>();}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16             \mbox{\hyperlink{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}{m\_components}}.push\_back(rtn);}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18             \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{19         \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23     \textcolor{keyword}{private}:}
+\DoxyCodeLine{24         \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_core}{Core}};}
+\DoxyCodeLine{25         std::list<std::shared\_ptr<Component> > \mbox{\hyperlink{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}{m\_components}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_entity_ab0a125079867c099760260086386f4c2}{tick}}();}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_entity_a314cad9c9602f79c668048ec7e544d44}{display}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \};}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,29 @@
+\hypertarget{matrix__common_8hpp_source}{}\doxysection{matrix\+\_\+common.\+hpp}
+\label{matrix__common_8hpp_source}\index{src/rend/glm/ext/matrix\_common.hpp@{src/rend/glm/ext/matrix\_common.hpp}}
+\mbox{\hyperlink{matrix__common_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}../detail/qualifier.hpp"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../detail/\_fixes.hpp"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#   pragma message("{}GLM: GLM\_EXT\_matrix\_transform extension included"{}})}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keyword}{template}<length\_t C, length\_t R, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{28     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<C, R, T, Q> \mbox{\hyperlink{group__core__func__common_ga8e93f374aae27d1a88b921860351f8d4}{mix}}(mat<C, R, T, Q> \textcolor{keyword}{const}\& x, mat<C, R, T, Q> \textcolor{keyword}{const}\& y, mat<C, R, U, Q> \textcolor{keyword}{const}\& a);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30     \textcolor{keyword}{template}<length\_t C, length\_t R, \textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U, qualifier Q>}
+\DoxyCodeLine{31     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} mat<C, R, T, Q> \mbox{\hyperlink{group__core__func__common_ga8e93f374aae27d1a88b921860351f8d4}{mix}}(mat<C, R, T, Q> \textcolor{keyword}{const}\& x, mat<C, R, T, Q> \textcolor{keyword}{const}\& y, U a);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{34 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{matrix__common_8inl}{matrix\_common.inl}}"{}}}
+
+\end{DoxyCode}

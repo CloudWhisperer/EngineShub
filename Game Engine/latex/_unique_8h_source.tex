@@ -1,0 +1,264 @@
+\hypertarget{_unique_8h_source}{}\doxysection{Unique.\+h}
+\label{_unique_8h_source}\index{src/rend/sys/Unique.h@{src/rend/sys/Unique.h}}
+\mbox{\hyperlink{_unique_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_UNIQUE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_UNIQUE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{panic_8h}{panic.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{Zero.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_lock_8h}{Lock.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{config_8h}{config.h}}"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{13 \textcolor{keyword}{struct }Ptr;}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{16 \textcolor{keyword}{struct }Unique;}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{19 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_unique}{Unique}}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21   \textcolor{keyword}{static} \mbox{\hyperlink{structsys_1_1_unique}{Unique<T>}} \mbox{\hyperlink{structsys_1_1_unique_a7041df47fed8591196466a7d30fedfab}{make}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23   \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique}}();}
+\DoxyCodeLine{24   \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\& \_copy);}
+\DoxyCodeLine{25   \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\& \mbox{\hyperlink{structsys_1_1_unique_a1266b6d749db234d82af34ceafe56426}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\& \_other);}
+\DoxyCodeLine{26   \mbox{\hyperlink{structsys_1_1_unique_a64f0cece913a9522d888bbf04dcc4def}{\string~Unique}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U> \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other);}
+\DoxyCodeLine{29   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U> \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\& \mbox{\hyperlink{structsys_1_1_unique_a483933c1c70d51a8a3f4f9a8866f6d5e}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{32   \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>}} \mbox{\hyperlink{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}{operator*}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{33   \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}} \mbox{\hyperlink{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}{operator-\/>}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{34   \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}} \mbox{\hyperlink{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}{get}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{36   T\& \mbox{\hyperlink{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}{operator*}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{37   T* \mbox{\hyperlink{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}{operator-\/>}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{38   T* \mbox{\hyperlink{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}{get}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_unique_a505c4d13ae747eb293e82c45982fac1f}{reset}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U> \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_unique_a26b13e6373d84b09146df3456f3b0f4f}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other) \textcolor{keyword}{const};}
+\DoxyCodeLine{44   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U> \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_unique_adc06c108e255a91abc774a9c455ea8fa}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other) \textcolor{keyword}{const};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keyword}{private}:}
+\DoxyCodeLine{47   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{48   \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50   \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{51   \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_unique}{Unique}};}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53   \textcolor{keyword}{mutable} \mbox{\hyperlink{structsys_1_1_zero}{Zero<T*>}} \mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}};}
+\DoxyCodeLine{54   \textcolor{keyword}{mutable} \mbox{\hyperlink{structsys_1_1_zero}{Zero}}<void (*)(\textcolor{keywordtype}{void}*)> \mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}};}
+\DoxyCodeLine{55   \textcolor{keyword}{mutable} \mbox{\hyperlink{structsys_1_1_zero}{Zero<LockBlock*>}} \mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_unique_a67c46318a4315fb96907fdce99b10c00}{deleter}}(\textcolor{keywordtype}{void}* \_ptr);}
+\DoxyCodeLine{58 \};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 \textcolor{comment}{/* Implementation */}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{68 \mbox{\hyperlink{structsys_1_1_unique}{Unique<T>}} \mbox{\hyperlink{structsys_1_1_unique_a7041df47fed8591196466a7d30fedfab}{Unique<T>::make}}()}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70   \mbox{\hyperlink{structsys_1_1_unique}{Unique<T>}} rtn;}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72   rtn.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} = \textcolor{keyword}{new} T();}
+\DoxyCodeLine{73   rtn.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} = deleter;}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{76   rtn.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}} = \textcolor{keyword}{new} \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}();}
+\DoxyCodeLine{77   rtn.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}}-\/>type\_name = \textcolor{keyword}{typeid}(T).name();}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80   \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{81 \}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{83 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{84 \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique<T>::Unique}}()}
+\DoxyCodeLine{85 \{ \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{88 \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique<T>::Unique}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\& \_copy) :}
+\DoxyCodeLine{89   m\_ptr(\_copy.m\_ptr),}
+\DoxyCodeLine{90   m\_deleter(\_copy.m\_deleter),}
+\DoxyCodeLine{91   m\_lock(\_copy.m\_lock)}
+\DoxyCodeLine{92 \{}
+\DoxyCodeLine{93   \_copy.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} = NULL;}
+\DoxyCodeLine{94   \_copy.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} = NULL;}
+\DoxyCodeLine{95   \_copy.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}} = NULL;}
+\DoxyCodeLine{96 \}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{99 \mbox{\hyperlink{structsys_1_1_unique}{Unique<T>}}\& \mbox{\hyperlink{structsys_1_1_unique_a1266b6d749db234d82af34ceafe56426}{Unique<T>::operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\& \_other)}
+\DoxyCodeLine{100 \{}
+\DoxyCodeLine{101   \textcolor{keywordflow}{if}(m\_ptr != \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} ||}
+\DoxyCodeLine{102     m\_deleter != \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} ||}
+\DoxyCodeLine{103     m\_lock != \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}})}
+\DoxyCodeLine{104   \{}
+\DoxyCodeLine{105     reset();}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107     m\_ptr = \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}};}
+\DoxyCodeLine{108     \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} = NULL;}
+\DoxyCodeLine{109 }
+\DoxyCodeLine{110     m\_deleter = \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}};}
+\DoxyCodeLine{111     \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} = NULL;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     m\_lock = \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}};}
+\DoxyCodeLine{114     \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}} = NULL;}
+\DoxyCodeLine{115   \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{118 \}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{120 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{121 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_unique_a505c4d13ae747eb293e82c45982fac1f}{Unique<T>::reset}}()}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123   \textcolor{keywordflow}{if}(!m\_ptr) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125   void (*deleter)(\textcolor{keywordtype}{void}*) = m\_deleter;}
+\DoxyCodeLine{126   deleter(m\_ptr);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{129   \textcolor{keywordflow}{if}(m\_lock)}
+\DoxyCodeLine{130   \{}
+\DoxyCodeLine{131     printf(\textcolor{stringliteral}{"{}Destructing \%s\(\backslash\)n"{}}, (\textcolor{keyword}{const} \textcolor{keywordtype}{char}*)m\_lock-\/>type\_name);}
+\DoxyCodeLine{132   \}}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134   \mbox{\hyperlink{structsys_1_1_lock_block}{LockBlock}}* lock = m\_lock;}
+\DoxyCodeLine{135   \textcolor{keyword}{delete} lock;}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{137 \}}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{140 \mbox{\hyperlink{structsys_1_1_unique_a64f0cece913a9522d888bbf04dcc4def}{Unique<T>::\string~Unique}}()}
+\DoxyCodeLine{141 \{}
+\DoxyCodeLine{142   reset();}
+\DoxyCodeLine{143 \}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{145 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{146 \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{147 \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique<T>::Unique}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other) :}
+\DoxyCodeLine{148   m\_ptr(\_other.m\_ptr),}
+\DoxyCodeLine{149   m\_deleter(\_other.m\_deleter),}
+\DoxyCodeLine{150   m\_lock(\_other.m\_lock)}
+\DoxyCodeLine{151 \{}
+\DoxyCodeLine{152   \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} = NULL;}
+\DoxyCodeLine{153   \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} = NULL;}
+\DoxyCodeLine{154   \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}} = NULL;}
+\DoxyCodeLine{155 \}}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{158 \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{159 \mbox{\hyperlink{structsys_1_1_unique}{Unique<T>}}\& \mbox{\hyperlink{structsys_1_1_unique_a1266b6d749db234d82af34ceafe56426}{Unique<T>::operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other)}
+\DoxyCodeLine{160 \{}
+\DoxyCodeLine{161   \textcolor{keywordflow}{if}(m\_ptr != \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} ||}
+\DoxyCodeLine{162     m\_deleter != \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} ||}
+\DoxyCodeLine{163     m\_lock != \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}})}
+\DoxyCodeLine{164   \{}
+\DoxyCodeLine{165     reset();}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167     m\_ptr = \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}};}
+\DoxyCodeLine{168     \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}} = NULL;}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170     m\_deleter = \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}};}
+\DoxyCodeLine{171     \_other.\mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\_deleter}} = NULL;}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173     m\_lock = \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}};}
+\DoxyCodeLine{174     \_other.\mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\_lock}} = NULL;}
+\DoxyCodeLine{175   \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{178 \}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#ifdef SYS\_DEBUG}}
+\DoxyCodeLine{181 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{182 \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>}} \mbox{\hyperlink{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}{Unique<T>::operator*}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{183 \textcolor{keyword}{}\{}
+\DoxyCodeLine{184   \textcolor{keywordflow}{if}(!m\_ptr)}
+\DoxyCodeLine{185   \{}
+\DoxyCodeLine{186     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Attempt to dereference NULL pointer"{}});}
+\DoxyCodeLine{187   \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189   \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_ref_lock}{RefLock<T>}}(m\_ptr, m\_lock);}
+\DoxyCodeLine{190 \}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{193 \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}} \mbox{\hyperlink{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}{Unique<T>::operator-\/>}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{194 \textcolor{keyword}{}\{}
+\DoxyCodeLine{195   \textcolor{keywordflow}{if}(!m\_ptr)}
+\DoxyCodeLine{196   \{}
+\DoxyCodeLine{197     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Attempt to dereference NULL pointer"{}});}
+\DoxyCodeLine{198   \}}
+\DoxyCodeLine{199 }
+\DoxyCodeLine{200   \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}}(m\_ptr, m\_lock);}
+\DoxyCodeLine{201 \}}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{204 \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}} \mbox{\hyperlink{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}{Unique<T>::get}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{205 \textcolor{keyword}{}\{}
+\DoxyCodeLine{206   \textcolor{keywordflow}{if}(!m\_ptr)}
+\DoxyCodeLine{207   \{}
+\DoxyCodeLine{208     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\textcolor{stringliteral}{"{}Attempt to dereference NULL pointer"{}});}
+\DoxyCodeLine{209   \}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211   \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_ptr_lock}{PtrLock<T>}}(m\_ptr, m\_lock);}
+\DoxyCodeLine{212 \}}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{215 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{216 T\& \mbox{\hyperlink{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}{Unique<T>::operator*}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{217 \textcolor{keyword}{}\{}
+\DoxyCodeLine{218   \textcolor{keywordflow}{return} *m\_ptr;}
+\DoxyCodeLine{219 \}}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{222 T* \mbox{\hyperlink{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}{Unique<T>::operator-\/>}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{223 \textcolor{keyword}{}\{}
+\DoxyCodeLine{224   \textcolor{keywordflow}{return} m\_ptr;}
+\DoxyCodeLine{225 \}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{228 T* \mbox{\hyperlink{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}{Unique<T>::get}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{229 \textcolor{keyword}{}\{}
+\DoxyCodeLine{230   \textcolor{keywordflow}{return} m\_ptr;}
+\DoxyCodeLine{231 \}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{234 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{235 \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_unique_a67c46318a4315fb96907fdce99b10c00}{Unique<T>::deleter}}(\textcolor{keywordtype}{void}* \_ptr)}
+\DoxyCodeLine{236 \{}
+\DoxyCodeLine{237   T* ptr = \textcolor{keyword}{static\_cast<}T*\textcolor{keyword}{>}(\_ptr);}
+\DoxyCodeLine{238   \textcolor{keyword}{delete} ptr;}
+\DoxyCodeLine{239 \}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{242 \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{243 \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_unique_a26b13e6373d84b09146df3456f3b0f4f}{Unique<T>::operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{244 \textcolor{keyword}{}\{}
+\DoxyCodeLine{245   \textcolor{keywordflow}{return} m\_ptr == \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}};}
+\DoxyCodeLine{246 \}}
+\DoxyCodeLine{247 }
+\DoxyCodeLine{248 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{249 \textcolor{keyword}{template} <\textcolor{keyword}{typename} U>}
+\DoxyCodeLine{250 \textcolor{keywordtype}{bool} \mbox{\hyperlink{structsys_1_1_unique_adc06c108e255a91abc774a9c455ea8fa}{Unique<T>::operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_unique}{Unique<U>}}\& \_other)\textcolor{keyword}{ const}}
+\DoxyCodeLine{251 \textcolor{keyword}{}\{}
+\DoxyCodeLine{252   \textcolor{keywordflow}{return} m\_ptr != \_other.\mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\_ptr}};}
+\DoxyCodeLine{253 \}}
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 \}}
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{258 }
+
+\end{DoxyCode}

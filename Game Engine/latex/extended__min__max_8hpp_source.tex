@@ -1,0 +1,106 @@
+\hypertarget{extended__min__max_8hpp_source}{}\doxysection{extended\+\_\+min\+\_\+max.\+hpp}
+\label{extended__min__max_8hpp_source}\index{src/rend/glm/gtx/extended\_min\_max.hpp@{src/rend/glm/gtx/extended\_min\_max.hpp}}
+\mbox{\hyperlink{extended__min__max_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15 \textcolor{comment}{// Dependency:}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}../glm.hpp"{}}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}../ext/vector\_common.hpp"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#if GLM\_MESSAGES == GLM\_ENABLE \&\& !defined(GLM\_EXT\_INCLUDED)}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#   ifndef GLM\_ENABLE\_EXPERIMENTAL}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#       pragma message("{}GLM: GLM\_GTX\_extented\_min\_max is an experimental extension and may change in the future. Use \#define GLM\_ENABLE\_EXPERIMENTAL before including it, if you really want to use it."{}})}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#   else}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#       pragma message("{}GLM: GLM\_GTX\_extented\_min\_max extension included"{}})}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#   endif}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceglm}{glm}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{34     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{35     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{group__core__func__common_ga6cf8098827054a270ee36b18e30d471d}{min}}(}
+\DoxyCodeLine{36         T \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{37         T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{38         T \textcolor{keyword}{const}\& z);}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{42     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{43     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_ga6cf8098827054a270ee36b18e30d471d}{min}}(}
+\DoxyCodeLine{44         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{45         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{46         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& z);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{50     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{51     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_ga6cf8098827054a270ee36b18e30d471d}{min}}(}
+\DoxyCodeLine{52         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{53         C<T> \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{54         C<T> \textcolor{keyword}{const}\& z);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{58     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{59     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{group__core__func__common_ga6cf8098827054a270ee36b18e30d471d}{min}}(}
+\DoxyCodeLine{60         T \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{61         T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{62         T \textcolor{keyword}{const}\& z,}
+\DoxyCodeLine{63         T \textcolor{keyword}{const}\& w);}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{68     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_ga6cf8098827054a270ee36b18e30d471d}{min}}(}
+\DoxyCodeLine{69         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{70         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{71         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& z,}
+\DoxyCodeLine{72         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& w);}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{76     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{77     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_ga6cf8098827054a270ee36b18e30d471d}{min}}(}
+\DoxyCodeLine{78         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{79         C<T> \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{80         C<T> \textcolor{keyword}{const}\& z,}
+\DoxyCodeLine{81         C<T> \textcolor{keyword}{const}\& w);}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{85     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{86     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{group__core__func__common_gae02d42887fc5570451f880e3c624b9ac}{max}}(}
+\DoxyCodeLine{87         T \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{88         T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{89         T \textcolor{keyword}{const}\& z);}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{93     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{94     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_gae02d42887fc5570451f880e3c624b9ac}{max}}(}
+\DoxyCodeLine{95         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{96         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{97         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& z);}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{101     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{102     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_gae02d42887fc5570451f880e3c624b9ac}{max}}(}
+\DoxyCodeLine{103         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{104         C<T> \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{105         C<T> \textcolor{keyword}{const}\& z);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{109     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{110     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} T \mbox{\hyperlink{group__core__func__common_gae02d42887fc5570451f880e3c624b9ac}{max}}(}
+\DoxyCodeLine{111         T \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{112         T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{113         T \textcolor{keyword}{const}\& z,}
+\DoxyCodeLine{114         T \textcolor{keyword}{const}\& w);}
+\DoxyCodeLine{115 }
+\DoxyCodeLine{118     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{119     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_gae02d42887fc5570451f880e3c624b9ac}{max}}(}
+\DoxyCodeLine{120         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{121         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{122         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& z,}
+\DoxyCodeLine{123         \textcolor{keyword}{typename} C<T>::T \textcolor{keyword}{const}\& w);}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{127     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{template}<\textcolor{keyword}{typename}> \textcolor{keyword}{class }C>}
+\DoxyCodeLine{128     \mbox{\hyperlink{setup_8hpp_ab2d052de21a70539923e9bcbf6e83a51}{GLM\_FUNC\_DECL}} C<T> \mbox{\hyperlink{group__core__func__common_gae02d42887fc5570451f880e3c624b9ac}{max}}(}
+\DoxyCodeLine{129         C<T> \textcolor{keyword}{const}\& x,}
+\DoxyCodeLine{130         C<T> \textcolor{keyword}{const}\& y,}
+\DoxyCodeLine{131         C<T> \textcolor{keyword}{const}\& z,}
+\DoxyCodeLine{132         C<T> \textcolor{keyword}{const}\& w);}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{135 \}\textcolor{comment}{//namespace glm}}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{extended__min__max_8inl}{extended\_min\_max.inl}}"{}}}
+
+\end{DoxyCode}

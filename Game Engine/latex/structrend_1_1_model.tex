@@ -1,0 +1,124 @@
+\hypertarget{structrend_1_1_model}{}\doxysection{rend\+::Model Struct Reference}
+\label{structrend_1_1_model}\index{rend::Model@{rend::Model}}
+
+
+{\ttfamily \#include $<$Model.\+h$>$}
+
+Inheritance diagram for rend\+::Model\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structrend_1_1_model}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_model_ad73cb6270a02ed2a8e9fdd9c7400b31b}{Model}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path)
+\item 
+\mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$\+::\+Iterator \mbox{\hyperlink{structrend_1_1_model_a5e3c49443913f21d0adb7c72f63c0d85}{parts\+Begin}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$\+::\+Iterator \mbox{\hyperlink{structrend_1_1_model_a92745f66ed5764d137c2d087f2cd79d8}{parts\+End}} ()
+\item 
+bool \mbox{\hyperlink{structrend_1_1_model_a1f9766e31b841d3488c24e52d7f91aad}{intersect}} (const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&\+\_\+ray) const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ \mbox{\hyperlink{structrend_1_1_model_a54307890731b7c018887eafccc7f8d57}{intersect}} (const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&\+\_\+ray, float \&\+\_\+distance) const
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_add81d26a1b9130c5536a9937ca5ba472}{color}} (\mbox{\hyperlink{group__core__vector_ga233f0e8f1aecf686e67c5c39316c4da8}{vec4}} \+\_\+color)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_a07d0c0ffbf4757a5520863d17af27b7d}{load}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path)
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_ad261eb589e6c3780d9a2f7fe3df10daf}{center\+\_\+parts}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_texture}{Texture}} $>$ \mbox{\hyperlink{structrend_1_1_model_a4e148f4e92cc15fccc0c048dc07534b9}{m\+\_\+textures}}
+\item 
+\mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ \mbox{\hyperlink{structrend_1_1_model_a9e81f55f3521d8adbc455ca5369dc1f9}{m\+\_\+parts}}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ \mbox{\hyperlink{structrend_1_1_face}{Face}} $>$ \mbox{\hyperlink{structrend_1_1_model_a93465517519aaa7109eb60c093d775bd}{m\+\_\+faces}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_model_ad73cb6270a02ed2a8e9fdd9c7400b31b}\label{structrend_1_1_model_ad73cb6270a02ed2a8e9fdd9c7400b31b}} 
+\index{rend::Model@{rend::Model}!Model@{Model}}
+\index{Model@{Model}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily rend\+::\+Model\+::\+Model (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_model_ad261eb589e6c3780d9a2f7fe3df10daf}\label{structrend_1_1_model_ad261eb589e6c3780d9a2f7fe3df10daf}} 
+\index{rend::Model@{rend::Model}!center\_parts@{center\_parts}}
+\index{center\_parts@{center\_parts}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{center\_parts()}{center\_parts()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+::center\+\_\+parts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_model_add81d26a1b9130c5536a9937ca5ba472}\label{structrend_1_1_model_add81d26a1b9130c5536a9937ca5ba472}} 
+\index{rend::Model@{rend::Model}!color@{color}}
+\index{color@{color}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{color()}{color()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+::color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__vector_ga233f0e8f1aecf686e67c5c39316c4da8}{vec4}}}]{\+\_\+color }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_model_a1f9766e31b841d3488c24e52d7f91aad}\label{structrend_1_1_model_a1f9766e31b841d3488c24e52d7f91aad}} 
+\index{rend::Model@{rend::Model}!intersect@{intersect}}
+\index{intersect@{intersect}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool rend\+::\+Model\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&}]{\+\_\+ray }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structrend_1_1_model_a54307890731b7c018887eafccc7f8d57}\label{structrend_1_1_model_a54307890731b7c018887eafccc7f8d57}} 
+\index{rend::Model@{rend::Model}!intersect@{intersect}}
+\index{intersect@{intersect}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ rend\+::\+Model\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&}]{\+\_\+ray,  }\item[{float \&}]{\+\_\+distance }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structrend_1_1_model_a07d0c0ffbf4757a5520863d17af27b7d}\label{structrend_1_1_model_a07d0c0ffbf4757a5520863d17af27b7d}} 
+\index{rend::Model@{rend::Model}!load@{load}}
+\index{load@{load}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_model_a5e3c49443913f21d0adb7c72f63c0d85}\label{structrend_1_1_model_a5e3c49443913f21d0adb7c72f63c0d85}} 
+\index{rend::Model@{rend::Model}!partsBegin@{partsBegin}}
+\index{partsBegin@{partsBegin}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{partsBegin()}{partsBegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$\+::\+Iterator rend\+::\+Model\+::parts\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_model_a92745f66ed5764d137c2d087f2cd79d8}\label{structrend_1_1_model_a92745f66ed5764d137c2d087f2cd79d8}} 
+\index{rend::Model@{rend::Model}!partsEnd@{partsEnd}}
+\index{partsEnd@{partsEnd}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{partsEnd()}{partsEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$\+::\+Iterator rend\+::\+Model\+::parts\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrend_1_1_model_a93465517519aaa7109eb60c093d775bd}\label{structrend_1_1_model_a93465517519aaa7109eb60c093d775bd}} 
+\index{rend::Model@{rend::Model}!m\_faces@{m\_faces}}
+\index{m\_faces@{m\_faces}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{m\_faces}{m\_faces}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$\mbox{\hyperlink{structrend_1_1_face}{Face}}$>$ rend\+::\+Model\+::m\+\_\+faces\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_model_a9e81f55f3521d8adbc455ca5369dc1f9}\label{structrend_1_1_model_a9e81f55f3521d8adbc455ca5369dc1f9}} 
+\index{rend::Model@{rend::Model}!m\_parts@{m\_parts}}
+\index{m\_parts@{m\_parts}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{m\_parts}{m\_parts}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$\mbox{\hyperlink{structrend_1_1_part}{Part}}$>$ rend\+::\+Model\+::m\+\_\+parts\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_model_a4e148f4e92cc15fccc0c048dc07534b9}\label{structrend_1_1_model_a4e148f4e92cc15fccc0c048dc07534b9}} 
+\index{rend::Model@{rend::Model}!m\_textures@{m\_textures}}
+\index{m\_textures@{m\_textures}!rend::Model@{rend::Model}}
+\doxysubsubsection{\texorpdfstring{m\_textures}{m\_textures}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$\mbox{\hyperlink{structrend_1_1_texture}{Texture}}$>$ rend\+::\+Model\+::m\+\_\+textures\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_model_8h}{Model.\+h}}\item 
+src/rend/\mbox{\hyperlink{_model_8cpp}{Model.\+cpp}}\end{DoxyCompactItemize}

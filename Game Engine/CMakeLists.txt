@@ -20,6 +20,9 @@ add_library(myengine
 
     src/myengine/myengine.h
 
+    src/myengine/Transform.h
+    src/myengine/Transform.cpp
+
     src/myengine/Component.h
     src/myengine/Component.cpp
 

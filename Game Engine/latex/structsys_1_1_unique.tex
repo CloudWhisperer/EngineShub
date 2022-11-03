@@ -1,0 +1,226 @@
+\hypertarget{structsys_1_1_unique}{}\doxysection{sys\+::Unique\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structsys_1_1_unique}\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Unique.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_unique_a2b6866bf9ab66cb9747abee78e4b4a3a}{Unique}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_unique_ad20443ad6d9edd1220f1bcc1218dbb27}{Unique}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_unique}{Unique}} \& \mbox{\hyperlink{structsys_1_1_unique_a1266b6d749db234d82af34ceafe56426}{operator=}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}} \&\+\_\+other)
+\item 
+\mbox{\hyperlink{structsys_1_1_unique_a64f0cece913a9522d888bbf04dcc4def}{$\sim$\+Unique}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{structsys_1_1_unique_af204e2cf2b1c4439ec567f50217b91b5}{Unique}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&\+\_\+other)
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{structsys_1_1_unique}{Unique}} \& \mbox{\hyperlink{structsys_1_1_unique_a483933c1c70d51a8a3f4f9a8866f6d5e}{operator=}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&\+\_\+other)
+\item 
+\mbox{\hyperlink{structsys_1_1_ref_lock}{Ref\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr_lock}{Ptr\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr_lock}{Ptr\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}{get}} () const
+\item 
+void \mbox{\hyperlink{structsys_1_1_unique_a505c4d13ae747eb293e82c45982fac1f}{reset}} ()
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{structsys_1_1_unique_a26b13e6373d84b09146df3456f3b0f4f}{operator==}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\bool \mbox{\hyperlink{structsys_1_1_unique_adc06c108e255a91abc774a9c455ea8fa}{operator!=}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&\+\_\+other) const
+\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \& \mbox{\hyperlink{structsys_1_1_unique_ab5dacadd906756b0c4560c261433a4da}{operator=}} (const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique_a7041df47fed8591196466a7d30fedfab}{make}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{structsys_1_1_unique_a67c46318a4315fb96907fdce99b10c00}{deleter}} (void $\ast$\+\_\+ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ T $\ast$ $>$ \mbox{\hyperlink{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}{m\+\_\+ptr}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ void($\ast$)(void $\ast$)$>$ \mbox{\hyperlink{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}{m\+\_\+deleter}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ \mbox{\hyperlink{structsys_1_1_lock_block}{Lock\+Block}} $\ast$ $>$ \mbox{\hyperlink{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}{m\+\_\+lock}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\struct \mbox{\hyperlink{structsys_1_1_unique_a88451fd4df98e8d9f813a7938e12194c}{Ptr}}
+\item 
+{\footnotesize template$<$typename U $>$ }\\struct \mbox{\hyperlink{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}{Unique}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_unique_a2b6866bf9ab66cb9747abee78e4b4a3a}\label{structsys_1_1_unique_a2b6866bf9ab66cb9747abee78e4b4a3a}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!Unique@{Unique}}
+\index{Unique@{Unique}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Unique()}{Unique()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::\+Unique}
+
+\mbox{\Hypertarget{structsys_1_1_unique_ad20443ad6d9edd1220f1bcc1218dbb27}\label{structsys_1_1_unique_ad20443ad6d9edd1220f1bcc1218dbb27}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!Unique@{Unique}}
+\index{Unique@{Unique}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Unique()}{Unique()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::\+Unique (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \&}]{\+\_\+copy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a64f0cece913a9522d888bbf04dcc4def}\label{structsys_1_1_unique_a64f0cece913a9522d888bbf04dcc4def}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!````~Unique@{$\sim$Unique}}
+\index{````~Unique@{$\sim$Unique}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Unique()}{~Unique()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{structsys_1_1_unique}{Unique}}}
+
+\mbox{\Hypertarget{structsys_1_1_unique_af204e2cf2b1c4439ec567f50217b91b5}\label{structsys_1_1_unique_af204e2cf2b1c4439ec567f50217b91b5}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!Unique@{Unique}}
+\index{Unique@{Unique}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Unique()}{Unique()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::\+Unique (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_unique_a67c46318a4315fb96907fdce99b10c00}\label{structsys_1_1_unique_a67c46318a4315fb96907fdce99b10c00}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!deleter@{deleter}}
+\index{deleter@{deleter}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deleter()}{deleter()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::deleter (\begin{DoxyParamCaption}\item[{void $\ast$}]{\+\_\+ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}\label{structsys_1_1_unique_a1937acd981de7fbc66839a935d84c884}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!get@{get}}
+\index{get@{get}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr_lock}{Ptr\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::get}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a7041df47fed8591196466a7d30fedfab}\label{structsys_1_1_unique_a7041df47fed8591196466a7d30fedfab}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!make@{make}}
+\index{make@{make}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{make()}{make()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::make\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{structsys_1_1_unique_adc06c108e255a91abc774a9c455ea8fa}\label{structsys_1_1_unique_adc06c108e255a91abc774a9c455ea8fa}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}\label{structsys_1_1_unique_ae458cac320d398f724146b196bd09ec7}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ref_lock}{Ref\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator$\ast$}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}\label{structsys_1_1_unique_a49bbeeab52df55c609dd67e23d54683c}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr_lock}{Ptr\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator-\/$>$}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a1266b6d749db234d82af34ceafe56426}\label{structsys_1_1_unique_a1266b6d749db234d82af34ceafe56426}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \& \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a483933c1c70d51a8a3f4f9a8866f6d5e}\label{structsys_1_1_unique_a483933c1c70d51a8a3f4f9a8866f6d5e}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{Unique}} \& \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_unique_ab5dacadd906756b0c4560c261433a4da}\label{structsys_1_1_unique_ab5dacadd906756b0c4560c261433a4da}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ T $>$ \& \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a26b13e6373d84b09146df3456f3b0f4f}\label{structsys_1_1_unique_a26b13e6373d84b09146df3456f3b0f4f}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+bool \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_unique}{Unique}}$<$ U $>$ \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a505c4d13ae747eb293e82c45982fac1f}\label{structsys_1_1_unique_a505c4d13ae747eb293e82c45982fac1f}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::reset}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_unique_a88451fd4df98e8d9f813a7938e12194c}\label{structsys_1_1_unique_a88451fd4df98e8d9f813a7938e12194c}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!Ptr@{Ptr}}
+\index{Ptr@{Ptr}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Ptr}{Ptr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+friend struct \mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}\label{structsys_1_1_unique_a15787979f7d1a0c7dd0802a23517e807}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!Unique@{Unique}}
+\index{Unique@{Unique}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Unique}{Unique}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+friend struct \mbox{\hyperlink{structsys_1_1_unique}{Unique}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}\label{structsys_1_1_unique_a3373a9d23c2fffb1a2ebf478638c00b9}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!m\_deleter@{m\_deleter}}
+\index{m\_deleter@{m\_deleter}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_deleter}{m\_deleter}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$void ($\ast$)(void$\ast$)$>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::m\+\_\+deleter\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}\label{structsys_1_1_unique_af2968dcc0603024c29f5eaa2d749cf1d}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!m\_lock@{m\_lock}}
+\index{m\_lock@{m\_lock}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_lock}{m\_lock}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$\mbox{\hyperlink{structsys_1_1_lock_block}{Lock\+Block}}$\ast$$>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::m\+\_\+lock\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}\label{structsys_1_1_unique_a05f6265b182749141cc6950934eb18b4}} 
+\index{sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}!m\_ptr@{m\_ptr}}
+\index{m\_ptr@{m\_ptr}!sys::Unique$<$ T $>$@{sys::Unique$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_ptr}{m\_ptr}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$T$\ast$$>$ \mbox{\hyperlink{structsys_1_1_unique}{sys\+::\+Unique}}$<$ T $>$\+::m\+\_\+ptr\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_ptr_8h}{Ptr.\+h}}\item 
+src/rend/sys/\mbox{\hyperlink{_unique_8h}{Unique.\+h}}\end{DoxyCompactItemize}

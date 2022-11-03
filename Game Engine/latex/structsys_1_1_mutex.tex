@@ -1,0 +1,85 @@
+\hypertarget{structsys_1_1_mutex}{}\doxysection{sys\+::Mutex Struct Reference}
+\label{structsys_1_1_mutex}\index{sys::Mutex@{sys::Mutex}}
+
+
+{\ttfamily \#include $<$Mutex.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_mutex_a4c411289e9076341d2d15f62ab7a1569}{Mutex}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_mutex_ac1b51cee348c71796a293189d10608bb}{$\sim$\+Mutex}} ()
+\item 
+void \mbox{\hyperlink{structsys_1_1_mutex_a64c8b36053bc3bd85d40857033020140}{lock}} () const
+\item 
+void \mbox{\hyperlink{structsys_1_1_mutex_af4899e1801f0e342edda65db4edee9bc}{unlock}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_mutex_acb74a4c9008c0bb9f57515c5f932773a}{Mutex}} (const \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_mutex}{Mutex}} \& \mbox{\hyperlink{structsys_1_1_mutex_abad1f2d4802d800b9feb1ec808293ea8}{operator=}} (const \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}} \&\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pthread\+\_\+mutex\+\_\+t \mbox{\hyperlink{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}{m\+\_\+lock}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_mutex_a4c411289e9076341d2d15f62ab7a1569}\label{structsys_1_1_mutex_a4c411289e9076341d2d15f62ab7a1569}} 
+\index{sys::Mutex@{sys::Mutex}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{Mutex()}{Mutex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sys\+::\+Mutex\+::\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_mutex_ac1b51cee348c71796a293189d10608bb}\label{structsys_1_1_mutex_ac1b51cee348c71796a293189d10608bb}} 
+\index{sys::Mutex@{sys::Mutex}!````~Mutex@{$\sim$Mutex}}
+\index{````~Mutex@{$\sim$Mutex}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{$\sim$Mutex()}{~Mutex()}}
+{\footnotesize\ttfamily sys\+::\+Mutex\+::$\sim$\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_mutex_acb74a4c9008c0bb9f57515c5f932773a}\label{structsys_1_1_mutex_acb74a4c9008c0bb9f57515c5f932773a}} 
+\index{sys::Mutex@{sys::Mutex}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{Mutex()}{Mutex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sys\+::\+Mutex\+::\+Mutex (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}} \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_mutex_a64c8b36053bc3bd85d40857033020140}\label{structsys_1_1_mutex_a64c8b36053bc3bd85d40857033020140}} 
+\index{sys::Mutex@{sys::Mutex}!lock@{lock}}
+\index{lock@{lock}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void sys\+::\+Mutex\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_mutex_abad1f2d4802d800b9feb1ec808293ea8}\label{structsys_1_1_mutex_abad1f2d4802d800b9feb1ec808293ea8}} 
+\index{sys::Mutex@{sys::Mutex}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}} \& sys\+::\+Mutex\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}} \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_mutex_af4899e1801f0e342edda65db4edee9bc}\label{structsys_1_1_mutex_af4899e1801f0e342edda65db4edee9bc}} 
+\index{sys::Mutex@{sys::Mutex}!unlock@{unlock}}
+\index{unlock@{unlock}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void sys\+::\+Mutex\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}\label{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}} 
+\index{sys::Mutex@{sys::Mutex}!m\_lock@{m\_lock}}
+\index{m\_lock@{m\_lock}!sys::Mutex@{sys::Mutex}}
+\doxysubsubsection{\texorpdfstring{m\_lock}{m\_lock}}
+{\footnotesize\ttfamily pthread\+\_\+mutex\+\_\+t sys\+::\+Mutex\+::m\+\_\+lock\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_mutex_8h}{Mutex.\+h}}\end{DoxyCompactItemize}

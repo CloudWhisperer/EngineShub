@@ -24,7 +24,14 @@ namespace myengine
 		friend struct Core;
 		std::list<std::shared_ptr<Component> > m_components;
 
+		/// <summary>
+		/// calculates the tick rate of the engine
+		/// </summary>
 		void tick();
+
+		/// <summary>
+		/// displays the tick rate of the engine in the command prompt
+		/// </summary>
 		void display();
 
 	};

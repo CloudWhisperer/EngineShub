@@ -1,0 +1,115 @@
+\hypertarget{structsys_1_1_thread_pool}{}\doxysection{sys\+::Thread\+Pool\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structsys_1_1_thread_pool}\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Thread\+Pool.\+h$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit}{Unit}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_thread_pool_aac717cb1a0ad3ee24c98ee48932f0340}{Thread\+Pool}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_thread_pool_a7be2e9a6b2fc3ac523eea0cc0fec1b26}{$\sim$\+Thread\+Pool}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_thread_pool_a339c7ee410b54ef2172ec6296a95162c}{size}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_thread_pool_a8ed972844f60becfda86ffb8db32db35}{at}} (size\+\_\+t idx) const
+\item 
+void \mbox{\hyperlink{structsys_1_1_thread_pool_a664025bd22e2083e011663c170c46a02}{execute}} (void($\ast$\+\_\+func)(T \&))
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_thread_pool_a0db9a48bf75c13f9c73b1910bd81a683}{Thread\+Pool}} (const \mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}} \& \mbox{\hyperlink{structsys_1_1_thread_pool_abc7000bb618f19f6127f6a563542a6a5}{operator=}} (const \mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}} \&\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ \mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit}{Unit}} $>$ \mbox{\hyperlink{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}{m\+\_\+units}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ void($\ast$)(T \&)$>$ \mbox{\hyperlink{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}{m\+\_\+func}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_thread_pool_aac717cb1a0ad3ee24c98ee48932f0340}\label{structsys_1_1_thread_pool_aac717cb1a0ad3ee24c98ee48932f0340}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::\+Thread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_thread_pool_a7be2e9a6b2fc3ac523eea0cc0fec1b26}\label{structsys_1_1_thread_pool_a7be2e9a6b2fc3ac523eea0cc0fec1b26}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!````~ThreadPool@{$\sim$ThreadPool}}
+\index{````~ThreadPool@{$\sim$ThreadPool}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ThreadPool()}{~ThreadPool()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_thread_pool_a0db9a48bf75c13f9c73b1910bd81a683}\label{structsys_1_1_thread_pool_a0db9a48bf75c13f9c73b1910bd81a683}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!ThreadPool@{ThreadPool}}
+\index{ThreadPool@{ThreadPool}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ThreadPool()}{ThreadPool()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::\+Thread\+Pool (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}}$<$ T $>$ \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_thread_pool_a8ed972844f60becfda86ffb8db32db35}\label{structsys_1_1_thread_pool_a8ed972844f60becfda86ffb8db32db35}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!at@{at}}
+\index{at@{at}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_thread_pool_a664025bd22e2083e011663c170c46a02}\label{structsys_1_1_thread_pool_a664025bd22e2083e011663c170c46a02}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!execute@{execute}}
+\index{execute@{execute}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::execute (\begin{DoxyParamCaption}\item[{void($\ast$)(T \&)}]{\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_thread_pool_abc7000bb618f19f6127f6a563542a6a5}\label{structsys_1_1_thread_pool_abc7000bb618f19f6127f6a563542a6a5}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}} \& \mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_thread_pool}{Thread\+Pool}}$<$ T $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_thread_pool_a339c7ee410b54ef2172ec6296a95162c}\label{structsys_1_1_thread_pool_a339c7ee410b54ef2172ec6296a95162c}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!size@{size}}
+\index{size@{size}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}\label{structsys_1_1_thread_pool_adc38894edaf50a88b7a304f4e203be90}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!m\_func@{m\_func}}
+\index{m\_func@{m\_func}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_func}{m\_func}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$void ($\ast$)(T\&)$>$ \mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::m\+\_\+func\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}\label{structsys_1_1_thread_pool_ae123b0e83a8c259a21e694d60abd0b77}} 
+\index{sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}!m\_units@{m\_units}}
+\index{m\_units@{m\_units}!sys::ThreadPool$<$ T $>$@{sys::ThreadPool$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_units}{m\_units}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$\mbox{\hyperlink{structsys_1_1_thread_pool_1_1_unit}{Unit}}$>$ \mbox{\hyperlink{structsys_1_1_thread_pool}{sys\+::\+Thread\+Pool}}$<$ T $>$\+::m\+\_\+units\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_thread_pool_8h}{Thread\+Pool.\+h}}\end{DoxyCompactItemize}

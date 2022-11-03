@@ -1,0 +1,135 @@
+\hypertarget{_private_8h_source}{}\doxysection{Private.\+h}
+\label{_private_8h_source}\index{src/rend/sys/Private.h@{src/rend/sys/Private.h}}
+\mbox{\hyperlink{_private_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_PRIVATE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_PRIVATE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{8 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_rc_ptr}{RcPtr}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10   \textcolor{keyword}{static} \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_rc_ptr_ac3671d13645a9de5380329b4dad1fc85}{do\_delete}}(\textcolor{keywordtype}{void}* \_ptr)}
+\DoxyCodeLine{11   \{}
+\DoxyCodeLine{12     T* t = (T*)\_ptr;}
+\DoxyCodeLine{13     \textcolor{keyword}{delete} t;}
+\DoxyCodeLine{14   \}}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16   T* \mbox{\hyperlink{structsys_1_1_rc_ptr_ac28d92302880b228e5b1ed3412bcb80e}{ptr}};}
+\DoxyCodeLine{17   void (*\mbox{\hyperlink{structsys_1_1_rc_ptr_a6212ac44bedaf9aa91a4aee736ba1a0e}{deleter}})(\textcolor{keywordtype}{void}* \_ptr);}
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_rc}{Rc}}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22   \textcolor{keywordtype}{int}* \mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24   \mbox{\hyperlink{structsys_1_1_rc_a50a1e5350fb2227258f68b6a9636be68}{Rc}}() :}
+\DoxyCodeLine{25     \mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}}(new int(1))}
+\DoxyCodeLine{26   \{ \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28   \mbox{\hyperlink{structsys_1_1_rc_a178cde0f966ff1f23a4f59f90baf342b}{\string~Rc}}()}
+\DoxyCodeLine{29   \{}
+\DoxyCodeLine{30     -\/-\/*\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32     \textcolor{keywordflow}{if}(!*\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}})}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34       \textcolor{keyword}{delete} \mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36   \}}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38   \mbox{\hyperlink{structsys_1_1_rc_a4f2e2b432e9e9f868e2723abe079537f}{Rc}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_rc}{Rc}}\& \_copy) :}
+\DoxyCodeLine{39     \mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}}(\_copy.\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}})}
+\DoxyCodeLine{40   \{}
+\DoxyCodeLine{41     ++*\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{42   \}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44   \mbox{\hyperlink{structsys_1_1_rc}{Rc}}\& \mbox{\hyperlink{structsys_1_1_rc_a9878b08fae0fc46db240b0cce9147076}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_rc}{Rc}}\& \_other)}
+\DoxyCodeLine{45   \{}
+\DoxyCodeLine{46     \mbox{\hyperlink{structsys_1_1_rc}{Rc}} tmp(*\textcolor{keyword}{this});}
+\DoxyCodeLine{47     -\/-\/*\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49     \mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}} = \_other.\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{50     ++*\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{53   \}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55   \textcolor{keywordtype}{int} \mbox{\hyperlink{structsys_1_1_rc_af1c334ff7541fceac5fd170bc0131157}{count}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{56 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{57     \textcolor{keywordflow}{return} *\mbox{\hyperlink{structsys_1_1_rc_a2c62cc698a0618d4fbff3503f646e8ab}{m\_rc}};}
+\DoxyCodeLine{58   \}}
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{62 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_enable_private}{EnablePrivate}}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   \mbox{\hyperlink{structsys_1_1_enable_private_ad882aad941a1dbf1ee09f43a79bdff03}{EnablePrivate}}() :}
+\DoxyCodeLine{65     \mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}}(),}
+\DoxyCodeLine{66     \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}(new \mbox{\hyperlink{structsys_1_1_rc_ptr}{RcPtr}}<T>())}
+\DoxyCodeLine{67   \{ \}}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69   \mbox{\hyperlink{structsys_1_1_enable_private_a4fdfae049d8e0a0bafac4d96f765881c}{\string~EnablePrivate}}()}
+\DoxyCodeLine{70   \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}}.\mbox{\hyperlink{structsys_1_1_rc_af1c334ff7541fceac5fd170bc0131157}{count}}() == 1)}
+\DoxyCodeLine{72     \{}
+\DoxyCodeLine{73       \textcolor{keywordflow}{if}(\mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>deleter)}
+\DoxyCodeLine{74       \{}
+\DoxyCodeLine{75         \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>deleter(\mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>ptr);}
+\DoxyCodeLine{76       \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78       \textcolor{keyword}{delete} \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}};}
+\DoxyCodeLine{79     \}}
+\DoxyCodeLine{80   \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82   \mbox{\hyperlink{structsys_1_1_enable_private_a219a764ee6eb04c74ffd25027d217996}{EnablePrivate}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_enable_private}{EnablePrivate}}\& \_copy) :}
+\DoxyCodeLine{83     \mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}}(\_copy.\mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}}),}
+\DoxyCodeLine{84     \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}(\_copy.\mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}})}
+\DoxyCodeLine{85   \{ \}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87   \mbox{\hyperlink{structsys_1_1_enable_private}{EnablePrivate}}\& \mbox{\hyperlink{structsys_1_1_enable_private_acc3e42d902d53ea371f111d6cff255bf}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_enable_private}{EnablePrivate}}\& \_other)}
+\DoxyCodeLine{88   \{}
+\DoxyCodeLine{89     \mbox{\hyperlink{structsys_1_1_enable_private}{EnablePrivate}} tmp(*\textcolor{keyword}{this});}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91     \mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}} = \_other.\mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}};}
+\DoxyCodeLine{92     \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}} = \_other.\mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{94     \textcolor{keywordflow}{return} *\textcolor{keyword}{this};}
+\DoxyCodeLine{95   \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{98   \mbox{\hyperlink{structsys_1_1_rc}{Rc}} \mbox{\hyperlink{structsys_1_1_enable_private_a012b9a06cc20c2c3f2a78cacf0e2b1ec}{m\_rc}};}
+\DoxyCodeLine{99   \mbox{\hyperlink{structsys_1_1_rc_ptr}{RcPtr<T>}}* \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}};}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101   T* \mbox{\hyperlink{structsys_1_1_enable_private_a7754be00535eee83f64ce87285d2cc4c}{self}}()}
+\DoxyCodeLine{102   \{}
+\DoxyCodeLine{103     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>ptr)}
+\DoxyCodeLine{104     \{}
+\DoxyCodeLine{105       \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>ptr = \textcolor{keyword}{new} T();}
+\DoxyCodeLine{106       \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>deleter = \mbox{\hyperlink{structsys_1_1_rc_ptr}{RcPtr<T>::do\_delete}};}
+\DoxyCodeLine{107     \}}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_enable_private_a3517aabec93254ea776b241adefba023}{m\_ptr}}-\/>ptr;}
+\DoxyCodeLine{110   \}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112   T* \mbox{\hyperlink{structsys_1_1_enable_private_addce73247b3941ad560ea6f980dd218f}{operator-\/>}}()}
+\DoxyCodeLine{113   \{}
+\DoxyCodeLine{114     \textcolor{keywordflow}{return} \mbox{\hyperlink{structsys_1_1_enable_private_a7754be00535eee83f64ce87285d2cc4c}{self}}();}
+\DoxyCodeLine{115   \}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117   T\& \mbox{\hyperlink{structsys_1_1_enable_private_abfdd7d0421a9387a189fda938c1986f0}{operator*}}()}
+\DoxyCodeLine{118   \{}
+\DoxyCodeLine{119     \textcolor{keywordflow}{return} *\mbox{\hyperlink{structsys_1_1_enable_private_a7754be00535eee83f64ce87285d2cc4c}{self}}();}
+\DoxyCodeLine{120   \}}
+\DoxyCodeLine{121 \};}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define EnablePrivate EnablePrivate<struct Private>}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define self self()}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{129 }
+
+\end{DoxyCode}

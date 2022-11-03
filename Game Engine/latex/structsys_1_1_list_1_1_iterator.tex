@@ -1,0 +1,102 @@
+\hypertarget{structsys_1_1_list_1_1_iterator}{}\doxysection{sys\+::List\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+::Iterator Struct Reference}
+\label{structsys_1_1_list_1_1_iterator}\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+
+
+{\ttfamily \#include $<$List.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{Iterator}} \& \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_a169a38fb880430162624a87ddc799e55}{operator++}} ()
+\item 
+bool \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_a83044524f2847841f2ebea5ca1709e32}{operator!=}} (const \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{Iterator}} \&\+\_\+other) const
+\item 
+bool \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_a78f1fcc287150c880b08fdd12e8eabc3}{operator==}} (const \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{Iterator}} \&\+\_\+other) const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr_lock}{Ptr\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_a90a5f9274782e0ee318d052e68946537}{operator-\/$>$}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_ref_lock}{Ref\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_a185de848da6a32c928dda449d0131d7d}{operator$\ast$}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ \mbox{\hyperlink{structsys_1_1_list_1_1_node}{Node}} $>$ \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_a2ecb3e7fef3defe6497f7d5d0b7178bd}{m\+\_\+node}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ bool $>$ \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_abbb7448f624abab44195967c4f056d59}{m\+\_\+end}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U $>$ }\\struct \mbox{\hyperlink{structsys_1_1_list_1_1_iterator_ac527f29a8df16b76b60024f3455a3835}{List}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_a83044524f2847841f2ebea5ca1709e32}\label{structsys_1_1_list_1_1_iterator_a83044524f2847841f2ebea5ca1709e32}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{Iterator}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_a185de848da6a32c928dda449d0131d7d}\label{structsys_1_1_list_1_1_iterator_a185de848da6a32c928dda449d0131d7d}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ref_lock}{Ref\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::operator$\ast$}
+
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_a169a38fb880430162624a87ddc799e55}\label{structsys_1_1_list_1_1_iterator_a169a38fb880430162624a87ddc799e55}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_list}{List}}$<$ T $>$\+::\+Iterator \& \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::operator++}
+
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_a90a5f9274782e0ee318d052e68946537}\label{structsys_1_1_list_1_1_iterator_a90a5f9274782e0ee318d052e68946537}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr_lock}{Ptr\+Lock}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::operator-\/$>$}
+
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_a78f1fcc287150c880b08fdd12e8eabc3}\label{structsys_1_1_list_1_1_iterator_a78f1fcc287150c880b08fdd12e8eabc3}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_list_1_1_iterator}{Iterator}} \&}]{\+\_\+other }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_ac527f29a8df16b76b60024f3455a3835}\label{structsys_1_1_list_1_1_iterator_ac527f29a8df16b76b60024f3455a3835}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!List@{List}}
+\index{List@{List}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{List}{List}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+friend struct \mbox{\hyperlink{structsys_1_1_list}{List}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_abbb7448f624abab44195967c4f056d59}\label{structsys_1_1_list_1_1_iterator_abbb7448f624abab44195967c4f056d59}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!m\_end@{m\_end}}
+\index{m\_end@{m\_end}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{m\_end}{m\_end}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$bool$>$ \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::m\+\_\+end\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_list_1_1_iterator_a2ecb3e7fef3defe6497f7d5d0b7178bd}\label{structsys_1_1_list_1_1_iterator_a2ecb3e7fef3defe6497f7d5d0b7178bd}} 
+\index{sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}!m\_node@{m\_node}}
+\index{m\_node@{m\_node}!sys::List$<$ T $>$::Iterator@{sys::List$<$ T $>$::Iterator}}
+\doxysubsubsection{\texorpdfstring{m\_node}{m\_node}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$\mbox{\hyperlink{structsys_1_1_list_1_1_node}{Node}}$>$ \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ T $>$\+::\+Iterator\+::m\+\_\+node\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_list_8h}{List.\+h}}\end{DoxyCompactItemize}

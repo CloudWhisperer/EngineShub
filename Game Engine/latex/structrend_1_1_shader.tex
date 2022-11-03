@@ -1,0 +1,196 @@
+\hypertarget{structrend_1_1_shader}{}\doxysection{rend\+::Shader Struct Reference}
+\label{structrend_1_1_shader}\index{rend::Shader@{rend::Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+Inheritance diagram for rend\+::Shader\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structrend_1_1_shader}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_shader_a6b6fef4417e08a0dd2304fe1e7501a6f}{Shader}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+vert\+Path, const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+frag\+Path)
+\item 
+\mbox{\hyperlink{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}{$\sim$\+Shader}} ()
+\item 
+GLuint \mbox{\hyperlink{structrend_1_1_shader_aebd7cceba1a13800da7cd37e65d5c995}{id}} ()
+\item 
+GLint \mbox{\hyperlink{structrend_1_1_shader_ad3d7ce977db31bfb3612f3f03b345e6c}{projection\+Loc}} ()
+\item 
+GLint \mbox{\hyperlink{structrend_1_1_shader_a4c9795a00f210edcaeb33efb3531c579}{model\+Loc}} ()
+\item 
+GLint \mbox{\hyperlink{structrend_1_1_shader_a68fda0e3c3b4891653c3464af098645f}{view\+Loc}} ()
+\item 
+GLint \mbox{\hyperlink{structrend_1_1_shader_a5f1627eabf69bda623aa548df4d43b72}{texture0\+Loc}} ()
+\item 
+GLint \mbox{\hyperlink{structrend_1_1_shader_a0389e992ccc2091134536aefdf7416c0}{texture1\+Loc}} ()
+\item 
+GLint \mbox{\hyperlink{structrend_1_1_shader_ab9b58888153f1741454f30316d86a027}{color\+Loc}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_shader_a7c1d34e575b6d578cee88f04e5a3dd8f}{Shader}} (const \mbox{\hyperlink{structrend_1_1_shader}{Shader}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structrend_1_1_shader}{Shader}} \& \mbox{\hyperlink{structrend_1_1_shader_a7747fff42dc872d762169dc9955c2c6e}{operator=}} (const \mbox{\hyperlink{structrend_1_1_shader}{Shader}} \&\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLuint $>$ \mbox{\hyperlink{structrend_1_1_shader_aaa77b296d4509ffa323e1bac03dfdeae}{m\+\_\+id}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLint $>$ \mbox{\hyperlink{structrend_1_1_shader_acbd88b9038d6c3fb7931adad7fe8cc7f}{m\+\_\+projection\+Loc}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLint $>$ \mbox{\hyperlink{structrend_1_1_shader_a3fa273b1f61ee492b7ff7ec439b2a828}{m\+\_\+view\+Loc}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLint $>$ \mbox{\hyperlink{structrend_1_1_shader_a5ac50fd1ad7d3f5aa736be28c41ee5b4}{m\+\_\+model\+Loc}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLint $>$ \mbox{\hyperlink{structrend_1_1_shader_ad3f3576a5ba2d9b658486d1ebd772971}{m\+\_\+texture0\+Loc}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLint $>$ \mbox{\hyperlink{structrend_1_1_shader_a23104473bbf78692b2c8570a1808c2e0}{m\+\_\+texture1\+Loc}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLint $>$ \mbox{\hyperlink{structrend_1_1_shader_a8c3bc3a473a9907ec6ae61deb08dce4e}{m\+\_\+color\+Loc}}
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structrend_1_1_shader_aa7069994edae353add4af94ad22c5485}{m\+\_\+vert\+Src}}
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \mbox{\hyperlink{structrend_1_1_shader_ac496ab8a09eb20faa722a400d9b05967}{m\+\_\+frag\+Src}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_shader_a6b6fef4417e08a0dd2304fe1e7501a6f}\label{structrend_1_1_shader_a6b6fef4417e08a0dd2304fe1e7501a6f}} 
+\index{rend::Shader@{rend::Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rend\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+vert\+Path,  }\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+frag\+Path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}\label{structrend_1_1_shader_a19e4082c42e8d2fd7256b5bfe3d2d811}} 
+\index{rend::Shader@{rend::Shader}!````~Shader@{$\sim$Shader}}
+\index{````~Shader@{$\sim$Shader}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{$\sim$Shader()}{~Shader()}}
+{\footnotesize\ttfamily rend\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a7c1d34e575b6d578cee88f04e5a3dd8f}\label{structrend_1_1_shader_a7c1d34e575b6d578cee88f04e5a3dd8f}} 
+\index{rend::Shader@{rend::Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rend\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_shader}{Shader}} \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_shader_ab9b58888153f1741454f30316d86a027}\label{structrend_1_1_shader_ab9b58888153f1741454f30316d86a027}} 
+\index{rend::Shader@{rend::Shader}!colorLoc@{colorLoc}}
+\index{colorLoc@{colorLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{colorLoc()}{colorLoc()}}
+{\footnotesize\ttfamily GLint rend\+::\+Shader\+::color\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_aebd7cceba1a13800da7cd37e65d5c995}\label{structrend_1_1_shader_aebd7cceba1a13800da7cd37e65d5c995}} 
+\index{rend::Shader@{rend::Shader}!id@{id}}
+\index{id@{id}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily GLuint rend\+::\+Shader\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a4c9795a00f210edcaeb33efb3531c579}\label{structrend_1_1_shader_a4c9795a00f210edcaeb33efb3531c579}} 
+\index{rend::Shader@{rend::Shader}!modelLoc@{modelLoc}}
+\index{modelLoc@{modelLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{modelLoc()}{modelLoc()}}
+{\footnotesize\ttfamily GLint rend\+::\+Shader\+::model\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a7747fff42dc872d762169dc9955c2c6e}\label{structrend_1_1_shader_a7747fff42dc872d762169dc9955c2c6e}} 
+\index{rend::Shader@{rend::Shader}!operator=@{operator=}}
+\index{operator=@{operator=}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrend_1_1_shader}{Shader}} \& rend\+::\+Shader\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_shader}{Shader}} \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_ad3d7ce977db31bfb3612f3f03b345e6c}\label{structrend_1_1_shader_ad3d7ce977db31bfb3612f3f03b345e6c}} 
+\index{rend::Shader@{rend::Shader}!projectionLoc@{projectionLoc}}
+\index{projectionLoc@{projectionLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{projectionLoc()}{projectionLoc()}}
+{\footnotesize\ttfamily GLint rend\+::\+Shader\+::projection\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a5f1627eabf69bda623aa548df4d43b72}\label{structrend_1_1_shader_a5f1627eabf69bda623aa548df4d43b72}} 
+\index{rend::Shader@{rend::Shader}!texture0Loc@{texture0Loc}}
+\index{texture0Loc@{texture0Loc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{texture0Loc()}{texture0Loc()}}
+{\footnotesize\ttfamily GLint rend\+::\+Shader\+::texture0\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a0389e992ccc2091134536aefdf7416c0}\label{structrend_1_1_shader_a0389e992ccc2091134536aefdf7416c0}} 
+\index{rend::Shader@{rend::Shader}!texture1Loc@{texture1Loc}}
+\index{texture1Loc@{texture1Loc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{texture1Loc()}{texture1Loc()}}
+{\footnotesize\ttfamily GLint rend\+::\+Shader\+::texture1\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a68fda0e3c3b4891653c3464af098645f}\label{structrend_1_1_shader_a68fda0e3c3b4891653c3464af098645f}} 
+\index{rend::Shader@{rend::Shader}!viewLoc@{viewLoc}}
+\index{viewLoc@{viewLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{viewLoc()}{viewLoc()}}
+{\footnotesize\ttfamily GLint rend\+::\+Shader\+::view\+Loc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrend_1_1_shader_a8c3bc3a473a9907ec6ae61deb08dce4e}\label{structrend_1_1_shader_a8c3bc3a473a9907ec6ae61deb08dce4e}} 
+\index{rend::Shader@{rend::Shader}!m\_colorLoc@{m\_colorLoc}}
+\index{m\_colorLoc@{m\_colorLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_colorLoc}{m\_colorLoc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLint$>$ rend\+::\+Shader\+::m\+\_\+color\+Loc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_ac496ab8a09eb20faa722a400d9b05967}\label{structrend_1_1_shader_ac496ab8a09eb20faa722a400d9b05967}} 
+\index{rend::Shader@{rend::Shader}!m\_fragSrc@{m\_fragSrc}}
+\index{m\_fragSrc@{m\_fragSrc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_fragSrc}{m\_fragSrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} rend\+::\+Shader\+::m\+\_\+frag\+Src\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_aaa77b296d4509ffa323e1bac03dfdeae}\label{structrend_1_1_shader_aaa77b296d4509ffa323e1bac03dfdeae}} 
+\index{rend::Shader@{rend::Shader}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLuint$>$ rend\+::\+Shader\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a5ac50fd1ad7d3f5aa736be28c41ee5b4}\label{structrend_1_1_shader_a5ac50fd1ad7d3f5aa736be28c41ee5b4}} 
+\index{rend::Shader@{rend::Shader}!m\_modelLoc@{m\_modelLoc}}
+\index{m\_modelLoc@{m\_modelLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_modelLoc}{m\_modelLoc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLint$>$ rend\+::\+Shader\+::m\+\_\+model\+Loc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_acbd88b9038d6c3fb7931adad7fe8cc7f}\label{structrend_1_1_shader_acbd88b9038d6c3fb7931adad7fe8cc7f}} 
+\index{rend::Shader@{rend::Shader}!m\_projectionLoc@{m\_projectionLoc}}
+\index{m\_projectionLoc@{m\_projectionLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_projectionLoc}{m\_projectionLoc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLint$>$ rend\+::\+Shader\+::m\+\_\+projection\+Loc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_ad3f3576a5ba2d9b658486d1ebd772971}\label{structrend_1_1_shader_ad3f3576a5ba2d9b658486d1ebd772971}} 
+\index{rend::Shader@{rend::Shader}!m\_texture0Loc@{m\_texture0Loc}}
+\index{m\_texture0Loc@{m\_texture0Loc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_texture0Loc}{m\_texture0Loc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLint$>$ rend\+::\+Shader\+::m\+\_\+texture0\+Loc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a23104473bbf78692b2c8570a1808c2e0}\label{structrend_1_1_shader_a23104473bbf78692b2c8570a1808c2e0}} 
+\index{rend::Shader@{rend::Shader}!m\_texture1Loc@{m\_texture1Loc}}
+\index{m\_texture1Loc@{m\_texture1Loc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_texture1Loc}{m\_texture1Loc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLint$>$ rend\+::\+Shader\+::m\+\_\+texture1\+Loc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_aa7069994edae353add4af94ad22c5485}\label{structrend_1_1_shader_aa7069994edae353add4af94ad22c5485}} 
+\index{rend::Shader@{rend::Shader}!m\_vertSrc@{m\_vertSrc}}
+\index{m\_vertSrc@{m\_vertSrc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_vertSrc}{m\_vertSrc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} rend\+::\+Shader\+::m\+\_\+vert\+Src\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_shader_a3fa273b1f61ee492b7ff7ec439b2a828}\label{structrend_1_1_shader_a3fa273b1f61ee492b7ff7ec439b2a828}} 
+\index{rend::Shader@{rend::Shader}!m\_viewLoc@{m\_viewLoc}}
+\index{m\_viewLoc@{m\_viewLoc}!rend::Shader@{rend::Shader}}
+\doxysubsubsection{\texorpdfstring{m\_viewLoc}{m\_viewLoc}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLint$>$ rend\+::\+Shader\+::m\+\_\+view\+Loc\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_shader_8h}{Shader.\+h}}\item 
+src/rend/\mbox{\hyperlink{_shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\hypertarget{_string_8h}{}\doxysection{src/rend/sys/\+String.h File Reference}
+\label{_string_8h}\index{src/rend/sys/String.h@{src/rend/sys/String.h}}
+{\ttfamily \#include \char`\"{}Vector.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ptr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}panic.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesys}{sys}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_string_8h_a547a41675d74fdf4b847f6744ea8823c}{SYS\+\_\+\+TAKE\+\_\+\+RAW}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_string_8h_a547a41675d74fdf4b847f6744ea8823c}\label{_string_8h_a547a41675d74fdf4b847f6744ea8823c}} 
+\index{String.h@{String.h}!SYS\_TAKE\_RAW@{SYS\_TAKE\_RAW}}
+\index{SYS\_TAKE\_RAW@{SYS\_TAKE\_RAW}!String.h@{String.h}}
+\doxysubsubsection{\texorpdfstring{SYS\_TAKE\_RAW}{SYS\_TAKE\_RAW}}
+{\footnotesize\ttfamily \#define SYS\+\_\+\+TAKE\+\_\+\+RAW}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordtype}{size\_t} len = strlen(\_value);       \(\backslash\)}
+\DoxyCodeLine{  m\_data.resize(len + 1);            \(\backslash\)}
+\DoxyCodeLine{                                     \(\backslash\)}
+\DoxyCodeLine{  for(\textcolor{keywordtype}{size\_t} ci = 0; ci < len; ++ci) \(\backslash\)}
+\DoxyCodeLine{  \{                                  \(\backslash\)}
+\DoxyCodeLine{    m\_data[ci] = \_value[ci];         \(\backslash\)}
+\DoxyCodeLine{  \}                                  \(\backslash\)}
+\DoxyCodeLine{                                     \(\backslash\)}
+\DoxyCodeLine{  m\_data[m\_data.size() -\/ 1] = 0;     \(\backslash\)}
+
+\end{DoxyCode}

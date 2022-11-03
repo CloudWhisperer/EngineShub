@@ -1,0 +1,145 @@
+\hypertarget{structrend_1_1_texture}{}\doxysection{rend\+::Texture Struct Reference}
+\label{structrend_1_1_texture}\index{rend::Texture@{rend::Texture}}
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+Inheritance diagram for rend\+::Texture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structrend_1_1_texture}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}{Texture}} ()
+\item 
+\mbox{\hyperlink{structrend_1_1_texture_a26e5e41d50de3e9398ca9aadcf6215ad}{Texture}} (const \mbox{\hyperlink{structrend_1_1_texture}{Texture}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structrend_1_1_texture}{Texture}} \& \mbox{\hyperlink{structrend_1_1_texture_ae7e77cb082918da85324d1b3ea900d8c}{operator=}} (const \mbox{\hyperlink{structrend_1_1_texture}{Texture}} \&\+\_\+other)
+\item 
+\mbox{\hyperlink{structrend_1_1_texture_ab16a44eb0444586c54c7fe27aee9906a}{$\sim$\+Texture}} ()
+\item 
+\mbox{\hyperlink{structrend_1_1_texture_a46c44f9369fc45ab64c675cc0121f0d8}{Texture}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path)
+\item 
+\mbox{\hyperlink{structrend_1_1_texture_abb3a815a3057a91efb222bf8bcad345e}{Texture}} (int \+\_\+width, int \+\_\+height)
+\item 
+void \mbox{\hyperlink{structrend_1_1_texture_a3222a0596751cb17cf6f8095651b3f9f}{resize}} (int \+\_\+width, int \+\_\+height)
+\item 
+void \mbox{\hyperlink{structrend_1_1_texture_a700bc114c6aabcebc9004b20ac7abe3a}{load}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path)
+\item 
+GLuint \mbox{\hyperlink{structrend_1_1_texture_ad9c989ed600c5befd267ae56583993ff}{id}} ()
+\item 
+\mbox{\hyperlink{group__core__vector_ga29b6216590129c7ac33f477dca55af32}{ivec2}} \mbox{\hyperlink{structrend_1_1_texture_a1772c13f6bab17898374afec8f640880}{size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLuint $>$ \mbox{\hyperlink{structrend_1_1_texture_a5ab802b3200da82d5a6a440e9ffd5d45}{m\+\_\+id}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ bool $>$ \mbox{\hyperlink{structrend_1_1_texture_a1be69e5b30cd02f9827a867ea847c758}{m\+\_\+dirty}}
+\item 
+\mbox{\hyperlink{group__core__vector_ga29b6216590129c7ac33f477dca55af32}{ivec2}} \mbox{\hyperlink{structrend_1_1_texture_af821a01c7b6f4fa98afc70172558e712}{m\+\_\+size}}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ unsigned char $>$ \mbox{\hyperlink{structrend_1_1_texture_ae438ebd99c6aaa35a8afdaf73d343348}{m\+\_\+raw}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}\label{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}} 
+\index{rend::Texture@{rend::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily rend\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_a26e5e41d50de3e9398ca9aadcf6215ad}\label{structrend_1_1_texture_a26e5e41d50de3e9398ca9aadcf6215ad}} 
+\index{rend::Texture@{rend::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily rend\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_texture}{Texture}} \&}]{\+\_\+copy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_ab16a44eb0444586c54c7fe27aee9906a}\label{structrend_1_1_texture_ab16a44eb0444586c54c7fe27aee9906a}} 
+\index{rend::Texture@{rend::Texture}!````~Texture@{$\sim$Texture}}
+\index{````~Texture@{$\sim$Texture}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{$\sim$Texture()}{~Texture()}}
+{\footnotesize\ttfamily rend\+::\+Texture\+::$\sim$\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_a46c44f9369fc45ab64c675cc0121f0d8}\label{structrend_1_1_texture_a46c44f9369fc45ab64c675cc0121f0d8}} 
+\index{rend::Texture@{rend::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily rend\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_abb3a815a3057a91efb222bf8bcad345e}\label{structrend_1_1_texture_abb3a815a3057a91efb222bf8bcad345e}} 
+\index{rend::Texture@{rend::Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily rend\+::\+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{int}]{\+\_\+width,  }\item[{int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_texture_ad9c989ed600c5befd267ae56583993ff}\label{structrend_1_1_texture_ad9c989ed600c5befd267ae56583993ff}} 
+\index{rend::Texture@{rend::Texture}!id@{id}}
+\index{id@{id}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily GLuint rend\+::\+Texture\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_a700bc114c6aabcebc9004b20ac7abe3a}\label{structrend_1_1_texture_a700bc114c6aabcebc9004b20ac7abe3a}} 
+\index{rend::Texture@{rend::Texture}!load@{load}}
+\index{load@{load}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void rend\+::\+Texture\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_ae7e77cb082918da85324d1b3ea900d8c}\label{structrend_1_1_texture_ae7e77cb082918da85324d1b3ea900d8c}} 
+\index{rend::Texture@{rend::Texture}!operator=@{operator=}}
+\index{operator=@{operator=}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrend_1_1_texture}{Texture}} \& rend\+::\+Texture\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_texture}{Texture}} \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_a3222a0596751cb17cf6f8095651b3f9f}\label{structrend_1_1_texture_a3222a0596751cb17cf6f8095651b3f9f}} 
+\index{rend::Texture@{rend::Texture}!resize@{resize}}
+\index{resize@{resize}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void rend\+::\+Texture\+::resize (\begin{DoxyParamCaption}\item[{int}]{\+\_\+width,  }\item[{int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_texture_a1772c13f6bab17898374afec8f640880}\label{structrend_1_1_texture_a1772c13f6bab17898374afec8f640880}} 
+\index{rend::Texture@{rend::Texture}!size@{size}}
+\index{size@{size}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga29b6216590129c7ac33f477dca55af32}{ivec2}} rend\+::\+Texture\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrend_1_1_texture_a1be69e5b30cd02f9827a867ea847c758}\label{structrend_1_1_texture_a1be69e5b30cd02f9827a867ea847c758}} 
+\index{rend::Texture@{rend::Texture}!m\_dirty@{m\_dirty}}
+\index{m\_dirty@{m\_dirty}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{m\_dirty}{m\_dirty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$bool$>$ rend\+::\+Texture\+::m\+\_\+dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_texture_a5ab802b3200da82d5a6a440e9ffd5d45}\label{structrend_1_1_texture_a5ab802b3200da82d5a6a440e9ffd5d45}} 
+\index{rend::Texture@{rend::Texture}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLuint$>$ rend\+::\+Texture\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_texture_ae438ebd99c6aaa35a8afdaf73d343348}\label{structrend_1_1_texture_ae438ebd99c6aaa35a8afdaf73d343348}} 
+\index{rend::Texture@{rend::Texture}!m\_raw@{m\_raw}}
+\index{m\_raw@{m\_raw}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{m\_raw}{m\_raw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$unsigned char$>$ rend\+::\+Texture\+::m\+\_\+raw\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_texture_af821a01c7b6f4fa98afc70172558e712}\label{structrend_1_1_texture_af821a01c7b6f4fa98afc70172558e712}} 
+\index{rend::Texture@{rend::Texture}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!rend::Texture@{rend::Texture}}
+\doxysubsubsection{\texorpdfstring{m\_size}{m\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga29b6216590129c7ac33f477dca55af32}{ivec2}} rend\+::\+Texture\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_texture_8h}{Texture.\+h}}\item 
+src/rend/\mbox{\hyperlink{_texture_8cpp}{Texture.\+cpp}}\end{DoxyCompactItemize}

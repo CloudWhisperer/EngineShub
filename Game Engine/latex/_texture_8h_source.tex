@@ -1,0 +1,49 @@
+\hypertarget{_texture_8h_source}{}\doxysection{Texture.\+h}
+\label{_texture_8h_source}\index{src/rend/Texture.h@{src/rend/Texture.h}}
+\mbox{\hyperlink{_texture_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef REND\_TEXTURE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define REND\_TEXTURE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rendmath_8h}{rendmath.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <GL/glew.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_zero_8h}{sys/Zero.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{sys/Ptr.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_vector_8h}{sys/Vector.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_string_8h}{sys/String.h}}"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacerend}{rend}}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{struct }\mbox{\hyperlink{structrend_1_1_texture}{Texture}} : \mbox{\hyperlink{structsys_1_1_enable_ptr}{sys::EnablePtr}}}
+\DoxyCodeLine{17 \{}
+\DoxyCodeLine{18   \mbox{\hyperlink{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}{Texture}}();}
+\DoxyCodeLine{19   \mbox{\hyperlink{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}{Texture}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_texture}{Texture}}\& \_copy);}
+\DoxyCodeLine{20   \mbox{\hyperlink{structrend_1_1_texture}{Texture}}\& \mbox{\hyperlink{structrend_1_1_texture_ae7e77cb082918da85324d1b3ea900d8c}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structrend_1_1_texture}{Texture}}\& \_other);}
+\DoxyCodeLine{21   \mbox{\hyperlink{structrend_1_1_texture_ab16a44eb0444586c54c7fe27aee9906a}{\string~Texture}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23   \mbox{\hyperlink{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}{Texture}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\& \_path);}
+\DoxyCodeLine{24   \mbox{\hyperlink{structrend_1_1_texture_ae4467ca415ba05f1b33a57b4087a7f1a}{Texture}}(\textcolor{keywordtype}{int} \_width, \textcolor{keywordtype}{int} \_height);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_texture_a3222a0596751cb17cf6f8095651b3f9f}{resize}}(\textcolor{keywordtype}{int} \_width, \textcolor{keywordtype}{int} \_height);}
+\DoxyCodeLine{27   \textcolor{keywordtype}{void} \mbox{\hyperlink{structrend_1_1_texture_a700bc114c6aabcebc9004b20ac7abe3a}{load}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{sys::String}}\& \_path);}
+\DoxyCodeLine{28   GLuint \mbox{\hyperlink{structrend_1_1_texture_ad9c989ed600c5befd267ae56583993ff}{id}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30   \mbox{\hyperlink{structglm_1_1vec}{ivec2}} \mbox{\hyperlink{structrend_1_1_texture_a1772c13f6bab17898374afec8f640880}{size}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{private}:}
+\DoxyCodeLine{33   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<GLuint>}} \mbox{\hyperlink{structrend_1_1_texture_a5ab802b3200da82d5a6a440e9ffd5d45}{m\_id}};}
+\DoxyCodeLine{34   \mbox{\hyperlink{structsys_1_1_zero}{sys::Zero<bool>}} \mbox{\hyperlink{structrend_1_1_texture_a1be69e5b30cd02f9827a867ea847c758}{m\_dirty}};}
+\DoxyCodeLine{35   \mbox{\hyperlink{structglm_1_1vec}{ivec2}} \mbox{\hyperlink{structrend_1_1_texture_af821a01c7b6f4fa98afc70172558e712}{m\_size}};}
+\DoxyCodeLine{36   \mbox{\hyperlink{structsys_1_1_vector}{sys::Vector<unsigned char>}} \mbox{\hyperlink{structrend_1_1_texture_ae438ebd99c6aaa35a8afdaf73d343348}{m\_raw}};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{43 }
+
+\end{DoxyCode}

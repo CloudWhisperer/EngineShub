@@ -1,0 +1,41 @@
+\hypertarget{_core_8h_source}{}\doxysection{Core.\+h}
+\label{_core_8h_source}\index{src/myengine/Core.h@{src/myengine/Core.h}}
+\mbox{\hyperlink{_core_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SDL2/SDL.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{11 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemyengine}{myengine}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{15     \textcolor{keyword}{struct }Entity;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{18     \textcolor{keyword}{struct }Component;}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_core}{Core}}}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{23         \textcolor{keyword}{static} std::shared\_ptr<Core> \mbox{\hyperlink{structmyengine_1_1_core_a60646236bab8f92a381ce2d43806e813}{initialize}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{26         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_core_ad30b81f4e6ca3cc018e6c529904fdb3f}{start}}();}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_core_a4f1818b9d6fbf66e8c3b246fa1f2d965}{stop}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{32         \mbox{\hyperlink{structmyengine_1_1_core_af8293765bd17b1e0003df3820fa38990}{\string~Core}}();}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35         std::shared\_ptr<Entity> \mbox{\hyperlink{structmyengine_1_1_core_abf2eea4d6b0d3788761ea11f34c4981d}{addEntity}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38     \textcolor{keyword}{private}:}
+\DoxyCodeLine{40         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}{m\_running}};}
+\DoxyCodeLine{41         std::vector<std::shared\_ptr<Entity> > \mbox{\hyperlink{structmyengine_1_1_core_af0c11fddba430e3b02fc05b4e6e04135}{m\_entities}};}
+\DoxyCodeLine{42         std::weak\_ptr<Core>\mbox{\hyperlink{structmyengine_1_1_core_ae82b7b0c2f95c869b82ea2082b6e5e37}{m\_self}};}
+\DoxyCodeLine{43         std::weak\_ptr<Core>\mbox{\hyperlink{structmyengine_1_1_core_a611c7efd669b6140df37b75e6c27c010}{rtn}};}
+\DoxyCodeLine{44         SDL\_Window* \mbox{\hyperlink{structmyengine_1_1_core_a1e3bb28ce6b0f676d3cf8b89a8bcf2d9}{m\_window}};}
+\DoxyCodeLine{45         SDL\_GLContext \mbox{\hyperlink{structmyengine_1_1_core_a29a296628fff741a57ec51646cc105f5}{m\_context}};}
+\DoxyCodeLine{46         SDL\_Event \mbox{\hyperlink{structmyengine_1_1_core_a14c3fcccfa702373ea1bd090ff196a1e}{e}};}
+\DoxyCodeLine{47     \};}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}

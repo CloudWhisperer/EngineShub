@@ -1,0 +1,101 @@
+\hypertarget{structsys_1_1_pipe}{}\doxysection{sys\+::Pipe Struct Reference}
+\label{structsys_1_1_pipe}\index{sys::Pipe@{sys::Pipe}}
+
+
+{\ttfamily \#include $<$Pipe.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_pipe_a070c6135312dcfe26813a91634735700}{Pipe}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+command)
+\item 
+\mbox{\hyperlink{structsys_1_1_pipe_a603cd9bc2fdbd13f16e06c2bfd25e42c}{$\sim$\+Pipe}} ()
+\item 
+bool \mbox{\hyperlink{structsys_1_1_pipe_a62dc4b688d8b18fbbefc099770c2261f}{open}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+command)
+\item 
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_pipe_a2952e61b4b2dbec5b38eadc5b6162672}{read}} (\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ unsigned char $>$ \&\+\_\+output)
+\item 
+bool \mbox{\hyperlink{structsys_1_1_pipe_affbb392a9cb9fb353a9f2d7da4282acd}{read\+\_\+line}} (\mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_pipe_a3a55f83916b16a6f8dc25681b52a9f8f}{Pipe}} (const \mbox{\hyperlink{structsys_1_1_pipe}{Pipe}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_pipe}{Pipe}} \& \mbox{\hyperlink{structsys_1_1_pipe_abbeafffc359a8a0764c82c522d68e4bc}{operator=}} (const \mbox{\hyperlink{structsys_1_1_pipe}{Pipe}} \&\+\_\+other)
+\item 
+bool \mbox{\hyperlink{structsys_1_1_pipe_ae9f9efcd04dce3f3210500c9900b9138}{strip\+\_\+endl}} (\mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ FILE $\ast$ $>$ \mbox{\hyperlink{structsys_1_1_pipe_a712ae5b30d16cc8c1f44792183d1cd58}{m\+\_\+raw}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_pipe_a070c6135312dcfe26813a91634735700}\label{structsys_1_1_pipe_a070c6135312dcfe26813a91634735700}} 
+\index{sys::Pipe@{sys::Pipe}!Pipe@{Pipe}}
+\index{Pipe@{Pipe}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{Pipe()}{Pipe()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sys\+::\+Pipe\+::\+Pipe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_pipe_a603cd9bc2fdbd13f16e06c2bfd25e42c}\label{structsys_1_1_pipe_a603cd9bc2fdbd13f16e06c2bfd25e42c}} 
+\index{sys::Pipe@{sys::Pipe}!````~Pipe@{$\sim$Pipe}}
+\index{````~Pipe@{$\sim$Pipe}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{$\sim$Pipe()}{~Pipe()}}
+{\footnotesize\ttfamily sys\+::\+Pipe\+::$\sim$\+Pipe (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_pipe_a3a55f83916b16a6f8dc25681b52a9f8f}\label{structsys_1_1_pipe_a3a55f83916b16a6f8dc25681b52a9f8f}} 
+\index{sys::Pipe@{sys::Pipe}!Pipe@{Pipe}}
+\index{Pipe@{Pipe}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{Pipe()}{Pipe()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sys\+::\+Pipe\+::\+Pipe (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_pipe}{Pipe}} \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_pipe_a62dc4b688d8b18fbbefc099770c2261f}\label{structsys_1_1_pipe_a62dc4b688d8b18fbbefc099770c2261f}} 
+\index{sys::Pipe@{sys::Pipe}!open@{open}}
+\index{open@{open}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{open()}{open()}}
+{\footnotesize\ttfamily bool sys\+::\+Pipe\+::open (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_pipe_abbeafffc359a8a0764c82c522d68e4bc}\label{structsys_1_1_pipe_abbeafffc359a8a0764c82c522d68e4bc}} 
+\index{sys::Pipe@{sys::Pipe}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_pipe}{Pipe}} \& sys\+::\+Pipe\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_pipe}{Pipe}} \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_pipe_a2952e61b4b2dbec5b38eadc5b6162672}\label{structsys_1_1_pipe_a2952e61b4b2dbec5b38eadc5b6162672}} 
+\index{sys::Pipe@{sys::Pipe}!read@{read}}
+\index{read@{read}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily size\+\_\+t sys\+::\+Pipe\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ unsigned char $>$ \&}]{\+\_\+output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_pipe_affbb392a9cb9fb353a9f2d7da4282acd}\label{structsys_1_1_pipe_affbb392a9cb9fb353a9f2d7da4282acd}} 
+\index{sys::Pipe@{sys::Pipe}!read\_line@{read\_line}}
+\index{read\_line@{read\_line}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{read\_line()}{read\_line()}}
+{\footnotesize\ttfamily bool sys\+::\+Pipe\+::read\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_pipe_ae9f9efcd04dce3f3210500c9900b9138}\label{structsys_1_1_pipe_ae9f9efcd04dce3f3210500c9900b9138}} 
+\index{sys::Pipe@{sys::Pipe}!strip\_endl@{strip\_endl}}
+\index{strip\_endl@{strip\_endl}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{strip\_endl()}{strip\_endl()}}
+{\footnotesize\ttfamily bool sys\+::\+Pipe\+::strip\+\_\+endl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_pipe_a712ae5b30d16cc8c1f44792183d1cd58}\label{structsys_1_1_pipe_a712ae5b30d16cc8c1f44792183d1cd58}} 
+\index{sys::Pipe@{sys::Pipe}!m\_raw@{m\_raw}}
+\index{m\_raw@{m\_raw}!sys::Pipe@{sys::Pipe}}
+\doxysubsubsection{\texorpdfstring{m\_raw}{m\_raw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$FILE $\ast$$>$ sys\+::\+Pipe\+::m\+\_\+raw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_pipe_8h}{Pipe.\+h}}\end{DoxyCompactItemize}

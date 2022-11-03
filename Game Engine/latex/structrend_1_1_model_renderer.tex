@@ -1,0 +1,118 @@
+\hypertarget{structrend_1_1_model_renderer}{}\doxysection{rend\+::Model\+Renderer Struct Reference}
+\label{structrend_1_1_model_renderer}\index{rend::ModelRenderer@{rend::ModelRenderer}}
+
+
+{\ttfamily \#include $<$Model\+Renderer.\+h$>$}
+
+Inheritance diagram for rend\+::Model\+Renderer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{structrend_1_1_model_renderer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_model_renderer_a79c80497086ef5b92d5f3478be0c3267}{Model\+Renderer}} (int \+\_\+width, int \+\_\+height)
+\item 
+\mbox{\hyperlink{structrend_1_1_model_renderer_a99b5db2bda30e602198e5b7569a5060a}{Model\+Renderer}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$ \+\_\+render\+Texture)
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_renderer_a6c67a77ad88284c6b35766e223b09cba}{model}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$ \+\_\+model)
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_renderer_a02a673d4cf325fc45bd6529130c69ca3}{animation}} (\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_animation}{Animation}} $>$ \+\_\+animation)
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_renderer_a9216d20517ba917ff963a87d82df14ce}{frame}} (float \+\_\+frame)
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ \mbox{\hyperlink{structrend_1_1_model_renderer_ad8b9584226bca05649f35c1ca292bf54}{intersect}} (const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&\+\_\+ray, float \&\+\_\+distance) const
+\item 
+void \mbox{\hyperlink{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb997a4}{render}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$ \mbox{\hyperlink{structrend_1_1_model_renderer_a044109b0fa335b852c78892437659745}{m\+\_\+model\+Ptr}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_animation}{Animation}} $>$ \mbox{\hyperlink{structrend_1_1_model_renderer_a62b014f28c850ccde10c538f3835aa6c}{m\+\_\+animation}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ float $>$ \mbox{\hyperlink{structrend_1_1_model_renderer_ae597d3dfba5dda557f62d3e39b245f28}{m\+\_\+frame}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a79c80497086ef5b92d5f3478be0c3267}\label{structrend_1_1_model_renderer_a79c80497086ef5b92d5f3478be0c3267}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!ModelRenderer@{ModelRenderer}}
+\index{ModelRenderer@{ModelRenderer}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{ModelRenderer()}{ModelRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily rend\+::\+Model\+Renderer\+::\+Model\+Renderer (\begin{DoxyParamCaption}\item[{int}]{\+\_\+width,  }\item[{int}]{\+\_\+height }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a99b5db2bda30e602198e5b7569a5060a}\label{structrend_1_1_model_renderer_a99b5db2bda30e602198e5b7569a5060a}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!ModelRenderer@{ModelRenderer}}
+\index{ModelRenderer@{ModelRenderer}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{ModelRenderer()}{ModelRenderer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily rend\+::\+Model\+Renderer\+::\+Model\+Renderer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_render_texture}{Render\+Texture}} $>$}]{\+\_\+render\+Texture }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a02a673d4cf325fc45bd6529130c69ca3}\label{structrend_1_1_model_renderer_a02a673d4cf325fc45bd6529130c69ca3}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!animation@{animation}}
+\index{animation@{animation}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{animation()}{animation()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+Renderer\+::animation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_animation}{Animation}} $>$}]{\+\_\+animation }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a9216d20517ba917ff963a87d82df14ce}\label{structrend_1_1_model_renderer_a9216d20517ba917ff963a87d82df14ce}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!frame@{frame}}
+\index{frame@{frame}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{frame()}{frame()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+Renderer\+::frame (\begin{DoxyParamCaption}\item[{float}]{\+\_\+frame }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_ad8b9584226bca05649f35c1ca292bf54}\label{structrend_1_1_model_renderer_ad8b9584226bca05649f35c1ca292bf54}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!intersect@{intersect}}
+\index{intersect@{intersect}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_part}{Part}} $>$ rend\+::\+Model\+Renderer\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&}]{\+\_\+ray,  }\item[{float \&}]{\+\_\+distance }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a6c67a77ad88284c6b35766e223b09cba}\label{structrend_1_1_model_renderer_a6c67a77ad88284c6b35766e223b09cba}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!model@{model}}
+\index{model@{model}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{model()}{model()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+Renderer\+::model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_model}{Model}} $>$}]{\+\_\+model }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb997a4}\label{structrend_1_1_model_renderer_a8d7d61685590d98364b7a9bb8bb997a4}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!render@{render}}
+\index{render@{render}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void rend\+::\+Model\+Renderer\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{structrend_1_1_renderer_a3588902d7e30986ebc201545049f875b}{rend\+::\+Renderer}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a62b014f28c850ccde10c538f3835aa6c}\label{structrend_1_1_model_renderer_a62b014f28c850ccde10c538f3835aa6c}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!m\_animation@{m\_animation}}
+\index{m\_animation@{m\_animation}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_animation}{m\_animation}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$\mbox{\hyperlink{structrend_1_1_animation}{Animation}}$>$ rend\+::\+Model\+Renderer\+::m\+\_\+animation\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_ae597d3dfba5dda557f62d3e39b245f28}\label{structrend_1_1_model_renderer_ae597d3dfba5dda557f62d3e39b245f28}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!m\_frame@{m\_frame}}
+\index{m\_frame@{m\_frame}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_frame}{m\_frame}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$float$>$ rend\+::\+Model\+Renderer\+::m\+\_\+frame\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_model_renderer_a044109b0fa335b852c78892437659745}\label{structrend_1_1_model_renderer_a044109b0fa335b852c78892437659745}} 
+\index{rend::ModelRenderer@{rend::ModelRenderer}!m\_modelPtr@{m\_modelPtr}}
+\index{m\_modelPtr@{m\_modelPtr}!rend::ModelRenderer@{rend::ModelRenderer}}
+\doxysubsubsection{\texorpdfstring{m\_modelPtr}{m\_modelPtr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$\mbox{\hyperlink{structrend_1_1_model}{Model}}$>$ rend\+::\+Model\+Renderer\+::m\+\_\+model\+Ptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_model_renderer_8h}{Model\+Renderer.\+h}}\item 
+src/rend/\mbox{\hyperlink{_model_renderer_8cpp}{Model\+Renderer.\+cpp}}\end{DoxyCompactItemize}

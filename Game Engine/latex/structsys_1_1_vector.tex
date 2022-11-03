@@ -1,0 +1,293 @@
+\hypertarget{structsys_1_1_vector}{}\doxysection{sys\+::Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Struct Template Reference}
+\label{structsys_1_1_vector}\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Vector.\+h$>$}
+
+Inheritance diagram for sys\+::Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structsys_1_1_vector}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}{Vector}} ()
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_adba44d2a935e8a3628c7d3a6a8a7ca62}{Vector}} (size\+\_\+t \+\_\+size)
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_a8440b64e366ce04f3e64c2e14dbac57a}{Vector}} (const \mbox{\hyperlink{structsys_1_1_vector}{Vector}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}} \& \mbox{\hyperlink{structsys_1_1_vector_a045cd7655b32bee02c04d1aa3cb940be}{operator=}} (const \mbox{\hyperlink{structsys_1_1_vector}{Vector}} \&\+\_\+other)
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_a79b6b9b6e921f1803c655383ebc13ced}{$\sim$\+Vector}} ()
+\item 
+T \& \mbox{\hyperlink{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&\+\_\+index)
+\item 
+const T \& \mbox{\hyperlink{structsys_1_1_vector_ae03e387b12fb8c8a4346e30a942f78e8}{operator\mbox{[}$\,$\mbox{]}}} (const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&\+\_\+index) const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_vector_a3def998a75ed02ba36e172a8d804a32c}{get}} (size\+\_\+t \+\_\+index)
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ const T $>$ \mbox{\hyperlink{structsys_1_1_vector_a6af92983deea7bce0face98ca2e7dbde}{get}} (size\+\_\+t \+\_\+index) const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}{push}} (const T \&\+\_\+value)
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_a504adc82bf3b0bc60823dafd161577aa}{clear}} ()
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}{resize}} (size\+\_\+t \+\_\+size)
+\item 
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}{size}} () const
+\item 
+T $\ast$ \mbox{\hyperlink{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}{unsafe\+\_\+raw}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} \mbox{\hyperlink{structsys_1_1_vector_a44a7b2597392ff058fbdcaba1c04041d}{begin}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} \mbox{\hyperlink{structsys_1_1_vector_a1d2f79011bdee414554f30b0a126a7ac}{end}} () const
+\item 
+\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} \mbox{\hyperlink{structsys_1_1_vector_a25610c136fb95e162e92377510581b77}{erase}} (\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} \&\+\_\+it)
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_a23924df8b7c27e0ffc0adbd9d40fa1ea}{sort}} (bool($\ast$\+\_\+func)(T \&, T \&))
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_a5d14785fe8168dda8ad19abc6f6546f9}{check\+\_\+lock}} () const
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_a2d9d416e962c84921d0b219e449e5779}{allocate}} (size\+\_\+t \+\_\+size)
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}{quicksort}} (int \+\_\+low, int \+\_\+high, bool($\ast$\+\_\+func)(T \&, T \&))
+\item 
+int \mbox{\hyperlink{structsys_1_1_vector_ade93aa5ceec3b859aeef905309ade160}{partition}} (int \+\_\+low, int \+\_\+high, bool($\ast$\+\_\+func)(T \&, T \&))
+\item 
+bool \mbox{\hyperlink{structsys_1_1_vector_a25450e09cf839682506f1329d19ac205}{compare\+Func}} (T \&\+\_\+a, T \&\+\_\+b)
+\item 
+void \mbox{\hyperlink{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}{swap}} (T \&\+\_\+a, T \&\+\_\+b)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_lock_block}{Lock\+Block}} \mbox{\hyperlink{structsys_1_1_vector_a6da887298360781299ebd9f72f8c51f6}{m\+\_\+locallock}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ size\+\_\+t $>$ \mbox{\hyperlink{structsys_1_1_vector_ad16a38a8fd5d64b213ef18580dc2042c}{m\+\_\+total}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ T $\ast$ $>$ \mbox{\hyperlink{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}{m\+\_\+raw}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ size\+\_\+t $>$ \mbox{\hyperlink{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}{m\+\_\+size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}\label{structsys_1_1_vector_a92588a54809c4d129ce860bfa4f66ec3}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::\+Vector}
+
+\mbox{\Hypertarget{structsys_1_1_vector_adba44d2a935e8a3628c7d3a6a8a7ca62}\label{structsys_1_1_vector_adba44d2a935e8a3628c7d3a6a8a7ca62}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::\+Vector (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a8440b64e366ce04f3e64c2e14dbac57a}\label{structsys_1_1_vector_a8440b64e366ce04f3e64c2e14dbac57a}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!Vector@{Vector}}
+\index{Vector@{Vector}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Vector()}{Vector()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::\+Vector (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ T $>$ \&}]{\+\_\+copy }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a79b6b9b6e921f1803c655383ebc13ced}\label{structsys_1_1_vector_a79b6b9b6e921f1803c655383ebc13ced}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!````~Vector@{$\sim$Vector}}
+\index{````~Vector@{$\sim$Vector}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Vector()}{~Vector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{structsys_1_1_vector}{Vector}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_vector_a2d9d416e962c84921d0b219e449e5779}\label{structsys_1_1_vector_a2d9d416e962c84921d0b219e449e5779}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!allocate@{allocate}}
+\index{allocate@{allocate}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{allocate()}{allocate()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a44a7b2597392ff058fbdcaba1c04041d}\label{structsys_1_1_vector_a44a7b2597392ff058fbdcaba1c04041d}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!begin@{begin}}
+\index{begin@{begin}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::begin}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a5d14785fe8168dda8ad19abc6f6546f9}\label{structsys_1_1_vector_a5d14785fe8168dda8ad19abc6f6546f9}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!check\_lock@{check\_lock}}
+\index{check\_lock@{check\_lock}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{check\_lock()}{check\_lock()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::check\+\_\+lock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a504adc82bf3b0bc60823dafd161577aa}\label{structsys_1_1_vector_a504adc82bf3b0bc60823dafd161577aa}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::clear}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a25450e09cf839682506f1329d19ac205}\label{structsys_1_1_vector_a25450e09cf839682506f1329d19ac205}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!compareFunc@{compareFunc}}
+\index{compareFunc@{compareFunc}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{compareFunc()}{compareFunc()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::compare\+Func (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+a,  }\item[{T \&}]{\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a1d2f79011bdee414554f30b0a126a7ac}\label{structsys_1_1_vector_a1d2f79011bdee414554f30b0a126a7ac}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!end@{end}}
+\index{end@{end}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::end}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a25610c136fb95e162e92377510581b77}\label{structsys_1_1_vector_a25610c136fb95e162e92377510581b77}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ T $>$\+::\+Iterator \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_vector_1_1_iterator}{Iterator}} \&}]{\+\_\+it }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a3def998a75ed02ba36e172a8d804a32c}\label{structsys_1_1_vector_a3def998a75ed02ba36e172a8d804a32c}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!get@{get}}
+\index{get@{get}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a6af92983deea7bce0face98ca2e7dbde}\label{structsys_1_1_vector_a6af92983deea7bce0face98ca2e7dbde}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!get@{get}}
+\index{get@{get}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ const T $>$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::get (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a045cd7655b32bee02c04d1aa3cb940be}\label{structsys_1_1_vector_a045cd7655b32bee02c04d1aa3cb940be}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ T $>$ \& \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ T $>$ \&}]{\+\_\+other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}\label{structsys_1_1_vector_a5c2b0d47edcda002e891f39e7d9f0531}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&}]{\+\_\+index }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_ae03e387b12fb8c8a4346e30a942f78e8}\label{structsys_1_1_vector_ae03e387b12fb8c8a4346e30a942f78e8}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const T \& \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_index_lock}{Index\+Lock}} \&}]{\+\_\+index }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structsys_1_1_vector_ade93aa5ceec3b859aeef905309ade160}\label{structsys_1_1_vector_ade93aa5ceec3b859aeef905309ade160}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!partition@{partition}}
+\index{partition@{partition}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::partition (\begin{DoxyParamCaption}\item[{int}]{\+\_\+low,  }\item[{int}]{\+\_\+high,  }\item[{bool($\ast$)(T \&, T \&)}]{\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}\label{structsys_1_1_vector_aa9f350d7a85f7b172355941339c6c07a}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!push@{push}}
+\index{push@{push}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_ptr}{Ptr}}$<$ T $>$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const T \&}]{\+\_\+value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}\label{structsys_1_1_vector_ac883ee619432cd74200fe169dc7904a1}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!quicksort@{quicksort}}
+\index{quicksort@{quicksort}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{quicksort()}{quicksort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::quicksort (\begin{DoxyParamCaption}\item[{int}]{\+\_\+low,  }\item[{int}]{\+\_\+high,  }\item[{bool($\ast$)(T \&, T \&)}]{\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}\label{structsys_1_1_vector_a58d1dd88a214702fdceb0814012b98b5}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}\label{structsys_1_1_vector_ad9f3c43afb027cd9818fa3d3a9257fdf}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!size@{size}}
+\index{size@{size}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::size}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a23924df8b7c27e0ffc0adbd9d40fa1ea}\label{structsys_1_1_vector_a23924df8b7c27e0ffc0adbd9d40fa1ea}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::sort (\begin{DoxyParamCaption}\item[{bool($\ast$)(T \&, T \&)}]{\+\_\+func }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}\label{structsys_1_1_vector_a29c0859e082204eb80814ca4d6c9e0ac}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!swap@{swap}}
+\index{swap@{swap}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::swap (\begin{DoxyParamCaption}\item[{T \&}]{\+\_\+a,  }\item[{T \&}]{\+\_\+b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}\label{structsys_1_1_vector_ab4707962e08c79e9b149be771a5ed827}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!unsafe\_raw@{unsafe\_raw}}
+\index{unsafe\_raw@{unsafe\_raw}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{unsafe\_raw()}{unsafe\_raw()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T $\ast$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::unsafe\+\_\+raw}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_vector_a6da887298360781299ebd9f72f8c51f6}\label{structsys_1_1_vector_a6da887298360781299ebd9f72f8c51f6}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!m\_locallock@{m\_locallock}}
+\index{m\_locallock@{m\_locallock}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_locallock}{m\_locallock}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_lock_block}{Lock\+Block}} \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::m\+\_\+locallock\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}\label{structsys_1_1_vector_abf02bc6c0982d0279b819c9a1b9a6507}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!m\_raw@{m\_raw}}
+\index{m\_raw@{m\_raw}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_raw}{m\_raw}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$T$\ast$$>$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::m\+\_\+raw\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}\label{structsys_1_1_vector_aefc01725ed3f8d4f8be3367676718c19}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!m\_size@{m\_size}}
+\index{m\_size@{m\_size}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_size}{m\_size}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$size\+\_\+t$>$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_vector_ad16a38a8fd5d64b213ef18580dc2042c}\label{structsys_1_1_vector_ad16a38a8fd5d64b213ef18580dc2042c}} 
+\index{sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}!m\_total@{m\_total}}
+\index{m\_total@{m\_total}!sys::Vector$<$ T $>$@{sys::Vector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{m\_total}{m\_total}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$size\+\_\+t$>$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ T $>$\+::m\+\_\+total\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_ptr_8h}{Ptr.\+h}}\item 
+src/rend/sys/\mbox{\hyperlink{_vector_8h}{Vector.\+h}}\end{DoxyCompactItemize}

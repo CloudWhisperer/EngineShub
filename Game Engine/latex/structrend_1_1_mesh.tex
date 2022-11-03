@@ -1,0 +1,228 @@
+\hypertarget{structrend_1_1_mesh}{}\doxysection{rend\+::Mesh Struct Reference}
+\label{structrend_1_1_mesh}\index{rend::Mesh@{rend::Mesh}}
+
+
+{\ttfamily \#include $<$Mesh.\+h$>$}
+
+Inheritance diagram for rend\+::Mesh\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structrend_1_1_mesh}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_mesh_ab5e09eb7254234882938f249566ffe63}{Mesh}} ()
+\item 
+\mbox{\hyperlink{structrend_1_1_mesh_a8da24b996fe08888a1b25877b3217f21}{Mesh}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path)
+\item 
+\mbox{\hyperlink{structrend_1_1_mesh_ae48c1345cb1806ab29e858d120633c7c}{$\sim$\+Mesh}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_a4967d86b9d2fe75765ebddfdedf557ee}{add}} (const \mbox{\hyperlink{structrend_1_1_face}{Face}} \&\+\_\+face)
+\item 
+GLuint \mbox{\hyperlink{structrend_1_1_mesh_a6f82b30566d8b0199bfec20c82558efa}{id}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{structrend_1_1_mesh_a19319a5cd7a55cf4da127e4c5825bc9b}{vertices}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_a5074db3a931acd4c949f88e97ca459a8}{load}} (const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&\+\_\+path)
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_a0c676f613364c7d8ecc5af9568df541f}{load\+Triangle}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_a42d941ceba7563692cc91f15981c5637}{load\+Quad}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_aa13c30e98d1d5de90904d055297e6c10}{load\+Gui\+Quad}} ()
+\item 
+void \mbox{\hyperlink{structrend_1_1_mesh_ac49a89e880be357e3af60e52d5ea2d31}{load\+Ndc\+Quad}} ()
+\item 
+bool \mbox{\hyperlink{structrend_1_1_mesh_a307eb4cbc1a6895b821c94e8b72bcc24}{intersect}} (const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&\+\_\+ray) const
+\item 
+bool \mbox{\hyperlink{structrend_1_1_mesh_a49bf948558a05af27e7abc39f3e05557}{intersect}} (const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&\+\_\+ray, float \&\+\_\+distance) const
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ \mbox{\hyperlink{structrend_1_1_face}{Face}} $>$ $>$ \mbox{\hyperlink{structrend_1_1_mesh_af9d9a9fb4d8d69186d5ff9a3725988a5}{faces}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structrend_1_1_mesh_a2bf8cf89910ee0a9b74d4ec729a2d8fc}{Mesh}} (const \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \& \mbox{\hyperlink{structrend_1_1_mesh_a97978e2cb1c928e34b8781c8d9b5f2d4}{operator=}} (const \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \&\+\_\+other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ bool $>$ \mbox{\hyperlink{structrend_1_1_mesh_ac4c97287d5c91829354f9b8bdf11d47d}{m\+\_\+dirty}}
+\item 
+\mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$ \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} $>$ \mbox{\hyperlink{structrend_1_1_mesh_ab2ece5a2c49dd6fb2687ddd2b778c42d}{m\+\_\+buffers}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$ GLuint $>$ \mbox{\hyperlink{structrend_1_1_mesh_ab01174b1bad40da4ac826b49c8e3caf3}{m\+\_\+id}}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ \mbox{\hyperlink{structrend_1_1_triangle}{Triangle}} $>$ \mbox{\hyperlink{structrend_1_1_mesh_ae6e54a5a6a7071ef258e99b0a84b16f3}{m\+\_\+triangles}}
+\item 
+\mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ \mbox{\hyperlink{structrend_1_1_face}{Face}} $>$ \mbox{\hyperlink{structrend_1_1_mesh_a21d31ca994df4cfb6653634430874247}{m\+\_\+faces}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} $>$ \mbox{\hyperlink{structrend_1_1_mesh_a36b5a50811ecbb00ff1e0c1adf179742}{m\+\_\+positions}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} $>$ \mbox{\hyperlink{structrend_1_1_mesh_a4c0f06586b72449151e5b274ebc6e931}{m\+\_\+texcoords}}
+\item 
+\mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structrend_1_1_buffer}{Buffer}} $>$ \mbox{\hyperlink{structrend_1_1_mesh_a983c28bc74fc45695d41e33775d36b2e}{m\+\_\+normals}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structrend_1_1_mesh_ab5e09eb7254234882938f249566ffe63}\label{structrend_1_1_mesh_ab5e09eb7254234882938f249566ffe63}} 
+\index{rend::Mesh@{rend::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily rend\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a8da24b996fe08888a1b25877b3217f21}\label{structrend_1_1_mesh_a8da24b996fe08888a1b25877b3217f21}} 
+\index{rend::Mesh@{rend::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily rend\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_ae48c1345cb1806ab29e858d120633c7c}\label{structrend_1_1_mesh_ae48c1345cb1806ab29e858d120633c7c}} 
+\index{rend::Mesh@{rend::Mesh}!````~Mesh@{$\sim$Mesh}}
+\index{````~Mesh@{$\sim$Mesh}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{$\sim$Mesh()}{~Mesh()}}
+{\footnotesize\ttfamily rend\+::\+Mesh\+::$\sim$\+Mesh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a2bf8cf89910ee0a9b74d4ec729a2d8fc}\label{structrend_1_1_mesh_a2bf8cf89910ee0a9b74d4ec729a2d8fc}} 
+\index{rend::Mesh@{rend::Mesh}!Mesh@{Mesh}}
+\index{Mesh@{Mesh}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{Mesh()}{Mesh()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily rend\+::\+Mesh\+::\+Mesh (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structrend_1_1_mesh_a4967d86b9d2fe75765ebddfdedf557ee}\label{structrend_1_1_mesh_a4967d86b9d2fe75765ebddfdedf557ee}} 
+\index{rend::Mesh@{rend::Mesh}!add@{add}}
+\index{add@{add}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_face}{Face}} \&}]{\+\_\+face }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_af9d9a9fb4d8d69186d5ff9a3725988a5}\label{structrend_1_1_mesh_af9d9a9fb4d8d69186d5ff9a3725988a5}} 
+\index{rend::Mesh@{rend::Mesh}!faces@{faces}}
+\index{faces@{faces}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{faces()}{faces()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$ \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$ \mbox{\hyperlink{structrend_1_1_face}{Face}} $>$ $>$ rend\+::\+Mesh\+::faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a6f82b30566d8b0199bfec20c82558efa}\label{structrend_1_1_mesh_a6f82b30566d8b0199bfec20c82558efa}} 
+\index{rend::Mesh@{rend::Mesh}!id@{id}}
+\index{id@{id}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{id()}{id()}}
+{\footnotesize\ttfamily GLuint rend\+::\+Mesh\+::id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a307eb4cbc1a6895b821c94e8b72bcc24}\label{structrend_1_1_mesh_a307eb4cbc1a6895b821c94e8b72bcc24}} 
+\index{rend::Mesh@{rend::Mesh}!intersect@{intersect}}
+\index{intersect@{intersect}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool rend\+::\+Mesh\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&}]{\+\_\+ray }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a49bf948558a05af27e7abc39f3e05557}\label{structrend_1_1_mesh_a49bf948558a05af27e7abc39f3e05557}} 
+\index{rend::Mesh@{rend::Mesh}!intersect@{intersect}}
+\index{intersect@{intersect}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{intersect()}{intersect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool rend\+::\+Mesh\+::intersect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_ray}{Ray}} \&}]{\+\_\+ray,  }\item[{float \&}]{\+\_\+distance }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a5074db3a931acd4c949f88e97ca459a8}\label{structrend_1_1_mesh_a5074db3a931acd4c949f88e97ca459a8}} 
+\index{rend::Mesh@{rend::Mesh}!load@{load}}
+\index{load@{load}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::load (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{sys\+::\+String}} \&}]{\+\_\+path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_aa13c30e98d1d5de90904d055297e6c10}\label{structrend_1_1_mesh_aa13c30e98d1d5de90904d055297e6c10}} 
+\index{rend::Mesh@{rend::Mesh}!loadGuiQuad@{loadGuiQuad}}
+\index{loadGuiQuad@{loadGuiQuad}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{loadGuiQuad()}{loadGuiQuad()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::load\+Gui\+Quad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_ac49a89e880be357e3af60e52d5ea2d31}\label{structrend_1_1_mesh_ac49a89e880be357e3af60e52d5ea2d31}} 
+\index{rend::Mesh@{rend::Mesh}!loadNdcQuad@{loadNdcQuad}}
+\index{loadNdcQuad@{loadNdcQuad}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{loadNdcQuad()}{loadNdcQuad()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::load\+Ndc\+Quad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a42d941ceba7563692cc91f15981c5637}\label{structrend_1_1_mesh_a42d941ceba7563692cc91f15981c5637}} 
+\index{rend::Mesh@{rend::Mesh}!loadQuad@{loadQuad}}
+\index{loadQuad@{loadQuad}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{loadQuad()}{loadQuad()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::load\+Quad (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a0c676f613364c7d8ecc5af9568df541f}\label{structrend_1_1_mesh_a0c676f613364c7d8ecc5af9568df541f}} 
+\index{rend::Mesh@{rend::Mesh}!loadTriangle@{loadTriangle}}
+\index{loadTriangle@{loadTriangle}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{loadTriangle()}{loadTriangle()}}
+{\footnotesize\ttfamily void rend\+::\+Mesh\+::load\+Triangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a97978e2cb1c928e34b8781c8d9b5f2d4}\label{structrend_1_1_mesh_a97978e2cb1c928e34b8781c8d9b5f2d4}} 
+\index{rend::Mesh@{rend::Mesh}!operator=@{operator=}}
+\index{operator=@{operator=}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \& rend\+::\+Mesh\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structrend_1_1_mesh}{Mesh}} \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a19319a5cd7a55cf4da127e4c5825bc9b}\label{structrend_1_1_mesh_a19319a5cd7a55cf4da127e4c5825bc9b}} 
+\index{rend::Mesh@{rend::Mesh}!vertices@{vertices}}
+\index{vertices@{vertices}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{vertices()}{vertices()}}
+{\footnotesize\ttfamily size\+\_\+t rend\+::\+Mesh\+::vertices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structrend_1_1_mesh_ab2ece5a2c49dd6fb2687ddd2b778c42d}\label{structrend_1_1_mesh_ab2ece5a2c49dd6fb2687ddd2b778c42d}} 
+\index{rend::Mesh@{rend::Mesh}!m\_buffers@{m\_buffers}}
+\index{m\_buffers@{m\_buffers}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_buffers}{m\_buffers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_list}{sys\+::\+List}}$<$\mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}$>$ rend\+::\+Mesh\+::m\+\_\+buffers\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_ac4c97287d5c91829354f9b8bdf11d47d}\label{structrend_1_1_mesh_ac4c97287d5c91829354f9b8bdf11d47d}} 
+\index{rend::Mesh@{rend::Mesh}!m\_dirty@{m\_dirty}}
+\index{m\_dirty@{m\_dirty}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_dirty}{m\_dirty}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$bool$>$ rend\+::\+Mesh\+::m\+\_\+dirty\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a21d31ca994df4cfb6653634430874247}\label{structrend_1_1_mesh_a21d31ca994df4cfb6653634430874247}} 
+\index{rend::Mesh@{rend::Mesh}!m\_faces@{m\_faces}}
+\index{m\_faces@{m\_faces}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_faces}{m\_faces}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$\mbox{\hyperlink{structrend_1_1_face}{Face}}$>$ rend\+::\+Mesh\+::m\+\_\+faces\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_ab01174b1bad40da4ac826b49c8e3caf3}\label{structrend_1_1_mesh_ab01174b1bad40da4ac826b49c8e3caf3}} 
+\index{rend::Mesh@{rend::Mesh}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{sys\+::\+Zero}}$<$GLuint$>$ rend\+::\+Mesh\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a983c28bc74fc45695d41e33775d36b2e}\label{structrend_1_1_mesh_a983c28bc74fc45695d41e33775d36b2e}} 
+\index{rend::Mesh@{rend::Mesh}!m\_normals@{m\_normals}}
+\index{m\_normals@{m\_normals}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_normals}{m\_normals}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$\mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}$>$ rend\+::\+Mesh\+::m\+\_\+normals\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a36b5a50811ecbb00ff1e0c1adf179742}\label{structrend_1_1_mesh_a36b5a50811ecbb00ff1e0c1adf179742}} 
+\index{rend::Mesh@{rend::Mesh}!m\_positions@{m\_positions}}
+\index{m\_positions@{m\_positions}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_positions}{m\_positions}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$\mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}$>$ rend\+::\+Mesh\+::m\+\_\+positions\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_a4c0f06586b72449151e5b274ebc6e931}\label{structrend_1_1_mesh_a4c0f06586b72449151e5b274ebc6e931}} 
+\index{rend::Mesh@{rend::Mesh}!m\_texcoords@{m\_texcoords}}
+\index{m\_texcoords@{m\_texcoords}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_texcoords}{m\_texcoords}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_ptr}{sys\+::\+Ptr}}$<$\mbox{\hyperlink{structrend_1_1_buffer}{Buffer}}$>$ rend\+::\+Mesh\+::m\+\_\+texcoords\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structrend_1_1_mesh_ae6e54a5a6a7071ef258e99b0a84b16f3}\label{structrend_1_1_mesh_ae6e54a5a6a7071ef258e99b0a84b16f3}} 
+\index{rend::Mesh@{rend::Mesh}!m\_triangles@{m\_triangles}}
+\index{m\_triangles@{m\_triangles}!rend::Mesh@{rend::Mesh}}
+\doxysubsubsection{\texorpdfstring{m\_triangles}{m\_triangles}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_vector}{sys\+::\+Vector}}$<$\mbox{\hyperlink{structrend_1_1_triangle}{Triangle}}$>$ rend\+::\+Mesh\+::m\+\_\+triangles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/\mbox{\hyperlink{_mesh_8h}{Mesh.\+h}}\item 
+src/rend/\mbox{\hyperlink{_mesh_8cpp}{Mesh.\+cpp}}\end{DoxyCompactItemize}

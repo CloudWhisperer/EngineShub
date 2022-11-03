@@ -1,0 +1,27 @@
+\hypertarget{_component_8h_source}{}\doxysection{Component.\+h}
+\label{_component_8h_source}\index{src/myengine/Component.h@{src/myengine/Component.h}}
+\mbox{\hyperlink{_component_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MYENGINE\_COMPONENT\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MYENGINE\_COMPONENT\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemyengine}{myengine}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6     \textcolor{keyword}{struct }Entity;}
+\DoxyCodeLine{7     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_component}{Component}}}
+\DoxyCodeLine{8     \{}
+\DoxyCodeLine{9     \textcolor{keyword}{private}:}
+\DoxyCodeLine{10         \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_entity}{Entity}};}
+\DoxyCodeLine{11         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_component_aabd0406bbbb7a66b123a54e92727d245}{onTick}}();}
+\DoxyCodeLine{12         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_component_a01950f2661cfe671eca0907590276a81}{onDisplay}}();}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_component_a7a7de6bfac781d83701e9ab2d70530b4}{tick}}();}
+\DoxyCodeLine{15         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_component_a48b2efd03b0f0c4240b55cce283142de}{display}}();}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17     \};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

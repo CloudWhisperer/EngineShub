@@ -1,0 +1,46 @@
+\hypertarget{_exception_8h_source}{}\doxysection{Exception.\+h}
+\label{_exception_8h_source}\index{src/rend/sys/Exception.h@{src/rend/sys/Exception.h}}
+\mbox{\hyperlink{_exception_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_EXCEPTION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_EXCEPTION\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_string_8h}{String.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_ptr_8h}{Ptr.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{panic_8h}{panic.h}}"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_exception}{Exception}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13   \textcolor{comment}{//Exception() \{ \}}}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{15   \mbox{\hyperlink{structsys_1_1_exception_afd1f3c5453516672923dc55419c63206}{Exception}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_string}{String}}\& \_message) :}
+\DoxyCodeLine{16     \mbox{\hyperlink{structsys_1_1_exception_a248794f9346ac69b103c5cb86c4bf708}{m\_message}}(\_message)}
+\DoxyCodeLine{17   \{}
+\DoxyCodeLine{18     printf(\textcolor{stringliteral}{"{}\%s\(\backslash\)n"{}}, \_message.\mbox{\hyperlink{structsys_1_1_string_ac8f19f6869d650281b91279fd0ac6a52}{unsafe\_raw}}());}
+\DoxyCodeLine{19   \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21   \textcolor{keyword}{virtual} \mbox{\hyperlink{structsys_1_1_exception_a625732b09a9885016c91b2dead3b95ed}{\string~Exception}}() \{ \}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23   \mbox{\hyperlink{structsys_1_1_ptr}{Ptr<const String>}} \mbox{\hyperlink{structsys_1_1_exception_aec5f9b4c02baad3bc58b52500c12e5f0}{what}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{24 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{25     \textcolor{keywordflow}{return} \&\mbox{\hyperlink{structsys_1_1_exception_a248794f9346ac69b103c5cb86c4bf708}{m\_message}};}
+\DoxyCodeLine{26   \}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_exception_a5518c2aad11eafcf72f4600ee46e245d}{panic}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{29 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{30     \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{sys::panic}}(\mbox{\hyperlink{structsys_1_1_exception_a248794f9346ac69b103c5cb86c4bf708}{m\_message}}.\mbox{\hyperlink{structsys_1_1_string_ac8f19f6869d650281b91279fd0ac6a52}{unsafe\_raw}}());}
+\DoxyCodeLine{31   \}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34   \mbox{\hyperlink{structsys_1_1_string}{String}} \mbox{\hyperlink{structsys_1_1_exception_a248794f9346ac69b103c5cb86c4bf708}{m\_message}};}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{40 }
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+\hypertarget{_mutex_8h_source}{}\doxysection{Mutex.\+h}
+\label{_mutex_8h_source}\index{src/rend/sys/Mutex.h@{src/rend/sys/Mutex.h}}
+\mbox{\hyperlink{_mutex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef SYS\_MUTEX\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define SYS\_MUTEX\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{panic_8h}{panic.h}}"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <pthread.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacesys}{sys}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{struct }\mbox{\hyperlink{structsys_1_1_mutex}{Mutex}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13   \mbox{\hyperlink{structsys_1_1_mutex_a4c411289e9076341d2d15f62ab7a1569}{Mutex}}()}
+\DoxyCodeLine{14   \{}
+\DoxyCodeLine{15     \textcolor{keywordflow}{if}(pthread\_mutex\_init(\&\mbox{\hyperlink{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}{m\_lock}}, NULL))}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Failed to initialize mutex"{}});}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19   \}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21   \mbox{\hyperlink{structsys_1_1_mutex_ac1b51cee348c71796a293189d10608bb}{\string~Mutex}}()}
+\DoxyCodeLine{22   \{}
+\DoxyCodeLine{23     \textcolor{keywordflow}{if}(pthread\_mutex\_destroy(\&\mbox{\hyperlink{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}{m\_lock}}))}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25       \mbox{\hyperlink{namespacesys_ab1ae7414319c425b1a5274f145874149}{panic}}(\textcolor{stringliteral}{"{}Failed to destroy mutex"{}});}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27   \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_mutex_a64c8b36053bc3bd85d40857033020140}{lock}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{30 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{31     pthread\_mutex\_lock(\&\mbox{\hyperlink{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}{m\_lock}});}
+\DoxyCodeLine{32   \}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34   \textcolor{keywordtype}{void} \mbox{\hyperlink{structsys_1_1_mutex_af4899e1801f0e342edda65db4edee9bc}{unlock}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{35 \textcolor{keyword}{  }\{}
+\DoxyCodeLine{36     pthread\_mutex\_unlock(\&\mbox{\hyperlink{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}{m\_lock}});}
+\DoxyCodeLine{37   \}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{private}:}
+\DoxyCodeLine{40   \textcolor{keyword}{mutable} pthread\_mutex\_t \mbox{\hyperlink{structsys_1_1_mutex_a0accd037d137cc8c7662562eecd537fd}{m\_lock}};}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42   \mbox{\hyperlink{structsys_1_1_mutex_acb74a4c9008c0bb9f57515c5f932773a}{Mutex}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}}\& \_copy);}
+\DoxyCodeLine{43   \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}}\& \mbox{\hyperlink{structsys_1_1_mutex_abad1f2d4802d800b9feb1ec808293ea8}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{structsys_1_1_mutex}{Mutex}}\& \_other);}
+\DoxyCodeLine{44 \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \}}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{49 }
+
+\end{DoxyCode}

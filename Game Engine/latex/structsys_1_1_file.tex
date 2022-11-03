@@ -1,0 +1,133 @@
+\hypertarget{structsys_1_1_file}{}\doxysection{sys\+::File Struct Reference}
+\label{structsys_1_1_file}\index{sys::File@{sys::File}}
+
+
+{\ttfamily \#include $<$File.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_file_a83b24191d03390eb9b90d716ce6703be}{File}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+path)
+\item 
+\mbox{\hyperlink{structsys_1_1_file_a8bdba24620f100fa9dc27f9dd5bdce14}{$\sim$\+File}} ()
+\item 
+size\+\_\+t \mbox{\hyperlink{structsys_1_1_file_ae950b3c54f48cc9fb1162719427295cd}{read}} (\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ unsigned char $>$ \&\+\_\+output)
+\item 
+void \mbox{\hyperlink{structsys_1_1_file_ac5346b454d8e14c786bee3c223dd6a53}{write\+\_\+line}} (const \mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+line)
+\item 
+bool \mbox{\hyperlink{structsys_1_1_file_a69f67606b851548706a54e6755cbeffb}{read\+\_\+line}} (\mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+line)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_file_ad474c0619d221764f33dec594b5886ee}{File}} (const \mbox{\hyperlink{structsys_1_1_file}{File}} \&\+\_\+copy)
+\item 
+\mbox{\hyperlink{structsys_1_1_file}{File}} \& \mbox{\hyperlink{structsys_1_1_file_a35f283c3043ac3b249bc3f2d51ef059d}{operator=}} (const \mbox{\hyperlink{structsys_1_1_file}{File}} \&\+\_\+other)
+\item 
+void \mbox{\hyperlink{structsys_1_1_file_a85c6436e8b4af7e755e4dc70587c8dea}{open\+Read}} ()
+\item 
+void \mbox{\hyperlink{structsys_1_1_file_ab069971fe988a2dbe9f2bb106acbf7ac}{open\+Write}} ()
+\item 
+bool \mbox{\hyperlink{structsys_1_1_file_aa94f4c528f1f023c43a063906d376390}{strip\+\_\+endl}} (\mbox{\hyperlink{structsys_1_1_string}{String}} \&\+\_\+str)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structsys_1_1_string}{String}} \mbox{\hyperlink{structsys_1_1_file_abc162e8cf65527d4cc1f606c5560ee35}{m\+\_\+path}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ int $>$ \mbox{\hyperlink{structsys_1_1_file_a6696df129ebc91924ee10587e30f6992}{m\+\_\+mode}}
+\item 
+\mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$ FILE $\ast$ $>$ \mbox{\hyperlink{structsys_1_1_file_aca6b67dd0b8a25cf6edb1f9e1e0cc950}{m\+\_\+raw}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structsys_1_1_file_a83b24191d03390eb9b90d716ce6703be}\label{structsys_1_1_file_a83b24191d03390eb9b90d716ce6703be}} 
+\index{sys::File@{sys::File}!File@{File}}
+\index{File@{File}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{File()}{File()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily sys\+::\+File\+::\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_a8bdba24620f100fa9dc27f9dd5bdce14}\label{structsys_1_1_file_a8bdba24620f100fa9dc27f9dd5bdce14}} 
+\index{sys::File@{sys::File}!````~File@{$\sim$File}}
+\index{````~File@{$\sim$File}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{$\sim$File()}{~File()}}
+{\footnotesize\ttfamily sys\+::\+File\+::$\sim$\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_ad474c0619d221764f33dec594b5886ee}\label{structsys_1_1_file_ad474c0619d221764f33dec594b5886ee}} 
+\index{sys::File@{sys::File}!File@{File}}
+\index{File@{File}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{File()}{File()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily sys\+::\+File\+::\+File (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_file}{File}} \&}]{\+\_\+copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structsys_1_1_file_a85c6436e8b4af7e755e4dc70587c8dea}\label{structsys_1_1_file_a85c6436e8b4af7e755e4dc70587c8dea}} 
+\index{sys::File@{sys::File}!openRead@{openRead}}
+\index{openRead@{openRead}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{openRead()}{openRead()}}
+{\footnotesize\ttfamily void sys\+::\+File\+::open\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_ab069971fe988a2dbe9f2bb106acbf7ac}\label{structsys_1_1_file_ab069971fe988a2dbe9f2bb106acbf7ac}} 
+\index{sys::File@{sys::File}!openWrite@{openWrite}}
+\index{openWrite@{openWrite}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{openWrite()}{openWrite()}}
+{\footnotesize\ttfamily void sys\+::\+File\+::open\+Write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_a35f283c3043ac3b249bc3f2d51ef059d}\label{structsys_1_1_file_a35f283c3043ac3b249bc3f2d51ef059d}} 
+\index{sys::File@{sys::File}!operator=@{operator=}}
+\index{operator=@{operator=}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_file}{File}} \& sys\+::\+File\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_file}{File}} \&}]{\+\_\+other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_ae950b3c54f48cc9fb1162719427295cd}\label{structsys_1_1_file_ae950b3c54f48cc9fb1162719427295cd}} 
+\index{sys::File@{sys::File}!read@{read}}
+\index{read@{read}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily size\+\_\+t sys\+::\+File\+::read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_vector}{Vector}}$<$ unsigned char $>$ \&}]{\+\_\+output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_a69f67606b851548706a54e6755cbeffb}\label{structsys_1_1_file_a69f67606b851548706a54e6755cbeffb}} 
+\index{sys::File@{sys::File}!read\_line@{read\_line}}
+\index{read\_line@{read\_line}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{read\_line()}{read\_line()}}
+{\footnotesize\ttfamily bool sys\+::\+File\+::read\+\_\+line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_aa94f4c528f1f023c43a063906d376390}\label{structsys_1_1_file_aa94f4c528f1f023c43a063906d376390}} 
+\index{sys::File@{sys::File}!strip\_endl@{strip\_endl}}
+\index{strip\_endl@{strip\_endl}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{strip\_endl()}{strip\_endl()}}
+{\footnotesize\ttfamily bool sys\+::\+File\+::strip\+\_\+endl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_ac5346b454d8e14c786bee3c223dd6a53}\label{structsys_1_1_file_ac5346b454d8e14c786bee3c223dd6a53}} 
+\index{sys::File@{sys::File}!write\_line@{write\_line}}
+\index{write\_line@{write\_line}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{write\_line()}{write\_line()}}
+{\footnotesize\ttfamily void sys\+::\+File\+::write\+\_\+line (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structsys_1_1_string}{String}} \&}]{\+\_\+line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsys_1_1_file_a6696df129ebc91924ee10587e30f6992}\label{structsys_1_1_file_a6696df129ebc91924ee10587e30f6992}} 
+\index{sys::File@{sys::File}!m\_mode@{m\_mode}}
+\index{m\_mode@{m\_mode}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{m\_mode}{m\_mode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$int$>$ sys\+::\+File\+::m\+\_\+mode\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_abc162e8cf65527d4cc1f606c5560ee35}\label{structsys_1_1_file_abc162e8cf65527d4cc1f606c5560ee35}} 
+\index{sys::File@{sys::File}!m\_path@{m\_path}}
+\index{m\_path@{m\_path}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{m\_path}{m\_path}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_string}{String}} sys\+::\+File\+::m\+\_\+path\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structsys_1_1_file_aca6b67dd0b8a25cf6edb1f9e1e0cc950}\label{structsys_1_1_file_aca6b67dd0b8a25cf6edb1f9e1e0cc950}} 
+\index{sys::File@{sys::File}!m\_raw@{m\_raw}}
+\index{m\_raw@{m\_raw}!sys::File@{sys::File}}
+\doxysubsubsection{\texorpdfstring{m\_raw}{m\_raw}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsys_1_1_zero}{Zero}}$<$FILE $\ast$$>$ sys\+::\+File\+::m\+\_\+raw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/rend/sys/\mbox{\hyperlink{_file_8h}{File.\+h}}\end{DoxyCompactItemize}
