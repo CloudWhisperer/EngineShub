@@ -5,10 +5,12 @@ project(MYENGINE)
 include_directories(
     src
     contrib/include
+    contrib/cl-windows-amd64/include
 )
 
 link_directories(
  ${PROJECT_SOURCE_DIR}/contrib/lib
+ contrib/cl-windows-amd64/lib
 )
 
 add_library(myengine
@@ -28,6 +30,11 @@ add_library(myengine
 
     src/myengine/TriangleRenderer.h
     src/myengine/TriangleRenderer.cpp
+
+    src/myengine/SoundSource.cpp
+    src/myengine/SoundSource.h
+
+    #src/myengine/stb_vorbis.c
 )
 target_link_libraries(myengine SDL2 SDL2main rend)
 
@@ -39,6 +46,7 @@ add_executable(game
 )
 
 target_link_libraries(game myengine)
+target_link_libraries(myengine openal32)
 
 
 add_library(rend

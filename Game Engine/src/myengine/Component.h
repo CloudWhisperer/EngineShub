@@ -14,6 +14,7 @@ namespace myengine
 		void tick();
 		void display();
 
+		//std::weak_ptr<Entity> m_entity;
 	};
 
 }
