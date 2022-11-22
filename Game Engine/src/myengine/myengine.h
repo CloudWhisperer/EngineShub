@@ -6,5 +6,6 @@
 #include "Component.h"
 #include "TriangleRenderer.h"
 #include "SoundSource.h"
+#include "Transform.h"
 
 #endif

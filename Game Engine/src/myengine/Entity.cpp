@@ -1,8 +1,9 @@
 #include "Entity.h"
 #include "Component.h"
+#include <vector>
+#include <memory>
 namespace myengine
 {
-
 	void Entity::tick()
 	{
 		for (std::list
@@ -21,5 +22,10 @@ namespace myengine
 		{
 			(*it)->display();
 		}
+	}
+
+	std::shared_ptr<Core> Entity::getCore()
+	{
+		return m_core.lock();
 	}
 }

@@ -1,8 +1,9 @@
 #include "Core.h"
 #include "Entity.h"
 #include "SDL2/SDL.h"
-#include <stdexcept>
 #include "TriangleRenderer.h"
+
+#include <stdexcept>
 #include <AL/al.h>
 #include <AL/alc.h>
 
@@ -105,6 +106,9 @@ namespace myengine
 	std::shared_ptr<Entity> Core::addEntity()
 	{
 		std::shared_ptr<Entity> rtn = std::make_shared<Entity>();
+
+		rtn->m_core = m_self;
+		rtn->m_self = rtn;
 
 		m_entities.push_back(rtn);
 
