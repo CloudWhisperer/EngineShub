@@ -2,6 +2,7 @@
 #include "Entity.h"
 #include "SDL2/SDL.h"
 #include "TriangleRenderer.h"
+#include "Transform.h"
 
 #include <stdexcept>
 #include <AL/al.h>
@@ -84,7 +85,11 @@ namespace myengine
 				m_entities.at(ei)->tick();
 			}
 
-			rend::Renderer r(640, 480);
+			int x = 0;
+			int y = 0;
+
+			SDL_GetWindowSize(m_window, &x, &y);
+			rend::Renderer r(x, y);
 			r.clear();
 
 			for (size_t ei = 0; ei < m_entities.size(); ei++)
@@ -98,6 +103,16 @@ namespace myengine
 		}
 	}
 
+	rend::vec2 Core::getScreenSize()
+	{
+		int x = 0;
+		int y = 0;
+
+		SDL_GetWindowSize(m_window, &x, &y);
+
+		return rend::vec2(x, y);
+	}
+
 	void Core::stop()
 	{
 		m_running = false;
@@ -109,6 +124,8 @@ namespace myengine
 
 		rtn->m_core = m_self;
 		rtn->m_self = rtn;
+		rtn->m_transform = rtn->addComponent<Transform>();
+
 
 		m_entities.push_back(rtn);
 

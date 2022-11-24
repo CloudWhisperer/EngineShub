@@ -1,6 +1,7 @@
 #include "SoundSource.h"
 #include "Component.h"
 #include "Entity.h"
+#include "Transform.h"
 
 #include <rend/rend.h>
 
@@ -84,8 +85,8 @@ namespace myengine
 
     void SoundSource::onTick()
     {
-        //rend::vec3 pos = Component::getEntity()->getTransform()->getPosition();
+        rend::vec3 pos = getEntity()->getTransform()->getPosition();
 
-        //alSource3f(sourceId, AL_POSITION, pos.x, pos.y, pos.z);
+        alSource3f(sourceId, AL_POSITION, pos.x, pos.y, pos.z);
     }
 }

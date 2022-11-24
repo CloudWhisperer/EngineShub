@@ -2,6 +2,7 @@
 #include <list>
 #include <SDL2/SDL.h>
 #include <vector>
+#include <rend/rend.h>
 
 /**
 * Initialises the Core that creates a window with a height and width that is made by the developer.
@@ -33,7 +34,7 @@ namespace myengine
 
 		///runs the entity function
 		std::shared_ptr<Entity> addEntity();
-
+		rend::vec2 getScreenSize();
 
 	private:
 		///boolean to check if the engine is running

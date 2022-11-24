@@ -28,4 +28,9 @@ namespace myengine
 	{
 		return m_core.lock();
 	}
+
+	std::shared_ptr<Transform> Entity::getTransform()
+	{
+		return m_transform.lock();
+	}
 }
