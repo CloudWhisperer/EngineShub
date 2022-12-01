@@ -1,6 +1,20 @@
 cmake_minimum_required(VERSION 3.0)
 project(MYENGINE)
 
+if(${CMAKE_SYSTEM_NAME} MATCHES "Emscripten")
+  include_directories(
+    contrib/emcc-emscripten-wasm/include
+  )
+
+  link_directories(
+    contrib/emcc-emscripten-wasm/lib
+  )
+
+  set(CMAKE_EXECUTABLE_SUFFIX ".html")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --preload-file ${CMAKE_SOURCE_DIR}/resources@resources")
+  set(LIBOPENAL openal)
+endif()
+
 
 include_directories(
     src
