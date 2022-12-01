@@ -20,4 +20,4 @@ namespace myengine
 		rend::vec3 m_scale;
 
 	};
-};
+};

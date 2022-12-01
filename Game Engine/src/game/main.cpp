@@ -21,8 +21,8 @@ struct Player : Component
 
 		getEntity()->getTransform()->setPosition(rend::vec3(m_position, 0, -20));
 
-		std::cout << getEntity()->getTransform()->getPosition().x << std::endl;
-		std::cout << getEntity()->getTransform()->getPosition().y << std::endl;
+		//std::cout << getEntity()->getTransform()->getPosition().x << std::endl;
+		//std::cout << getEntity()->getTransform()->getPosition().y << std::endl;
 
 		//std::cout << "Ticking" << std::endl;
 
@@ -43,7 +43,7 @@ private:
 int main(int argc, char* argv[])
 {
 
-	std::cout << "hello world" << std::endl;
+	std::cout << "Welcome to SHUBENGINE" << std::endl;
 
 	std::shared_ptr<Core> core = Core::initialize();
 

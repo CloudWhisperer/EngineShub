@@ -48,6 +48,12 @@ add_library(myengine
     src/myengine/SoundSource.cpp
     src/myengine/SoundSource.h
 
+    src/myengine/Boxcollider.cpp
+    src/myengine/Boxcollider.h
+
+    src/myengine/Rigidbody.cpp
+    src/myengine/Rigidbody.h
+
     #src/myengine/stb_vorbis.c
 )
 target_link_libraries(myengine SDL2 SDL2main rend)
