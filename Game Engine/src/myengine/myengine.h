@@ -7,5 +7,6 @@
 #include "TriangleRenderer.h"
 #include "SoundSource.h"
 #include "Transform.h"
+#include "irccomponent.h"
 
 #endif
