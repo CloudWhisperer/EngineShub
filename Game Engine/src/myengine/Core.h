@@ -3,6 +3,7 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include <rend/rend.h>
+#include <iostream>
 
 /**
 * Initialises the Core that creates a window with a height and width that is made by the developer.
@@ -17,6 +18,46 @@ namespace myengine
 
 	///creates the struct for component
 	struct Component;
+
+	struct Resource
+	{
+		virtual void onLoad() = 0;
+		std::string getPath() const;
+	private:
+		std::string m_path;
+		void load();
+	};
+	
+	struct Model : Resource
+	{
+		void onLoad();
+	private:
+		std::shared_ptr<rend::Model> m_model;
+	};
+	
+	struct Texture : Resource
+	{
+		void onLoad();
+	private:
+		std::shared_ptr<rend::Texture> m_texture;
+	};
+	
+	struct Shader : Resource
+	{
+		void onLoad();
+	private:
+		std::shared_ptr<rend::Shader> m_shader;
+	};
+	
+	//struct SoundSource : Resource
+	//{
+	//	void onLoadsound();
+	//private:
+	//	std::shared_ptr<myengine::SoundSource> m_soundsource;
+	//};
+
+
+
 
 	struct Core
 	{
@@ -46,4 +87,5 @@ namespace myengine
 		SDL_GLContext m_context;
 		SDL_Event e;
 	};
+
 }

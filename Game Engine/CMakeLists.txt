@@ -54,6 +54,9 @@ add_library(myengine
     src/myengine/Rigidbody.cpp
     src/myengine/Rigidbody.h
 
+    src/myengine/Resources.cpp
+    src/myengine/Resources.h
+
     #src/myengine/stb_vorbis.c
 )
 target_link_libraries(myengine SDL2 SDL2main rend)
