@@ -8,5 +8,7 @@
 #include "SoundSource.h"
 #include "Transform.h"
 #include "irccomponent.h"
+#include "Boxcollider.h"
+#include "Resources.h"
 
 #endif

@@ -53,6 +53,8 @@ int main(int argc, char* argv[])
 	e->addComponent<SoundSource>();
 	e->addComponent<irccomponent>();
 
+
+
 	//how does rend work without include???
 	e->getTransform()->setPosition(rend::vec3(0, 0, -5));
 

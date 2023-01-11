@@ -79,6 +79,17 @@ namespace myengine
 				{
 					m_running = false;
 				}
+
+				//else
+				//{
+				//	switch (event.type) {
+				//		/* Keyboard event */
+				//		/* Pass the event data onto PrintKeyInfo() */
+				//	case SDL_KEYDOWN:
+				//	case SDL_KEYUP:
+				//		PrintKeyInfo(&event.key);
+				//		break;
+				//}
 			}
 
 			for (size_t ei = 0; ei < m_entities.size(); ei++)
@@ -155,6 +166,10 @@ namespace myengine
 		}
 	}
 
+	void Model::onLoad()
+	{
+	}
+
 	struct Resources
 	{
 		template <typename T>
@@ -189,5 +204,10 @@ namespace myengine
 		SDL_GL_DeleteContext(m_context);
 		SDL_DestroyWindow(m_window);
 		SDL_Quit();
+	}
+
+	void Resource::load()
+	{
+
 	}
 }

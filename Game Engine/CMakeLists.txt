@@ -57,9 +57,15 @@ add_library(myengine
     src/myengine/Resources.cpp
     src/myengine/Resources.h
 
-    #src/myengine/stb_vorbis.c
+    src/myengine/irccomponent.cpp
+    src/myengine/irccomponent.h
+
+    src/myengine/Keyboard.cpp
+    src/myengine/Keyboard.h
+
+    src/myengine/stb_vorbis.c
 )
-target_link_libraries(myengine SDL2 SDL2main rend)
+target_link_libraries(myengine SDL2 SDL2main rend openal32)
 
 add_executable(game
     src/game/main.cpp
@@ -69,7 +75,7 @@ add_executable(game
 )
 
 target_link_libraries(game myengine)
-target_link_libraries(myengine openal32)
+#target_link_libraries(myengine openal32)
 
 
 add_library(rend

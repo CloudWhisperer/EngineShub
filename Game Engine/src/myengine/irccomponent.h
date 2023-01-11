@@ -11,8 +11,10 @@ namespace myengine
 	{
 		int result;
 		WSADATA wsadata;
-		irccomponent();//initialise the winsock, and connect ppl
-		~irccomponent();//close sockets
+
+		//broken for some reason
+		//irccomponent();//initialise the winsock, and connect ppl
+		//~irccomponent();//close sockets
 
 		//functions for pepping server and stuff
 		void prepserver();
