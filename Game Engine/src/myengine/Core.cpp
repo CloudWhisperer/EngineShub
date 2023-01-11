@@ -80,16 +80,36 @@ namespace myengine
 					m_running = false;
 				}
 
-				//else
-				//{
-				//	switch (event.type) {
-				//		/* Keyboard event */
-				//		/* Pass the event data onto PrintKeyInfo() */
-				//	case SDL_KEYDOWN:
-				//	case SDL_KEYUP:
-				//		PrintKeyInfo(&event.key);
-				//		break;
-				//}
+	/*			if(e.type == SDL_KEYDOWN)
+				{
+					std::cout << "a key has been pressed" << std::endl;
+				}
+
+				if (e.key.keysym.sym == SDLK_0)
+				{
+					std::cout << "0 pressed" << std::endl;
+				}  */
+
+				const Uint8* state = SDL_GetKeyboardState(NULL);
+				if (state[SDL_SCANCODE_RIGHT])
+				{
+					std::cout << "right arrow key press" << std::endl;
+				}
+
+				if (state[SDL_SCANCODE_LEFT])
+				{
+					std::cout << "left arrow key press" << std::endl;
+				}
+
+				if (state[SDL_SCANCODE_UP])
+				{
+					std::cout << "up arrow key press" << std::endl;
+				}
+
+				if (state[SDL_SCANCODE_DOWN])
+				{
+					std::cout << "down arrow key press" << std::endl;
+				}
 			}
 
 			for (size_t ei = 0; ei < m_entities.size(); ei++)

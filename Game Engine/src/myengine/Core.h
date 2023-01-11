@@ -4,6 +4,7 @@
 #include <vector>
 #include <rend/rend.h>
 #include <iostream>
+#include <myengine/Keyboard.h>
 
 /**
 * Initialises the Core that creates a window with a height and width that is made by the developer.
@@ -81,6 +82,7 @@ namespace myengine
 		///boolean to check if the engine is running
 		bool m_running;
 		std::vector<std::shared_ptr<Entity> > m_entities;
+		std::shared_ptr<Keyboard> m_keyboard;
 		std::weak_ptr<Core>m_self;
 		std::weak_ptr<Core>rtn;
 		SDL_Window* m_window;
