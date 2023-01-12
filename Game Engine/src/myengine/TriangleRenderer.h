@@ -10,6 +10,7 @@ namespace myengine
 		TriangleRenderer();
 	private:
 		rend::Mesh m_mesh;
+		rend::Mesh m_enemy;
 		rend::Shader m_shader;
 		void onDisplay();
 	};

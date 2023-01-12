@@ -32,7 +32,10 @@ namespace myengine
 	*/
 	struct Texture : Resource
 	{
-		void onLoad();
+		void onLoad()
+		{
+			m_texture = std::make_shared<rend::Texture>(getPath().c_str());
+		}
 	private:
 		std::shared_ptr<rend::Texture> m_texture;
 	};

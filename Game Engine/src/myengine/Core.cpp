@@ -150,6 +150,8 @@ namespace myengine
 		return rtn;
 	}
 
+
+
 	template <typename T>
 	void find(std::vector<std::shared_ptr<T> >& _out)
 	{
