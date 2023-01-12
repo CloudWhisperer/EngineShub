@@ -1,0 +1,48 @@
+\hypertarget{irccomponent_8h_source}{}\doxysection{irccomponent.\+h}
+\label{irccomponent_8h_source}\index{src/myengine/irccomponent.h@{src/myengine/irccomponent.h}}
+\mbox{\hyperlink{irccomponent_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#define WIN32\_LEAN\_AND\_MEAN}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <ws2tcpip.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemyengine}{myengine}}}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{14     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1irccomponent}{irccomponent}} : \mbox{\hyperlink{structmyengine_1_1_component}{Component}}}
+\DoxyCodeLine{15     \{}
+\DoxyCodeLine{16         \textcolor{keywordtype}{int} \mbox{\hyperlink{structmyengine_1_1irccomponent_aa581f9190630358dcdcdd9caa1fe80dd}{result}};}
+\DoxyCodeLine{17         WSADATA \mbox{\hyperlink{structmyengine_1_1irccomponent_a3eaadf3d1533b84c69b7bdbd8a52b24c}{wsadata}};}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19         \textcolor{comment}{//broken for some reason}}
+\DoxyCodeLine{20         \textcolor{comment}{//irccomponent();//initialise the winsock, and connect ppl}}
+\DoxyCodeLine{21         \textcolor{comment}{//\string~irccomponent();//close sockets}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23         \textcolor{comment}{//functions for pepping server and stuff}}
+\DoxyCodeLine{24         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}{prepserver}}();}
+\DoxyCodeLine{25         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1irccomponent_a6a597fc388182c1e63a2fb0a1c5117e6}{serversocket}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27         \textcolor{comment}{//client stuff}}
+\DoxyCodeLine{28         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}{prepclient}}();}
+\DoxyCodeLine{29         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}{connectingclient}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}{ontick}}();}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1irccomponent_a4071c86897a456715443916917410ee6}{authenticate}}();}
+\DoxyCodeLine{34         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}{disconnected}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36     \textcolor{keyword}{private}:}
+\DoxyCodeLine{37         SOCKET \mbox{\hyperlink{structmyengine_1_1irccomponent_a711dd2ac02df1bde1f33aa1d6b03cfba}{m\_socket}};}
+\DoxyCodeLine{38         std::vector<unsigned char> \mbox{\hyperlink{structmyengine_1_1irccomponent_a893a89a132c43e2cbd478b49680c0f5b}{m\_incoming}};}
+\DoxyCodeLine{39         std::vector<unsigned char> \mbox{\hyperlink{structmyengine_1_1irccomponent_afe3cd9b2588df5fd27a9f6382f4bd839}{m\_outgoing}};}
+\DoxyCodeLine{40         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structmyengine_1_1irccomponent_ad4c23d5b968ec31519a08d204b310168}{m\_authenticated}};}
+\DoxyCodeLine{41         \textcolor{keywordtype}{bool} \mbox{\hyperlink{structmyengine_1_1irccomponent_a6ca7703d89edf92ad119d45252d199ec}{m\_disconnected}};}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \};}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \};}
+
+\end{DoxyCode}

@@ -1,79 +1,15 @@
 \hypertarget{_transform_8h}{}\doxysection{src/myengine/\+Transform.h File Reference}
 \label{_transform_8h}\index{src/myengine/Transform.h@{src/myengine/Transform.h}}
 {\ttfamily \#include $<$vector$>$}\newline
-\doxysubsection*{Functions}
+{\ttfamily \#include \char`\"{}Component.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$rend/rend.\+h$>$}\newline
+\doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} \mbox{\hyperlink{_transform_8h_abd21eea17e0ddff4dab750381fc67137}{get\+Model}} ()
-\item 
-void \mbox{\hyperlink{_transform_8h_a84d451861150b9a1814c07bf08c33c63}{set\+Position}} (const vec3 \&\+\_\+position)
+struct \mbox{\hyperlink{structmyengine_1_1_transform}{myengine\+::\+Transform}}
 \end{DoxyCompactItemize}
-\doxysubsection*{Variables}
+\doxysubsection*{Namespaces}
 \begin{DoxyCompactItemize}
 \item 
-vec3 \mbox{\hyperlink{_transform_8h_ad3addc46ce66dbc0b807e9aae35a4fc4}{m\+\_\+position}}
-\begin{DoxyCompactList}\small\item\em X, Y, Z location of Entity. \end{DoxyCompactList}\item 
-vec3 \mbox{\hyperlink{_transform_8h_a284004eadef06ed85b57f2cb0c50b964}{m\+\_\+rotation}}
-\begin{DoxyCompactList}\small\item\em Rotation of Entity in euler angles. \end{DoxyCompactList}\item 
-vec3 \mbox{\hyperlink{_transform_8h_a6a1043d2df93fd95e6934baf1c26c701}{m\+\_\+scale}}
-\begin{DoxyCompactList}\small\item\em Scale of Entity. \end{DoxyCompactList}\end{DoxyCompactItemize}
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_transform_8h_abd21eea17e0ddff4dab750381fc67137}\label{_transform_8h_abd21eea17e0ddff4dab750381fc67137}} 
-\index{Transform.h@{Transform.h}!getModel@{getModel}}
-\index{getModel@{getModel}!Transform.h@{Transform.h}}
-\doxysubsubsection{\texorpdfstring{getModel()}{getModel()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-Component providing position information of the Entity. / struct Transform \+: Component \{ /$\ast$$\ast$ Generate the model matrix based on the position, rotation and scale.
-
-\begin{DoxyReturn}{Returns}
-The generated model matrix 
-\end{DoxyReturn}
-\mbox{\Hypertarget{_transform_8h_a84d451861150b9a1814c07bf08c33c63}\label{_transform_8h_a84d451861150b9a1814c07bf08c33c63}} 
-\index{Transform.h@{Transform.h}!setPosition@{setPosition}}
-\index{setPosition@{setPosition}!Transform.h@{Transform.h}}
-\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
-{\footnotesize\ttfamily void set\+Position (\begin{DoxyParamCaption}\item[{const vec3 \&}]{\+\_\+position }\end{DoxyParamCaption})}
-
-Set the position.
-
-
-\begin{DoxyParams}{Parameters}
-{\em \+\_\+position} & The new position \\
-\hline
-\end{DoxyParams}
-
-
-\doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{_transform_8h_ad3addc46ce66dbc0b807e9aae35a4fc4}\label{_transform_8h_ad3addc46ce66dbc0b807e9aae35a4fc4}} 
-\index{Transform.h@{Transform.h}!m\_position@{m\_position}}
-\index{m\_position@{m\_position}!Transform.h@{Transform.h}}
-\doxysubsubsection{\texorpdfstring{m\_position}{m\_position}}
-{\footnotesize\ttfamily vec3 m\+\_\+position\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-X, Y, Z location of Entity. 
-
-\mbox{\Hypertarget{_transform_8h_a284004eadef06ed85b57f2cb0c50b964}\label{_transform_8h_a284004eadef06ed85b57f2cb0c50b964}} 
-\index{Transform.h@{Transform.h}!m\_rotation@{m\_rotation}}
-\index{m\_rotation@{m\_rotation}!Transform.h@{Transform.h}}
-\doxysubsubsection{\texorpdfstring{m\_rotation}{m\_rotation}}
-{\footnotesize\ttfamily vec3 m\+\_\+rotation\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Rotation of Entity in euler angles. 
-
-\mbox{\Hypertarget{_transform_8h_a6a1043d2df93fd95e6934baf1c26c701}\label{_transform_8h_a6a1043d2df93fd95e6934baf1c26c701}} 
-\index{Transform.h@{Transform.h}!m\_scale@{m\_scale}}
-\index{m\_scale@{m\_scale}!Transform.h@{Transform.h}}
-\doxysubsubsection{\texorpdfstring{m\_scale}{m\_scale}}
-{\footnotesize\ttfamily vec3 m\+\_\+scale\hspace{0.3cm}{\ttfamily [private]}}
-
-
-
-Scale of Entity. 
-
+namespace \mbox{\hyperlink{namespacemyengine}{myengine}}
+\end{DoxyCompactItemize}

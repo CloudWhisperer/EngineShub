@@ -29,6 +29,7 @@ namespace myengine
 	private:
 		friend struct Core;
 
+		/// creates pointers to itself and core
 		std::weak_ptr<Core> m_core;
 		std::weak_ptr<Entity> m_self;
 		std::list<std::shared_ptr<Component> > m_components;

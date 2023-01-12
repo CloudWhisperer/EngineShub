@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: myengine::Entity Struct Reference</title>
+<title>myengine: myengine::Entity Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">myengine
    </div>
   </td>
  </tr>
@@ -90,6 +90,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a514e500995795a71aeea15f447856b9e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a514e500995795a71aeea15f447856b9e"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#a514e500995795a71aeea15f447856b9e">addComponent</a> ()</td></tr>
 <tr class="separator:a514e500995795a71aeea15f447856b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d39705dcf1bb5022b03d52f7622da31"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structmyengine_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#a1d39705dcf1bb5022b03d52f7622da31">getCore</a> ()</td></tr>
+<tr class="separator:a1d39705dcf1bb5022b03d52f7622da31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931cb57377c5b43b8d4e02b32892a5dc"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="structmyengine_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#a931cb57377c5b43b8d4e02b32892a5dc">getTransform</a> ()</td></tr>
+<tr class="separator:a931cb57377c5b43b8d4e02b32892a5dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -102,8 +106,17 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:abd6451cad16fca0adacf163215954182"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="structmyengine_1_1_core.html">Core</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#abd6451cad16fca0adacf163215954182">m_core</a></td></tr>
+<tr class="memdesc:abd6451cad16fca0adacf163215954182"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates pointers to itself and core  <a href="structmyengine_1_1_entity.html#abd6451cad16fca0adacf163215954182">More...</a><br /></td></tr>
+<tr class="separator:abd6451cad16fca0adacf163215954182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41b3411342cbe39ba683d842cd17160f"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="structmyengine_1_1_entity.html">Entity</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#a41b3411342cbe39ba683d842cd17160f">m_self</a></td></tr>
+<tr class="separator:a41b3411342cbe39ba683d842cd17160f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ce9c5b8a7904395a6ea66d2478c8432"><td class="memItemLeft" align="right" valign="top">std::list&lt; std::shared_ptr&lt; <a class="el" href="structmyengine_1_1_component.html">Component</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#a4ce9c5b8a7904395a6ea66d2478c8432">m_components</a></td></tr>
 <tr class="separator:a4ce9c5b8a7904395a6ea66d2478c8432"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec4044771a4ec5d5ac246a6ccda9a85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#adec4044771a4ec5d5ac246a6ccda9a85">m_alive</a></td></tr>
+<tr class="separator:adec4044771a4ec5d5ac246a6ccda9a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80ccccdf71ec60d03bd34094c3f77d63"><td class="memItemLeft" align="right" valign="top">std::weak_ptr&lt; <a class="el" href="structmyengine_1_1_transform.html">Transform</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmyengine_1_1_entity.html#a80ccccdf71ec60d03bd34094c3f77d63">m_transform</a></td></tr>
+<tr class="separator:a80ccccdf71ec60d03bd34094c3f77d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="friends" name="friends"></a>
 Friends</h2></td></tr>
@@ -165,6 +178,40 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="a1d39705dcf1bb5022b03d52f7622da31" name="a1d39705dcf1bb5022b03d52f7622da31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d39705dcf1bb5022b03d52f7622da31">&#9670;&#160;</a></span>getCore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structmyengine_1_1_core.html">Core</a> &gt; myengine::Entity::getCore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a931cb57377c5b43b8d4e02b32892a5dc" name="a931cb57377c5b43b8d4e02b32892a5dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a931cb57377c5b43b8d4e02b32892a5dc">&#9670;&#160;</a></span>getTransform()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt; <a class="el" href="structmyengine_1_1_transform.html">Transform</a> &gt; myengine::Entity::getTransform </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ab0a125079867c099760260086386f4c2" name="ab0a125079867c099760260086386f4c2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab0a125079867c099760260086386f4c2">&#9670;&#160;</a></span>tick()</h2>
 
@@ -216,6 +263,28 @@ template&lt;typename T &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="adec4044771a4ec5d5ac246a6ccda9a85" name="adec4044771a4ec5d5ac246a6ccda9a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adec4044771a4ec5d5ac246a6ccda9a85">&#9670;&#160;</a></span>m_alive</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool myengine::Entity::m_alive</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4ce9c5b8a7904395a6ea66d2478c8432" name="a4ce9c5b8a7904395a6ea66d2478c8432"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ce9c5b8a7904395a6ea66d2478c8432">&#9670;&#160;</a></span>m_components</h2>
 
@@ -227,6 +296,74 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::list&lt;std::shared_ptr&lt;<a class="el" href="structmyengine_1_1_component.html">Component</a>&gt; &gt; myengine::Entity::m_components</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd6451cad16fca0adacf163215954182" name="abd6451cad16fca0adacf163215954182"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd6451cad16fca0adacf163215954182">&#9670;&#160;</a></span>m_core</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="structmyengine_1_1_core.html">Core</a>&gt; myengine::Entity::m_core</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>creates pointers to itself and core </p>
+
+</div>
+</div>
+<a id="a41b3411342cbe39ba683d842cd17160f" name="a41b3411342cbe39ba683d842cd17160f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41b3411342cbe39ba683d842cd17160f">&#9670;&#160;</a></span>m_self</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="structmyengine_1_1_entity.html">Entity</a>&gt; myengine::Entity::m_self</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a80ccccdf71ec60d03bd34094c3f77d63" name="a80ccccdf71ec60d03bd34094c3f77d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80ccccdf71ec60d03bd34094c3f77d63">&#9670;&#160;</a></span>m_transform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::weak_ptr&lt;<a class="el" href="structmyengine_1_1_transform.html">Transform</a>&gt; myengine::Entity::m_transform</td>
         </tr>
       </table>
   </td>

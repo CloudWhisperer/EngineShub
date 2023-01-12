@@ -14,7 +14,11 @@ void \mbox{\hyperlink{structmyengine_1_1_core_a4f1818b9d6fbf66e8c3b246fa1f2d965}
 \mbox{\hyperlink{structmyengine_1_1_core_af8293765bd17b1e0003df3820fa38990}{$\sim$\+Core}} ()
 \begin{DoxyCompactList}\small\item\em deconstructs everything that needs to be removed to save memory leaks \end{DoxyCompactList}\item 
 std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_abf2eea4d6b0d3788761ea11f34c4981d}{add\+Entity}} ()
-\begin{DoxyCompactList}\small\item\em runs the entity function \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em runs the entity function \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__core__vector_ga6ebf1ff1f152ff34c800b6997d5f311f}{rend\+::vec2}} \mbox{\hyperlink{structmyengine_1_1_core_ab8224997f867d2422c38652374d61897}{get\+Screen\+Size}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_resources}{Resources}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_a82f9fc96dd0d9cb9fd29c0aa7cf83c45}{get\+Resources}} ()
+\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,6 +30,10 @@ static std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}
 bool \mbox{\hyperlink{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}{m\+\_\+running}}
 \begin{DoxyCompactList}\small\item\em boolean to check if the engine is running \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}} $>$ $>$ \mbox{\hyperlink{structmyengine_1_1_core_af0c11fddba430e3b02fc05b4e6e04135}{m\+\_\+entities}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_keyboard}{Keyboard}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_ae0911a866f3343d48ec9989e32c0aa31}{m\+\_\+keyboard}}
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_resources}{Resources}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_a9498586e97c0cb5eea1f66a1a300d985}{m\+\_\+resources}}
 \item 
 std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structmyengine_1_1_core_ae82b7b0c2f95c869b82ea2082b6e5e37}{m\+\_\+self}}
 \item 
@@ -62,6 +70,18 @@ deconstructs everything that needs to be removed to save memory leaks
 
 
 runs the entity function 
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a82f9fc96dd0d9cb9fd29c0aa7cf83c45}\label{structmyengine_1_1_core_a82f9fc96dd0d9cb9fd29c0aa7cf83c45}} 
+\index{myengine::Core@{myengine::Core}!getResources@{getResources}}
+\index{getResources@{getResources}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{getResources()}{getResources()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_resources}{Resources}} $>$ myengine\+::\+Core\+::get\+Resources (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_ab8224997f867d2422c38652374d61897}\label{structmyengine_1_1_core_ab8224997f867d2422c38652374d61897}} 
+\index{myengine::Core@{myengine::Core}!getScreenSize@{getScreenSize}}
+\index{getScreenSize@{getScreenSize}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{getScreenSize()}{getScreenSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga6ebf1ff1f152ff34c800b6997d5f311f}{rend\+::vec2}} myengine\+::\+Core\+::get\+Screen\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 \mbox{\Hypertarget{structmyengine_1_1_core_a60646236bab8f92a381ce2d43806e813}\label{structmyengine_1_1_core_a60646236bab8f92a381ce2d43806e813}} 
 \index{myengine::Core@{myengine::Core}!initialize@{initialize}}
@@ -113,6 +133,18 @@ stops the engine
 \index{m\_entities@{m\_entities}!myengine::Core@{myengine::Core}}
 \doxysubsubsection{\texorpdfstring{m\_entities}{m\_entities}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_entity}{Entity}}$>$ $>$ myengine\+::\+Core\+::m\+\_\+entities\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_ae0911a866f3343d48ec9989e32c0aa31}\label{structmyengine_1_1_core_ae0911a866f3343d48ec9989e32c0aa31}} 
+\index{myengine::Core@{myengine::Core}!m\_keyboard@{m\_keyboard}}
+\index{m\_keyboard@{m\_keyboard}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_keyboard}{m\_keyboard}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_keyboard}{Keyboard}}$>$ myengine\+::\+Core\+::m\+\_\+keyboard\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_core_a9498586e97c0cb5eea1f66a1a300d985}\label{structmyengine_1_1_core_a9498586e97c0cb5eea1f66a1a300d985}} 
+\index{myengine::Core@{myengine::Core}!m\_resources@{m\_resources}}
+\index{m\_resources@{m\_resources}!myengine::Core@{myengine::Core}}
+\doxysubsubsection{\texorpdfstring{m\_resources}{m\_resources}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_resources}{Resources}}$>$ myengine\+::\+Core\+::m\+\_\+resources\hspace{0.3cm}{\ttfamily [private]}}
 
 \mbox{\Hypertarget{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}\label{structmyengine_1_1_core_afb4eb261775fe2aeb94a0357da97e961}} 
 \index{myengine::Core@{myengine::Core}!m\_running@{m\_running}}

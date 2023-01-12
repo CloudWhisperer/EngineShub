@@ -4,6 +4,33 @@
 
 using namespace myengine;
 
+struct Player;
+
+void controller()
+{
+	const Uint8* state = SDL_GetKeyboardState(NULL);
+	if (state[SDL_SCANCODE_RIGHT])
+	{
+		std::cout << "right arrow key press" << std::endl;
+		
+	}
+
+	if (state[SDL_SCANCODE_LEFT])
+	{
+		std::cout << "left arrow key press" << std::endl;
+	}
+
+	if (state[SDL_SCANCODE_UP])
+	{
+		std::cout << "up arrow key press" << std::endl;
+	}
+
+	if (state[SDL_SCANCODE_DOWN])
+	{
+		std::cout << "down arrow key press" << std::endl;
+	}
+};
+
 struct Player : Component
 {
 	Player() :
@@ -15,23 +42,11 @@ struct Player : Component
 	{
 		m_angle += 4.0f;
 
-		//m_position += 0.1f;
-
 		getEntity()->getTransform()->setRotation(rend::vec3(m_angle, m_angle, m_angle));
 
 		getEntity()->getTransform()->setPosition(rend::vec3(m_position, 0, -20));
 
-		//std::cout << getEntity()->getTransform()->getPosition().x << std::endl;
-		//std::cout << getEntity()->getTransform()->getPosition().y << std::endl;
-
-		//std::cout << "Ticking" << std::endl;
-
-		//if (m_count > 600)
-		//{
-			//another way to stop the engine, preferred to get the core first then just getting the entity
-			//getEntity()->kill();
-			//getEntity()->getCore()->stop();
-		//}
+		controller();
 	}
 
 private:
@@ -43,7 +58,7 @@ private:
 int main(int argc, char* argv[])
 {
 
-	std::cout << "Welcome to SHUBENGINE" << std::endl;
+	std::cout << "SHUBENGINE LOADED SUCCESSFULLY" << std::endl;
 
 	std::shared_ptr<Core> core = Core::initialize();
 
@@ -53,9 +68,8 @@ int main(int argc, char* argv[])
 	e->addComponent<SoundSource>();
 	e->addComponent<irccomponent>();
 
+	std::shared_ptr<Texture> cattext = core->getResources()->load<Texture>("Textures/cat.png");
 
-
-	//how does rend work without include???
 	e->getTransform()->setPosition(rend::vec3(0, 0, -5));
 
 	core->start();

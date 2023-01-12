@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: src/rend/glm/detail/qualifier.hpp Source File</title>
+<title>myengine: src/rend/glm/detail/qualifier.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">myengine
    </div>
   </td>
  </tr>
@@ -162,16 +162,16 @@ $(function() {
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1storage.html">   85</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structglm_1_1detail_1_1storage.html">storage</a></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    {</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1storage_1_1type.html">   87</a></span>        <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structglm_1_1detail_1_1storage_1_1type.html">type</a> {</div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1storage_1_1type.html#a4f504f12210a0424ce891a6b64b33127">   88</a></span>            T <a class="code hl_variable" href="structglm_1_1detail_1_1storage_1_1type.html#a4f504f12210a0424ce891a6b64b33127">data</a>[L];</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1storage_1_1type.html#a4f504f12210a0424ce891a6b64b33127">   88</a></span>            T <a class="code hl_variable" href="structglm_1_1detail_1_1storage_1_1type.html#a4f504f12210a0424ce891a6b64b33127">data</a>[<a class="code hl_define" href="stb__vorbis_8c.html#aa73214aa5f2f94f63d90bb4e3d99fe53">L</a>];</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1storage.html#a5216a19f9cf2c43192a0758c2ce114ac">   89</a></span>        } <a class="code hl_struct" href="structglm_1_1type.html">type</a>;</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    };</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#   if GLM_HAS_ALIGNOF</span></div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keyword">template</span>&lt;length_t L, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">struct </span>storage&lt;L, T, true&gt;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        <span class="keyword">struct </span>storage&lt;<a class="code hl_define" href="stb__vorbis_8c.html#aa73214aa5f2f94f63d90bb4e3d99fe53">L</a>, T, true&gt;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        {</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="keyword">typedef</span> <span class="keyword">struct </span><span class="keyword">alignas</span>(L * sizeof(T)) <a class="code hl_struct" href="structglm_1_1type.html">type</a> {</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                T <a class="code hl_variable" href="structglm_1_1detail_1_1storage_1_1type.html#a4f504f12210a0424ce891a6b64b33127">data</a>[L];</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>                T <a class="code hl_variable" href="structglm_1_1detail_1_1storage_1_1type.html#a4f504f12210a0424ce891a6b64b33127">data</a>[<a class="code hl_define" href="stb__vorbis_8c.html#aa73214aa5f2f94f63d90bb4e3d99fe53">L</a>];</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            } type;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        };</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
@@ -276,7 +276,7 @@ $(function() {
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    {};</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keyword">template</span> &lt;length_t C, length_t R, <span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1gen_type_trait_3_01mat_3_01_c_00_01_r_00_01_t_01_4_01_4.html">  202</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structglm_1_1detail_1_1gen_type_trait.html">genTypeTrait</a>&lt;<a class="code hl_struct" href="structglm_1_1mat.html">mat</a>&lt;C, R, T&gt; &gt;</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1gen_type_trait_3_01mat_3_01_c_00_01_r_00_01_t_01_4_01_4.html">  202</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structglm_1_1detail_1_1gen_type_trait.html">genTypeTrait</a>&lt;<a class="code hl_struct" href="structglm_1_1mat.html">mat</a>&lt;<a class="code hl_define" href="stb__vorbis_8c.html#ac4cf4b2ab929bd23951a8676eeac086b">C</a>, <a class="code hl_define" href="stb__vorbis_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a>, T&gt; &gt;</div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    {</div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno"><a class="line" href="structglm_1_1detail_1_1gen_type_trait_3_01mat_3_01_c_00_01_r_00_01_t_01_4_01_4.html#a35924af2489328f8f8afee1cf109e04e">  204</a></span>        <span class="keyword">static</span> <span class="keyword">const</span> <a class="code hl_enumeration" href="namespaceglm_1_1detail.html#a2b685825395a537617a73f60d1f21e60">genTypeEnum</a> GENTYPE = <a class="code hl_enumvalue" href="namespaceglm_1_1detail.html#a2b685825395a537617a73f60d1f21e60a85adefad02e67d31b8436ed6b0eed0e0">GENTYPE_MAT</a>;</div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    };</div>
@@ -325,6 +325,9 @@ $(function() {
 <div class="ttc" id="asetup_8hpp_html"><div class="ttname"><a href="setup_8hpp.html">setup.hpp</a></div></div>
 <div class="ttc" id="asetup_8hpp_html_a08b807947b47031d3a511f03f89645ad"><div class="ttname"><a href="setup_8hpp.html#a08b807947b47031d3a511f03f89645ad">GLM_CONSTEXPR</a></div><div class="ttdeci">#define GLM_CONSTEXPR</div><div class="ttdef"><b>Definition:</b> setup.hpp:292</div></div>
 <div class="ttc" id="asetup_8hpp_html_a33fdea6f91c5f834105f7415e2a64407"><div class="ttname"><a href="setup_8hpp.html#a33fdea6f91c5f834105f7415e2a64407">GLM_FUNC_QUALIFIER</a></div><div class="ttdeci">#define GLM_FUNC_QUALIFIER</div><div class="ttdef"><b>Definition:</b> setup.hpp:439</div></div>
+<div class="ttc" id="astb__vorbis_8c_html_a5c71a5e59a53413cd6c270266d63b031"><div class="ttname"><a href="stb__vorbis_8c.html#a5c71a5e59a53413cd6c270266d63b031">R</a></div><div class="ttdeci">#define R</div><div class="ttdef"><b>Definition:</b> stb_vorbis.c:5133</div></div>
+<div class="ttc" id="astb__vorbis_8c_html_aa73214aa5f2f94f63d90bb4e3d99fe53"><div class="ttname"><a href="stb__vorbis_8c.html#aa73214aa5f2f94f63d90bb4e3d99fe53">L</a></div><div class="ttdeci">#define L</div><div class="ttdef"><b>Definition:</b> stb_vorbis.c:5131</div></div>
+<div class="ttc" id="astb__vorbis_8c_html_ac4cf4b2ab929bd23951a8676eeac086b"><div class="ttname"><a href="stb__vorbis_8c.html#ac4cf4b2ab929bd23951a8676eeac086b">C</a></div><div class="ttdeci">#define C</div><div class="ttdef"><b>Definition:</b> stb_vorbis.c:5132</div></div>
 <div class="ttc" id="astructglm_1_1detail_1_1gen_type_trait_html"><div class="ttname"><a href="structglm_1_1detail_1_1gen_type_trait.html">glm::detail::genTypeTrait</a></div><div class="ttdef"><b>Definition:</b> qualifier.hpp:199</div></div>
 <div class="ttc" id="astructglm_1_1detail_1_1init__gentype_3_01gen_type_00_01_g_e_n_t_y_p_e___m_a_t_01_4_html_a724a46f86c46f05a3ae041d8bbe02a8b"><div class="ttname"><a href="structglm_1_1detail_1_1init__gentype_3_01gen_type_00_01_g_e_n_t_y_p_e___m_a_t_01_4.html#a724a46f86c46f05a3ae041d8bbe02a8b">glm::detail::init_gentype&lt; genType, GENTYPE_MAT &gt;::identity</a></div><div class="ttdeci">GLM_FUNC_QUALIFIER static GLM_CONSTEXPR genType identity()</div><div class="ttdef"><b>Definition:</b> qualifier.hpp:224</div></div>
 <div class="ttc" id="astructglm_1_1detail_1_1init__gentype_3_01gen_type_00_01_g_e_n_t_y_p_e___q_u_a_t_01_4_html_a087904ff6bbbbd194402937123b90d13"><div class="ttname"><a href="structglm_1_1detail_1_1init__gentype_3_01gen_type_00_01_g_e_n_t_y_p_e___q_u_a_t_01_4.html#a087904ff6bbbbd194402937123b90d13">glm::detail::init_gentype&lt; genType, GENTYPE_QUAT &gt;::identity</a></div><div class="ttdeci">GLM_FUNC_QUALIFIER static GLM_CONSTEXPR genType identity()</div><div class="ttdef"><b>Definition:</b> qualifier.hpp:215</div></div>

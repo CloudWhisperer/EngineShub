@@ -8,6 +8,10 @@
 \begin{DoxyCompactItemize}
 \item 
 {\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a514e500995795a71aeea15f447856b9e}{add\+Component}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a1d39705dcf1bb5022b03d52f7622da31}{get\+Core}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_transform}{Transform}} $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a931cb57377c5b43b8d4e02b32892a5dc}{get\+Transform}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -19,7 +23,15 @@ void \mbox{\hyperlink{structmyengine_1_1_entity_a314cad9c9602f79c668048ec7e544d4
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ \mbox{\hyperlink{structmyengine_1_1_entity_abd6451cad16fca0adacf163215954182}{m\+\_\+core}}
+\begin{DoxyCompactList}\small\item\em creates pointers to itself and core \end{DoxyCompactList}\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}} $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a41b3411342cbe39ba683d842cd17160f}{m\+\_\+self}}
+\item 
 std\+::list$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_component}{Component}} $>$ $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}{m\+\_\+components}}
+\item 
+bool \mbox{\hyperlink{structmyengine_1_1_entity_adec4044771a4ec5d5ac246a6ccda9a85}{m\+\_\+alive}}
+\item 
+std\+::weak\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_transform}{Transform}} $>$ \mbox{\hyperlink{structmyengine_1_1_entity_a80ccccdf71ec60d03bd34094c3f77d63}{m\+\_\+transform}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
@@ -46,6 +58,18 @@ std\+::shared\+\_\+ptr$<$ T $>$ myengine\+::\+Entity\+::add\+Component (\begin{D
 
 displays the tick rate of the engine in the command prompt  
 
+\mbox{\Hypertarget{structmyengine_1_1_entity_a1d39705dcf1bb5022b03d52f7622da31}\label{structmyengine_1_1_entity_a1d39705dcf1bb5022b03d52f7622da31}} 
+\index{myengine::Entity@{myengine::Entity}!getCore@{getCore}}
+\index{getCore@{getCore}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{getCore()}{getCore()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_core}{Core}} $>$ myengine\+::\+Entity\+::get\+Core (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmyengine_1_1_entity_a931cb57377c5b43b8d4e02b32892a5dc}\label{structmyengine_1_1_entity_a931cb57377c5b43b8d4e02b32892a5dc}} 
+\index{myengine::Entity@{myengine::Entity}!getTransform@{getTransform}}
+\index{getTransform@{getTransform}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{getTransform()}{getTransform()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_transform}{Transform}} $>$ myengine\+::\+Entity\+::get\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \mbox{\Hypertarget{structmyengine_1_1_entity_ab0a125079867c099760260086386f4c2}\label{structmyengine_1_1_entity_ab0a125079867c099760260086386f4c2}} 
 \index{myengine::Entity@{myengine::Entity}!tick@{tick}}
 \index{tick@{tick}!myengine::Entity@{myengine::Entity}}
@@ -68,11 +92,39 @@ calculates the tick rate of the engine
 
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_entity_adec4044771a4ec5d5ac246a6ccda9a85}\label{structmyengine_1_1_entity_adec4044771a4ec5d5ac246a6ccda9a85}} 
+\index{myengine::Entity@{myengine::Entity}!m\_alive@{m\_alive}}
+\index{m\_alive@{m\_alive}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_alive}{m\_alive}}
+{\footnotesize\ttfamily bool myengine\+::\+Entity\+::m\+\_\+alive\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}\label{structmyengine_1_1_entity_a4ce9c5b8a7904395a6ea66d2478c8432}} 
 \index{myengine::Entity@{myengine::Entity}!m\_components@{m\_components}}
 \index{m\_components@{m\_components}!myengine::Entity@{myengine::Entity}}
 \doxysubsubsection{\texorpdfstring{m\_components}{m\_components}}
 {\footnotesize\ttfamily std\+::list$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_component}{Component}}$>$ $>$ myengine\+::\+Entity\+::m\+\_\+components\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_entity_abd6451cad16fca0adacf163215954182}\label{structmyengine_1_1_entity_abd6451cad16fca0adacf163215954182}} 
+\index{myengine::Entity@{myengine::Entity}!m\_core@{m\_core}}
+\index{m\_core@{m\_core}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_core}{m\_core}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_core}{Core}}$>$ myengine\+::\+Entity\+::m\+\_\+core\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+creates pointers to itself and core 
+
+\mbox{\Hypertarget{structmyengine_1_1_entity_a41b3411342cbe39ba683d842cd17160f}\label{structmyengine_1_1_entity_a41b3411342cbe39ba683d842cd17160f}} 
+\index{myengine::Entity@{myengine::Entity}!m\_self@{m\_self}}
+\index{m\_self@{m\_self}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_self}{m\_self}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_entity}{Entity}}$>$ myengine\+::\+Entity\+::m\+\_\+self\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1_entity_a80ccccdf71ec60d03bd34094c3f77d63}\label{structmyengine_1_1_entity_a80ccccdf71ec60d03bd34094c3f77d63}} 
+\index{myengine::Entity@{myengine::Entity}!m\_transform@{m\_transform}}
+\index{m\_transform@{m\_transform}!myengine::Entity@{myengine::Entity}}
+\doxysubsubsection{\texorpdfstring{m\_transform}{m\_transform}}
+{\footnotesize\ttfamily std\+::weak\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_transform}{Transform}}$>$ myengine\+::\+Entity\+::m\+\_\+transform\hspace{0.3cm}{\ttfamily [private]}}
 
 
 

@@ -1,0 +1,88 @@
+\hypertarget{_resources_8h_source}{}\doxysection{Resources.\+h}
+\label{_resources_8h_source}\index{src/myengine/Resources.h@{src/myengine/Resources.h}}
+\mbox{\hyperlink{_resources_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_component_8h}{Component.h}}"{}}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rend_8h}{rend/rend.h}}"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{6 \textcolor{comment}{//\#include "{}SoundSource.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{comment}{//dont have a audiofile or a textfile yet, will add them later}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacemyengine}{myengine}}}
+\DoxyCodeLine{11 \{}
+\DoxyCodeLine{15     \textcolor{keyword}{struct }Resources;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{20     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_resource}{Resource}}}
+\DoxyCodeLine{21     \{}
+\DoxyCodeLine{22         \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_resource_ae972761939dd1311b3c9f90bc35a6ef5}{onLoad}}() = 0;}
+\DoxyCodeLine{23         std::string \mbox{\hyperlink{structmyengine_1_1_resource_a0725d0f188a13bc412243fb933cfe8f5}{getPath}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keyword}{private}:}
+\DoxyCodeLine{25         \textcolor{keyword}{friend} \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_resources}{Resources}};}
+\DoxyCodeLine{26         std::string \mbox{\hyperlink{structmyengine_1_1_resource_a350ada705a26a651c0f85391d5cb4350}{m\_path}};}
+\DoxyCodeLine{27         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_resource_a1615bc75362e2235b7872a2230acbd1e}{load}}();}
+\DoxyCodeLine{28     \};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{33     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_texture}{Texture}} : \mbox{\hyperlink{structmyengine_1_1_resource}{Resource}}}
+\DoxyCodeLine{34     \{}
+\DoxyCodeLine{35         \textcolor{keywordtype}{void} \mbox{\hyperlink{structmyengine_1_1_texture_ae8dbfc0d28cdd0aaa6f183b0242277ff}{onLoad}}();}
+\DoxyCodeLine{36     \textcolor{keyword}{private}:}
+\DoxyCodeLine{37         std::shared\_ptr<rend::Texture> \mbox{\hyperlink{structmyengine_1_1_texture_a185f6d4df26facd68d073910c3375396}{m\_texture}};}
+\DoxyCodeLine{38     \};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \textcolor{comment}{//struct Model : Resource}}
+\DoxyCodeLine{41     \textcolor{comment}{//\{}}
+\DoxyCodeLine{42     \textcolor{comment}{//  void onLoad();}}
+\DoxyCodeLine{43     \textcolor{comment}{//private:}}
+\DoxyCodeLine{44     \textcolor{comment}{//  std::shared\_ptr<rend::Model> m\_model;}}
+\DoxyCodeLine{45     \textcolor{comment}{//\};}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47     \textcolor{comment}{//struct Shader : Resource}}
+\DoxyCodeLine{48     \textcolor{comment}{//\{}}
+\DoxyCodeLine{49     \textcolor{comment}{//  void onLoad();}}
+\DoxyCodeLine{50     \textcolor{comment}{//private:}}
+\DoxyCodeLine{51     \textcolor{comment}{//  std::shared\_ptr<rend::Shader> m\_shader;}}
+\DoxyCodeLine{52     \textcolor{comment}{//\};}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54     \textcolor{comment}{//struct SoundSource : Resource}}
+\DoxyCodeLine{55     \textcolor{comment}{//\{}}
+\DoxyCodeLine{56     \textcolor{comment}{//  void onLoadsound();}}
+\DoxyCodeLine{57     \textcolor{comment}{//private:}}
+\DoxyCodeLine{58     \textcolor{comment}{//  std::shared\_ptr<myengine::SoundSource> m\_soundsource;}}
+\DoxyCodeLine{59     \textcolor{comment}{//\};}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{65     \textcolor{keyword}{struct }\mbox{\hyperlink{structmyengine_1_1_resources}{Resources}}}
+\DoxyCodeLine{66     \{}
+\DoxyCodeLine{67         \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{68         std::shared\_ptr<T> \mbox{\hyperlink{structmyengine_1_1_resources_a8758836ac20eba08835ea44c2ff85539}{load}}(\textcolor{keyword}{const} std::string\& \_path)}
+\DoxyCodeLine{69         \{}
+\DoxyCodeLine{70             \textcolor{comment}{// Search for previously loaded resource}}
+\DoxyCodeLine{71             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{size\_t} i = 0; i < \mbox{\hyperlink{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}{m\_resources}}.size(); ++i)}
+\DoxyCodeLine{72             \{}
+\DoxyCodeLine{73                 std::cout << \textcolor{stringliteral}{"{}searching for loaded resource"{}} << std::endl;}
+\DoxyCodeLine{74                 \textcolor{comment}{// Return it if found}}
+\DoxyCodeLine{75                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}{m\_resources}}.at(i)-\/>getPath() == \_path)}
+\DoxyCodeLine{76                 \{}
+\DoxyCodeLine{77                     std::cout << \textcolor{stringliteral}{"{}found resource"{}} << std::endl;}
+\DoxyCodeLine{78                     \textcolor{keywordflow}{return} std::dynamic\_pointer\_cast<T>(\mbox{\hyperlink{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}{m\_resources}}.at(i));}
+\DoxyCodeLine{79                 \}}
+\DoxyCodeLine{80             \}}
+\DoxyCodeLine{81             \textcolor{comment}{// Create new instance, construct it and add to cache}}
+\DoxyCodeLine{82             std::shared\_ptr<T> rtn = std::make\_shared<T>();}
+\DoxyCodeLine{83             rtn-\/>m\_path = \_path;}
+\DoxyCodeLine{84             rtn-\/>load();}
+\DoxyCodeLine{85             \mbox{\hyperlink{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}{m\_resources}}.push\_back(rtn);}
+\DoxyCodeLine{86             \textcolor{keywordflow}{return} rtn;}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{92     \textcolor{keyword}{private}:}
+\DoxyCodeLine{93         std::vector<std::shared\_ptr<Resource> > \mbox{\hyperlink{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}{m\_resources}};}
+\DoxyCodeLine{94     \};}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \}}
+\DoxyCodeLine{97 }
+
+\end{DoxyCode}

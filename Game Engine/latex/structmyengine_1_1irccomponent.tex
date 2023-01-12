@@ -1,0 +1,152 @@
+\hypertarget{structmyengine_1_1irccomponent}{}\doxysection{myengine\+::irccomponent Struct Reference}
+\label{structmyengine_1_1irccomponent}\index{myengine::irccomponent@{myengine::irccomponent}}
+
+
+{\ttfamily \#include $<$irccomponent.\+h$>$}
+
+Inheritance diagram for myengine\+::irccomponent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{structmyengine_1_1irccomponent}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}{prepserver}} ()
+\item 
+void \mbox{\hyperlink{structmyengine_1_1irccomponent_a6a597fc388182c1e63a2fb0a1c5117e6}{serversocket}} ()
+\item 
+void \mbox{\hyperlink{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}{prepclient}} ()
+\item 
+void \mbox{\hyperlink{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}{connectingclient}} ()
+\item 
+void \mbox{\hyperlink{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}{ontick}} ()
+\item 
+void \mbox{\hyperlink{structmyengine_1_1irccomponent_a4071c86897a456715443916917410ee6}{authenticate}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structmyengine_1_1irccomponent_aa581f9190630358dcdcdd9caa1fe80dd}{result}}
+\item 
+WSADATA \mbox{\hyperlink{structmyengine_1_1irccomponent_a3eaadf3d1533b84c69b7bdbd8a52b24c}{wsadata}}
+\item 
+bool \mbox{\hyperlink{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}{disconnected}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+SOCKET \mbox{\hyperlink{structmyengine_1_1irccomponent_a711dd2ac02df1bde1f33aa1d6b03cfba}{m\+\_\+socket}}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{structmyengine_1_1irccomponent_a893a89a132c43e2cbd478b49680c0f5b}{m\+\_\+incoming}}
+\item 
+std\+::vector$<$ unsigned char $>$ \mbox{\hyperlink{structmyengine_1_1irccomponent_afe3cd9b2588df5fd27a9f6382f4bd839}{m\+\_\+outgoing}}
+\item 
+bool \mbox{\hyperlink{structmyengine_1_1irccomponent_ad4c23d5b968ec31519a08d204b310168}{m\+\_\+authenticated}}
+\item 
+bool \mbox{\hyperlink{structmyengine_1_1irccomponent_a6ca7703d89edf92ad119d45252d199ec}{m\+\_\+disconnected}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+struct for the iirc components which is the server/online mode of the engine, its not fully finished however there is a big start on there with lots of server prepping anf connecting 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a4071c86897a456715443916917410ee6}\label{structmyengine_1_1irccomponent_a4071c86897a456715443916917410ee6}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily void myengine\+::irccomponent\+::authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}\label{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!connectingclient@{connectingclient}}
+\index{connectingclient@{connectingclient}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{connectingclient()}{connectingclient()}}
+{\footnotesize\ttfamily void myengine\+::irccomponent\+::connectingclient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}\label{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!ontick@{ontick}}
+\index{ontick@{ontick}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{ontick()}{ontick()}}
+{\footnotesize\ttfamily void myengine\+::irccomponent\+::ontick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}\label{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!prepclient@{prepclient}}
+\index{prepclient@{prepclient}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{prepclient()}{prepclient()}}
+{\footnotesize\ttfamily void myengine\+::irccomponent\+::prepclient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}\label{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!prepserver@{prepserver}}
+\index{prepserver@{prepserver}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{prepserver()}{prepserver()}}
+{\footnotesize\ttfamily void myengine\+::irccomponent\+::prepserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item Bind on the obtained interface $\ast$/
+\item Listen on socket $\ast$/
+\end{DoxyItemize}\mbox{\Hypertarget{structmyengine_1_1irccomponent_a6a597fc388182c1e63a2fb0a1c5117e6}\label{structmyengine_1_1irccomponent_a6a597fc388182c1e63a2fb0a1c5117e6}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!serversocket@{serversocket}}
+\index{serversocket@{serversocket}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{serversocket()}{serversocket()}}
+{\footnotesize\ttfamily void myengine\+::irccomponent\+::serversocket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}\label{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!disconnected@{disconnected}}
+\index{disconnected@{disconnected}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{disconnected}{disconnected}}
+{\footnotesize\ttfamily bool myengine\+::irccomponent\+::disconnected}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_ad4c23d5b968ec31519a08d204b310168}\label{structmyengine_1_1irccomponent_ad4c23d5b968ec31519a08d204b310168}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!m\_authenticated@{m\_authenticated}}
+\index{m\_authenticated@{m\_authenticated}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{m\_authenticated}{m\_authenticated}}
+{\footnotesize\ttfamily bool myengine\+::irccomponent\+::m\+\_\+authenticated\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a6ca7703d89edf92ad119d45252d199ec}\label{structmyengine_1_1irccomponent_a6ca7703d89edf92ad119d45252d199ec}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!m\_disconnected@{m\_disconnected}}
+\index{m\_disconnected@{m\_disconnected}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{m\_disconnected}{m\_disconnected}}
+{\footnotesize\ttfamily bool myengine\+::irccomponent\+::m\+\_\+disconnected\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a893a89a132c43e2cbd478b49680c0f5b}\label{structmyengine_1_1irccomponent_a893a89a132c43e2cbd478b49680c0f5b}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!m\_incoming@{m\_incoming}}
+\index{m\_incoming@{m\_incoming}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{m\_incoming}{m\_incoming}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ myengine\+::irccomponent\+::m\+\_\+incoming\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_afe3cd9b2588df5fd27a9f6382f4bd839}\label{structmyengine_1_1irccomponent_afe3cd9b2588df5fd27a9f6382f4bd839}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!m\_outgoing@{m\_outgoing}}
+\index{m\_outgoing@{m\_outgoing}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{m\_outgoing}{m\_outgoing}}
+{\footnotesize\ttfamily std\+::vector$<$unsigned char$>$ myengine\+::irccomponent\+::m\+\_\+outgoing\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a711dd2ac02df1bde1f33aa1d6b03cfba}\label{structmyengine_1_1irccomponent_a711dd2ac02df1bde1f33aa1d6b03cfba}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!m\_socket@{m\_socket}}
+\index{m\_socket@{m\_socket}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{m\_socket}{m\_socket}}
+{\footnotesize\ttfamily SOCKET myengine\+::irccomponent\+::m\+\_\+socket\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_aa581f9190630358dcdcdd9caa1fe80dd}\label{structmyengine_1_1irccomponent_aa581f9190630358dcdcdd9caa1fe80dd}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!result@{result}}
+\index{result@{result}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily int myengine\+::irccomponent\+::result}
+
+\mbox{\Hypertarget{structmyengine_1_1irccomponent_a3eaadf3d1533b84c69b7bdbd8a52b24c}\label{structmyengine_1_1irccomponent_a3eaadf3d1533b84c69b7bdbd8a52b24c}} 
+\index{myengine::irccomponent@{myengine::irccomponent}!wsadata@{wsadata}}
+\index{wsadata@{wsadata}!myengine::irccomponent@{myengine::irccomponent}}
+\doxysubsubsection{\texorpdfstring{wsadata}{wsadata}}
+{\footnotesize\ttfamily WSADATA myengine\+::irccomponent\+::wsadata}
+
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/myengine/\mbox{\hyperlink{irccomponent_8h}{irccomponent.\+h}}\item 
+src/myengine/\mbox{\hyperlink{irccomponent_8cpp}{irccomponent.\+cpp}}\end{DoxyCompactItemize}

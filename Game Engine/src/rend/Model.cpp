@@ -6,7 +6,6 @@
 namespace rend
 {
 
-
 Model::Model(const sys::String& _path)
 {
   load(_path);

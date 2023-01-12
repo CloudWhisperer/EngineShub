@@ -75,7 +75,6 @@ add_executable(game
 )
 
 target_link_libraries(game myengine)
-#target_link_libraries(myengine openal32)
 
 
 add_library(rend

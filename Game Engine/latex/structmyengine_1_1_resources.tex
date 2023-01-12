@@ -1,0 +1,43 @@
+\hypertarget{structmyengine_1_1_resources}{}\doxysection{myengine\+::Resources Struct Reference}
+\label{structmyengine_1_1_resources}\index{myengine::Resources@{myengine::Resources}}
+
+
+{\ttfamily \#include $<$Resources.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\std\+::shared\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{structmyengine_1_1_resources_a8758836ac20eba08835ea44c2ff85539}{load}} (const std\+::string \&\+\_\+path)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{structmyengine_1_1_resource}{Resource}} $>$ $>$ \mbox{\hyperlink{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}{m\+\_\+resources}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+contains the loop to load a resource, because this is a template the function can go in the header file 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_resources_a8758836ac20eba08835ea44c2ff85539}\label{structmyengine_1_1_resources_a8758836ac20eba08835ea44c2ff85539}} 
+\index{myengine::Resources@{myengine::Resources}!load@{load}}
+\index{load@{load}!myengine::Resources@{myengine::Resources}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$ T $>$ myengine\+::\+Resources\+::load (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}\label{structmyengine_1_1_resources_a749b78b92757d3480ecff1bb980e6cac}} 
+\index{myengine::Resources@{myengine::Resources}!m\_resources@{m\_resources}}
+\index{m\_resources@{m\_resources}!myengine::Resources@{myengine::Resources}}
+\doxysubsubsection{\texorpdfstring{m\_resources}{m\_resources}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{structmyengine_1_1_resource}{Resource}}$>$ $>$ myengine\+::\+Resources\+::m\+\_\+resources\hspace{0.3cm}{\ttfamily [private]}}
+
+private variables needed for the resources 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/myengine/\mbox{\hyperlink{_resources_8h}{Resources.\+h}}\end{DoxyCompactItemize}

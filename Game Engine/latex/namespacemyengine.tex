@@ -3,15 +3,101 @@
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structmyengine_1_1_box_collider}{Box\+Collider}}
+\item 
 struct \mbox{\hyperlink{structmyengine_1_1_component}{Component}}
 \item 
 struct \mbox{\hyperlink{structmyengine_1_1_core}{Core}}
 \item 
 struct \mbox{\hyperlink{structmyengine_1_1_entity}{Entity}}
 \item 
+struct \mbox{\hyperlink{structmyengine_1_1irccomponent}{irccomponent}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_keyboard}{Keyboard}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_resource}{Resource}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_resources}{Resources}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_rigid_body}{Rigid\+Body}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_sound_source}{Sound\+Source}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_texture}{Texture}}
+\item 
+struct \mbox{\hyperlink{structmyengine_1_1_transform}{Transform}}
+\item 
 struct \mbox{\hyperlink{structmyengine_1_1_triangle_renderer}{Triangle\+Renderer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespacemyengine_a1797733946c4d684974fb29503914ac5}{find}} (std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \&\+\_\+out)
+\item 
+\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{namespacemyengine_a8da5546447ffe8e1a930b4bb326fca64}{ontick}} (\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} position, \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} size)
+\item 
+void \mbox{\hyperlink{namespacemyengine_a70d51fcc03ff3445861c661716cd7acf}{load\+\_\+ogg}} (const std\+::string \&\+\_\+path, std\+::vector$<$ unsigned char $>$ \&\+\_\+buffer, ALenum \&\+\_\+format, ALsizei \&\+\_\+freq)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{namespacemyengine_a6c221266d8bc51a192acf69b0f1c5ebe}{i\+Result}}
+\item 
+float \mbox{\hyperlink{namespacemyengine_a7fe0bb6c46cca6b37fd6653d7454b1ff}{amount}} = 0.\+1f
+\item 
+float \mbox{\hyperlink{namespacemyengine_a8ed4be53327237feb9c68dd00afb3790}{step}} = 0.\+1f
+\item 
+bool \mbox{\hyperlink{namespacemyengine_a17108fe1fe75bf9fc44eddf15807c6f9}{iscolliding}} = false
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Initialises the \mbox{\hyperlink{structmyengine_1_1_core}{Core}} that creates a window with a height and width that is made by the developer. Also has exceptions incase something goes wrong and the program will stop and note the errors down. And finally it includes the quit functions for the window and application. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacemyengine_a1797733946c4d684974fb29503914ac5}\label{namespacemyengine_a1797733946c4d684974fb29503914ac5}} 
+\index{myengine@{myengine}!find@{find}}
+\index{find@{find}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void myengine\+::find (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::shared\+\_\+ptr$<$ T $>$ $>$ \&}]{\+\_\+out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacemyengine_a70d51fcc03ff3445861c661716cd7acf}\label{namespacemyengine_a70d51fcc03ff3445861c661716cd7acf}} 
+\index{myengine@{myengine}!load\_ogg@{load\_ogg}}
+\index{load\_ogg@{load\_ogg}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{load\_ogg()}{load\_ogg()}}
+{\footnotesize\ttfamily void myengine\+::load\+\_\+ogg (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{\+\_\+path,  }\item[{std\+::vector$<$ unsigned char $>$ \&}]{\+\_\+buffer,  }\item[{ALenum \&}]{\+\_\+format,  }\item[{ALsizei \&}]{\+\_\+freq }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacemyengine_a8da5546447ffe8e1a930b4bb326fca64}\label{namespacemyengine_a8da5546447ffe8e1a930b4bb326fca64}} 
+\index{myengine@{myengine}!ontick@{ontick}}
+\index{ontick@{ontick}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{ontick()}{ontick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} myengine\+::ontick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{position,  }\item[{\mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}}}]{size }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacemyengine_a7fe0bb6c46cca6b37fd6653d7454b1ff}\label{namespacemyengine_a7fe0bb6c46cca6b37fd6653d7454b1ff}} 
+\index{myengine@{myengine}!amount@{amount}}
+\index{amount@{amount}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{amount}{amount}}
+{\footnotesize\ttfamily float myengine\+::amount = 0.\+1f}
+
+\mbox{\Hypertarget{namespacemyengine_a6c221266d8bc51a192acf69b0f1c5ebe}\label{namespacemyengine_a6c221266d8bc51a192acf69b0f1c5ebe}} 
+\index{myengine@{myengine}!iResult@{iResult}}
+\index{iResult@{iResult}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{iResult}{iResult}}
+{\footnotesize\ttfamily int myengine\+::i\+Result}
+
+\mbox{\Hypertarget{namespacemyengine_a17108fe1fe75bf9fc44eddf15807c6f9}\label{namespacemyengine_a17108fe1fe75bf9fc44eddf15807c6f9}} 
+\index{myengine@{myengine}!iscolliding@{iscolliding}}
+\index{iscolliding@{iscolliding}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{iscolliding}{iscolliding}}
+{\footnotesize\ttfamily bool myengine\+::iscolliding = false}
+
+\mbox{\Hypertarget{namespacemyengine_a8ed4be53327237feb9c68dd00afb3790}\label{namespacemyengine_a8ed4be53327237feb9c68dd00afb3790}} 
+\index{myengine@{myengine}!step@{step}}
+\index{step@{step}!myengine@{myengine}}
+\doxysubsubsection{\texorpdfstring{step}{step}}
+{\footnotesize\ttfamily float myengine\+::step = 0.\+1f}
+

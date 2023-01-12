@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.5"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: src/myengine/Transform.h Source File</title>
+<title>myengine: src/myengine/Transform.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">myengine
    </div>
   </td>
  </tr>
@@ -77,21 +77,43 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="_transform_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_transform_8h.html#abd21eea17e0ddff4dab750381fc67137">   15</a></span>    <a class="code hl_class" href="structglm_1_1mat.html">rend::mat4</a> <a class="code hl_function" href="_transform_8h.html#abd21eea17e0ddff4dab750381fc67137">getModel</a>();</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_transform_8h.html#a84d451861150b9a1814c07bf08c33c63">   21</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="_transform_8h.html#a84d451861150b9a1814c07bf08c33c63">setPosition</a>(<span class="keyword">const</span> vec3&amp; _position);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="_transform_8h.html#ad3addc46ce66dbc0b807e9aae35a4fc4">   23</a></span>    vec3 <a class="code hl_variable" href="_transform_8h.html#ad3addc46ce66dbc0b807e9aae35a4fc4">m_position</a>; </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="_transform_8h.html#a284004eadef06ed85b57f2cb0c50b964">   24</a></span>    vec3 <a class="code hl_variable" href="_transform_8h.html#a284004eadef06ed85b57f2cb0c50b964">m_rotation</a>; </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="_transform_8h.html#a6a1043d2df93fd95e6934baf1c26c701">   25</a></span>    vec3 <a class="code hl_variable" href="_transform_8h.html#a6a1043d2df93fd95e6934baf1c26c701">m_scale</a>; </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
-<div class="ttc" id="a_transform_8h_html_a284004eadef06ed85b57f2cb0c50b964"><div class="ttname"><a href="_transform_8h.html#a284004eadef06ed85b57f2cb0c50b964">m_rotation</a></div><div class="ttdeci">vec3 m_rotation</div><div class="ttdoc">Rotation of Entity in euler angles.</div><div class="ttdef"><b>Definition:</b> Transform.h:24</div></div>
-<div class="ttc" id="a_transform_8h_html_a6a1043d2df93fd95e6934baf1c26c701"><div class="ttname"><a href="_transform_8h.html#a6a1043d2df93fd95e6934baf1c26c701">m_scale</a></div><div class="ttdeci">vec3 m_scale</div><div class="ttdoc">Scale of Entity.</div><div class="ttdef"><b>Definition:</b> Transform.h:25</div></div>
-<div class="ttc" id="a_transform_8h_html_a84d451861150b9a1814c07bf08c33c63"><div class="ttname"><a href="_transform_8h.html#a84d451861150b9a1814c07bf08c33c63">setPosition</a></div><div class="ttdeci">void setPosition(const vec3 &amp;_position)</div></div>
-<div class="ttc" id="a_transform_8h_html_abd21eea17e0ddff4dab750381fc67137"><div class="ttname"><a href="_transform_8h.html#abd21eea17e0ddff4dab750381fc67137">getModel</a></div><div class="ttdeci">rend::mat4 getModel()</div></div>
-<div class="ttc" id="a_transform_8h_html_ad3addc46ce66dbc0b807e9aae35a4fc4"><div class="ttname"><a href="_transform_8h.html#ad3addc46ce66dbc0b807e9aae35a4fc4">m_position</a></div><div class="ttdeci">vec3 m_position</div><div class="ttdoc">X, Y, Z location of Entity.</div><div class="ttdef"><b>Definition:</b> Transform.h:23</div></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_component_8h.html">Component.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;<a class="code" href="rend_8h.html">rend/rend.h</a>&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacemyengine.html">myengine</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="structmyengine_1_1_transform.html">    7</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structmyengine_1_1_transform.html">Transform</a> : <a class="code hl_struct" href="structmyengine_1_1_component.html">Component</a></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>        <a class="code hl_function" href="structmyengine_1_1_transform.html#ae1a0b5cce561bb5ef107842156ea8157">Transform</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        <a class="code hl_class" href="structglm_1_1mat.html">rend::mat4</a> <a class="code hl_function" href="structmyengine_1_1_transform.html#afef5477aa6e6a79e84c4e54a4ccdb7e9">getModel</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="structmyengine_1_1_transform.html#ae5218c539e6b0239b08c6547f62dfe5b">setPosition</a>(<span class="keyword">const</span> <a class="code hl_class" href="structglm_1_1vec.html">rend::vec3</a>&amp; _position);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        <a class="code hl_class" href="structglm_1_1vec.html">rend::vec3</a> <a class="code hl_function" href="structmyengine_1_1_transform.html#abea419728f43cd078a4257120f804d17">getPosition</a>();</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="structmyengine_1_1_transform.html#a3117dc9385c5ce95940efc9dd91f8cd6">setRotation</a>(<span class="keyword">const</span> <a class="code hl_class" href="structglm_1_1vec.html">rend::vec3</a>&amp; _rotation);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structmyengine_1_1_transform.html#a89126c00f2fc851903145b569ef5d48e">   18</a></span>        <a class="code hl_class" href="structglm_1_1vec.html">rend::vec3</a> <a class="code hl_variable" href="structmyengine_1_1_transform.html#a89126c00f2fc851903145b569ef5d48e">m_position</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structmyengine_1_1_transform.html#acb2c92b84d40a8d3c5ff6b39d595566d">   19</a></span>        <a class="code hl_class" href="structglm_1_1vec.html">rend::vec3</a> <a class="code hl_variable" href="structmyengine_1_1_transform.html#acb2c92b84d40a8d3c5ff6b39d595566d">m_rotation</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structmyengine_1_1_transform.html#a8d3c19c69ba21a9425200ff62d62264d">   20</a></span>        <a class="code hl_class" href="structglm_1_1vec.html">rend::vec3</a> <a class="code hl_variable" href="structmyengine_1_1_transform.html#a8d3c19c69ba21a9425200ff62d62264d">m_scale</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>};</div>
+<div class="ttc" id="a_component_8h_html"><div class="ttname"><a href="_component_8h.html">Component.h</a></div></div>
+<div class="ttc" id="anamespacemyengine_html"><div class="ttname"><a href="namespacemyengine.html">myengine</a></div><div class="ttdef"><b>Definition:</b> Boxcollider.cpp:8</div></div>
+<div class="ttc" id="arend_8h_html"><div class="ttname"><a href="rend_8h.html">rend.h</a></div></div>
 <div class="ttc" id="astructglm_1_1mat_html"><div class="ttname"><a href="structglm_1_1mat.html">glm::mat&lt; 4, 4, float, defaultp &gt;</a></div></div>
+<div class="ttc" id="astructglm_1_1vec_html"><div class="ttname"><a href="structglm_1_1vec.html">glm::vec&lt; 3, float, defaultp &gt;</a></div></div>
+<div class="ttc" id="astructmyengine_1_1_component_html"><div class="ttname"><a href="structmyengine_1_1_component.html">myengine::Component</a></div><div class="ttdef"><b>Definition:</b> Component.h:13</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html"><div class="ttname"><a href="structmyengine_1_1_transform.html">myengine::Transform</a></div><div class="ttdef"><b>Definition:</b> Transform.h:8</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_a3117dc9385c5ce95940efc9dd91f8cd6"><div class="ttname"><a href="structmyengine_1_1_transform.html#a3117dc9385c5ce95940efc9dd91f8cd6">myengine::Transform::setRotation</a></div><div class="ttdeci">void setRotation(const rend::vec3 &amp;_rotation)</div><div class="ttdef"><b>Definition:</b> Transform.cpp:30</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_a89126c00f2fc851903145b569ef5d48e"><div class="ttname"><a href="structmyengine_1_1_transform.html#a89126c00f2fc851903145b569ef5d48e">myengine::Transform::m_position</a></div><div class="ttdeci">rend::vec3 m_position</div><div class="ttdef"><b>Definition:</b> Transform.h:18</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_a8d3c19c69ba21a9425200ff62d62264d"><div class="ttname"><a href="structmyengine_1_1_transform.html#a8d3c19c69ba21a9425200ff62d62264d">myengine::Transform::m_scale</a></div><div class="ttdeci">rend::vec3 m_scale</div><div class="ttdef"><b>Definition:</b> Transform.h:20</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_abea419728f43cd078a4257120f804d17"><div class="ttname"><a href="structmyengine_1_1_transform.html#abea419728f43cd078a4257120f804d17">myengine::Transform::getPosition</a></div><div class="ttdeci">rend::vec3 getPosition()</div><div class="ttdef"><b>Definition:</b> Transform.cpp:35</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_acb2c92b84d40a8d3c5ff6b39d595566d"><div class="ttname"><a href="structmyengine_1_1_transform.html#acb2c92b84d40a8d3c5ff6b39d595566d">myengine::Transform::m_rotation</a></div><div class="ttdeci">rend::vec3 m_rotation</div><div class="ttdef"><b>Definition:</b> Transform.h:19</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_ae1a0b5cce561bb5ef107842156ea8157"><div class="ttname"><a href="structmyengine_1_1_transform.html#ae1a0b5cce561bb5ef107842156ea8157">myengine::Transform::Transform</a></div><div class="ttdeci">Transform()</div><div class="ttdef"><b>Definition:</b> Transform.cpp:6</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_ae5218c539e6b0239b08c6547f62dfe5b"><div class="ttname"><a href="structmyengine_1_1_transform.html#ae5218c539e6b0239b08c6547f62dfe5b">myengine::Transform::setPosition</a></div><div class="ttdeci">void setPosition(const rend::vec3 &amp;_position)</div><div class="ttdef"><b>Definition:</b> Transform.cpp:25</div></div>
+<div class="ttc" id="astructmyengine_1_1_transform_html_afef5477aa6e6a79e84c4e54a4ccdb7e9"><div class="ttname"><a href="structmyengine_1_1_transform.html#afef5477aa6e6a79e84c4e54a4ccdb7e9">myengine::Transform::getModel</a></div><div class="ttdeci">rend::mat4 getModel()</div><div class="ttdef"><b>Definition:</b> Transform.cpp:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

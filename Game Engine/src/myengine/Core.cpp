@@ -23,9 +23,21 @@ namespace myengine
 		{
 			throw std::runtime_error("Failed to initialize SDL");
 		}
-		if (!(rtn->m_window = SDL_CreateWindow("SDL2 Platform",
+
+		//// Select the color for drawing. It is set to red here.
+		//SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+
+		//// Clear the entire screen to our selected color.
+		//SDL_RenderClear(renderer);
+
+		//// Up until now everything was drawn behind the scenes.
+		//// This will show the new, red contents of the window.
+		//SDL_RenderPresent(renderer);
+
+		if (!(rtn->m_window = SDL_CreateWindow("SHUBENGINE VII",
 			SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
 			INITIAL_WIDTH, INITIAL_HEIGHT, SDL_WINDOW_RESIZABLE | SDL_WINDOW_OPENGL)))
+
 		{
 			SDL_Quit();
 			throw std::runtime_error("Failed to create Window");
@@ -64,7 +76,14 @@ namespace myengine
 
 		alListener3f(AL_POSITION, 0.0f, 0.0f, 0.0f);
 
+		rtn->m_resources = std::make_shared<Resources>();
+
 		return rtn;
+	}
+
+	std::shared_ptr<Resources> Core::getResources()
+	{
+		return m_resources;
 	}
 
 	void Core::start()
@@ -78,37 +97,6 @@ namespace myengine
 				if (e.type == SDL_QUIT)
 				{
 					m_running = false;
-				}
-
-	/*			if(e.type == SDL_KEYDOWN)
-				{
-					std::cout << "a key has been pressed" << std::endl;
-				}
-
-				if (e.key.keysym.sym == SDLK_0)
-				{
-					std::cout << "0 pressed" << std::endl;
-				}  */
-
-				const Uint8* state = SDL_GetKeyboardState(NULL);
-				if (state[SDL_SCANCODE_RIGHT])
-				{
-					std::cout << "right arrow key press" << std::endl;
-				}
-
-				if (state[SDL_SCANCODE_LEFT])
-				{
-					std::cout << "left arrow key press" << std::endl;
-				}
-
-				if (state[SDL_SCANCODE_UP])
-				{
-					std::cout << "up arrow key press" << std::endl;
-				}
-
-				if (state[SDL_SCANCODE_DOWN])
-				{
-					std::cout << "down arrow key press" << std::endl;
 				}
 			}
 
@@ -128,8 +116,6 @@ namespace myengine
 			{
 				m_entities.at(ei)->display();
 			}
-
-
 
 			SDL_GL_SwapWindow(m_window);
 		}
@@ -186,48 +172,10 @@ namespace myengine
 		}
 	}
 
-	void Model::onLoad()
-	{
-	}
-
-	struct Resources
-	{
-		template <typename T>
-		std::shared_ptr<T> load(const std::string& _path)
-		{
-			// Search for previously loaded resource
-			for (size_t i = 0; i < m_resources.size(); ++i)
-			{
-				std::cout << "searching for loaded resource" << std::endl;
-				// Return it if found
-				if (m_resources.at(i)->getPath() == _path)
-				{
-					std::cout << "found resource" << std::endl;
-					return m_resources.at(i);
-				}
-			}
-			// Create new instance, construct it and add to cache
-			std::shared_ptr<T> rtn = std::make_shared<T>();
-			rtn->m_path = _path;
-			rtn->load();
-			m_resources.push_back(rtn);
-			return rtn;
-		}
-
-	private:
-		std::vector<std::shared_ptr<Resource> > m_resources;
-	};
-
-
 	Core::~Core()
 	{
 		SDL_GL_DeleteContext(m_context);
 		SDL_DestroyWindow(m_window);
 		SDL_Quit();
-	}
-
-	void Resource::load()
-	{
-
 	}
 }

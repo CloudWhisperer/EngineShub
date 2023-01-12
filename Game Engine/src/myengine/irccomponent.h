@@ -7,6 +7,10 @@
 
 namespace myengine
 {
+	/**
+	*struct for the iirc components which is the server/online mode of the engine, its not fully finished
+	* however there is a big start on there with lots of server prepping anf connecting
+	*/
 	struct irccomponent : Component
 	{
 		int result;

@@ -15,7 +15,7 @@ Renderer::Renderer(int _width, int _height) :
   m_projection(1.0f),
   m_view(1.0f),
   m_model(1.0f),
-  m_clearColor(0.392f, 0.584f, 0.929f, 1.0f),
+  m_clearColor(0.8, 0, 0, 1),
   m_color(1, 1, 1, 1),
   m_windowSize(_width, _height)
 { }
