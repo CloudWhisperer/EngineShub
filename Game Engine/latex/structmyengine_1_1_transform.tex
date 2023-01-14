@@ -14,15 +14,15 @@ Inheritance diagram for myengine\+::Transform\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{structmyengine_1_1_transform_ae1a0b5cce561bb5ef107842156ea8157}{Transform}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em gets the model and sets rotation,scale, and position in the world \end{DoxyCompactList}\item 
 \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} \mbox{\hyperlink{structmyengine_1_1_transform_afef5477aa6e6a79e84c4e54a4ccdb7e9}{get\+Model}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em gets the model \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1_transform_ae5218c539e6b0239b08c6547f62dfe5b}{set\+Position}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&\+\_\+position)
-\item 
+\begin{DoxyCompactList}\small\item\em sets position of the object \end{DoxyCompactList}\item 
 \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \mbox{\hyperlink{structmyengine_1_1_transform_abea419728f43cd078a4257120f804d17}{get\+Position}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em gets position of the object \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1_transform_a3117dc9385c5ce95940efc9dd91f8cd6}{set\+Rotation}} (const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&\+\_\+rotation)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em sets the rotation of the 3d model \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,6 +43,10 @@ void \mbox{\hyperlink{structmyengine_1_1_transform_a3117dc9385c5ce95940efc9dd91f
 
 
 
+gets the model and sets rotation,scale, and position in the world 
+
+
+
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{structmyengine_1_1_transform_afef5477aa6e6a79e84c4e54a4ccdb7e9}\label{structmyengine_1_1_transform_afef5477aa6e6a79e84c4e54a4ccdb7e9}} 
 \index{myengine::Transform@{myengine::Transform}!getModel@{getModel}}
@@ -50,24 +54,58 @@ void \mbox{\hyperlink{structmyengine_1_1_transform_a3117dc9385c5ce95940efc9dd91f
 \doxysubsubsection{\texorpdfstring{getModel()}{getModel()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{group__core__matrix_gac54cbc572f1349a255fe476ca6a42a7b}{rend\+::mat4}} myengine\+::\+Transform\+::get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+gets the model 
+
+\begin{DoxyReturn}{Returns}
+mat4 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structmyengine_1_1_transform_abea419728f43cd078a4257120f804d17}\label{structmyengine_1_1_transform_abea419728f43cd078a4257120f804d17}} 
 \index{myengine::Transform@{myengine::Transform}!getPosition@{getPosition}}
 \index{getPosition@{getPosition}!myengine::Transform@{myengine::Transform}}
 \doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} myengine\+::\+Transform\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+gets position of the object 
+
+\begin{DoxyReturn}{Returns}
+vector 3 
+\end{DoxyReturn}
 \mbox{\Hypertarget{structmyengine_1_1_transform_ae5218c539e6b0239b08c6547f62dfe5b}\label{structmyengine_1_1_transform_ae5218c539e6b0239b08c6547f62dfe5b}} 
 \index{myengine::Transform@{myengine::Transform}!setPosition@{setPosition}}
 \index{setPosition@{setPosition}!myengine::Transform@{myengine::Transform}}
 \doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
 {\footnotesize\ttfamily void myengine\+::\+Transform\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&}]{\+\_\+position }\end{DoxyParamCaption})}
 
+
+
+sets position of the object 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+position} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{structmyengine_1_1_transform_a3117dc9385c5ce95940efc9dd91f8cd6}\label{structmyengine_1_1_transform_a3117dc9385c5ce95940efc9dd91f8cd6}} 
 \index{myengine::Transform@{myengine::Transform}!setRotation@{setRotation}}
 \index{setRotation@{setRotation}!myengine::Transform@{myengine::Transform}}
 \doxysubsubsection{\texorpdfstring{setRotation()}{setRotation()}}
 {\footnotesize\ttfamily void myengine\+::\+Transform\+::set\+Rotation (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{group__core__vector_ga4320b87e41013b7e875f845f439fc498}{rend\+::vec3}} \&}]{\+\_\+rotation }\end{DoxyParamCaption})}
 
+
+
+sets the rotation of the 3d model 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+rotation} & ~\newline
+ \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}

@@ -10,6 +10,7 @@ namespace myengine
 	{
 		m_mesh.loadTriangle();
 		m_enemy.loadTriangle();
+		m_enemy2.loadTriangle();
 	}
 	void TriangleRenderer::onDisplay()
 	{
@@ -18,6 +19,7 @@ namespace myengine
 		r.shader(&m_shader);
 		r.mesh(&m_mesh);
 		r.mesh(&m_enemy);
+		r.mesh(&m_enemy2);
 
 		r.projection(rend::perspective(rend::radians(45.0f), 1.0f, 0.1f, 100.0f));
 

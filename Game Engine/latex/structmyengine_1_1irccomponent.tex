@@ -14,17 +14,17 @@ Inheritance diagram for myengine\+::irccomponent\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}{prepserver}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em preps the server \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1irccomponent_a6a597fc388182c1e63a2fb0a1c5117e6}{serversocket}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em server socket \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}{prepclient}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em prepares the client \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}{connectingclient}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em connects the client \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}{ontick}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em ontick function for the server \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{structmyengine_1_1irccomponent_a4071c86897a456715443916917410ee6}{authenticate}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em authenticates the player in the network to make sure they are legit \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -33,7 +33,7 @@ int \mbox{\hyperlink{structmyengine_1_1irccomponent_aa581f9190630358dcdcdd9caa1f
 WSADATA \mbox{\hyperlink{structmyengine_1_1irccomponent_a3eaadf3d1533b84c69b7bdbd8a52b24c}{wsadata}}
 \item 
 bool \mbox{\hyperlink{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}{disconnected}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em boolean to check if the player is disconnected or not \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,11 +59,19 @@ struct for the iirc components which is the server/online mode of the engine, it
 \doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
 {\footnotesize\ttfamily void myengine\+::irccomponent\+::authenticate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+authenticates the player in the network to make sure they are legit 
+
 \mbox{\Hypertarget{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}\label{structmyengine_1_1irccomponent_a5d260317cb6305655612db124fba4d61}} 
 \index{myengine::irccomponent@{myengine::irccomponent}!connectingclient@{connectingclient}}
 \index{connectingclient@{connectingclient}!myengine::irccomponent@{myengine::irccomponent}}
 \doxysubsubsection{\texorpdfstring{connectingclient()}{connectingclient()}}
 {\footnotesize\ttfamily void myengine\+::irccomponent\+::connectingclient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+connects the client 
 
 \mbox{\Hypertarget{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}\label{structmyengine_1_1irccomponent_aeaed5be8726b26a3a79090bd6ca43988}} 
 \index{myengine::irccomponent@{myengine::irccomponent}!ontick@{ontick}}
@@ -71,17 +79,29 @@ struct for the iirc components which is the server/online mode of the engine, it
 \doxysubsubsection{\texorpdfstring{ontick()}{ontick()}}
 {\footnotesize\ttfamily void myengine\+::irccomponent\+::ontick (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+ontick function for the server 
+
 \mbox{\Hypertarget{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}\label{structmyengine_1_1irccomponent_a09ff2d8b120e7ff17213ee69fed23a32}} 
 \index{myengine::irccomponent@{myengine::irccomponent}!prepclient@{prepclient}}
 \index{prepclient@{prepclient}!myengine::irccomponent@{myengine::irccomponent}}
 \doxysubsubsection{\texorpdfstring{prepclient()}{prepclient()}}
 {\footnotesize\ttfamily void myengine\+::irccomponent\+::prepclient (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+prepares the client 
+
 \mbox{\Hypertarget{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}\label{structmyengine_1_1irccomponent_adff5dcbcb7ff98a6c1ee1ec452eeb43a}} 
 \index{myengine::irccomponent@{myengine::irccomponent}!prepserver@{prepserver}}
 \index{prepserver@{prepserver}!myengine::irccomponent@{myengine::irccomponent}}
 \doxysubsubsection{\texorpdfstring{prepserver()}{prepserver()}}
 {\footnotesize\ttfamily void myengine\+::irccomponent\+::prepserver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+preps the server 
 
 
 \begin{DoxyItemize}
@@ -95,12 +115,20 @@ struct for the iirc components which is the server/online mode of the engine, it
 
 
 
+server socket 
+
+
+
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}\label{structmyengine_1_1irccomponent_a25b10b7a9a01a26e8429380e8c7d5d85}} 
 \index{myengine::irccomponent@{myengine::irccomponent}!disconnected@{disconnected}}
 \index{disconnected@{disconnected}!myengine::irccomponent@{myengine::irccomponent}}
 \doxysubsubsection{\texorpdfstring{disconnected}{disconnected}}
 {\footnotesize\ttfamily bool myengine\+::irccomponent\+::disconnected}
+
+
+
+boolean to check if the player is disconnected or not 
 
 \mbox{\Hypertarget{structmyengine_1_1irccomponent_ad4c23d5b968ec31519a08d204b310168}\label{structmyengine_1_1irccomponent_ad4c23d5b968ec31519a08d204b310168}} 
 \index{myengine::irccomponent@{myengine::irccomponent}!m\_authenticated@{m\_authenticated}}

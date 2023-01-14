@@ -1,6 +1,5 @@
 \hypertarget{game_2main_8cpp}{}\doxysection{src/game/main.cpp File Reference}
 \label{game_2main_8cpp}\index{src/game/main.cpp@{src/game/main.cpp}}
-{\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$myengine/myengine.\+h$>$}\newline
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
@@ -8,26 +7,34 @@
 struct \mbox{\hyperlink{struct_player}{Player}}
 \item 
 struct \mbox{\hyperlink{struct_enemy}{Enemy}}
+\item 
+struct \mbox{\hyperlink{struct_enemy2}{Enemy2}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{game_2main_8cpp_a54b55b119fdadc6ceabfead41ef23be7}{controller}} ()
-\item 
 int \mbox{\hyperlink{game_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const Uint8 $\ast$ \mbox{\hyperlink{game_2main_8cpp_a0923fe7f6236e4875f0a3cb91adc8e2e}{state}} = SDL\+\_\+\+Get\+Keyboard\+State(NULL)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{game_2main_8cpp_a54b55b119fdadc6ceabfead41ef23be7}\label{game_2main_8cpp_a54b55b119fdadc6ceabfead41ef23be7}} 
-\index{main.cpp@{main.cpp}!controller@{controller}}
-\index{controller@{controller}!main.cpp@{main.cpp}}
-\doxysubsubsection{\texorpdfstring{controller()}{controller()}}
-{\footnotesize\ttfamily void controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
 \mbox{\Hypertarget{game_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{game_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
 \index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{game_2main_8cpp_a0923fe7f6236e4875f0a3cb91adc8e2e}\label{game_2main_8cpp_a0923fe7f6236e4875f0a3cb91adc8e2e}} 
+\index{main.cpp@{main.cpp}!state@{state}}
+\index{state@{state}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily const Uint8$\ast$ state = SDL\+\_\+\+Get\+Keyboard\+State(NULL)}
 

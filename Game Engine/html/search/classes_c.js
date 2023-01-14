@@ -28,7 +28,7 @@ var searchData=
   ['materialgroup_25',['MaterialGroup',['../structrend_1_1_material_group.html',1,'rend']]],
   ['mesh_26',['Mesh',['../structrend_1_1_mesh.html',1,'rend']]],
   ['mode_27',['Mode',['../struct_mode.html',1,'']]],
-  ['model_28',['Model',['../structrend_1_1_model.html',1,'rend']]],
+  ['model_28',['Model',['../structmyengine_1_1_model.html',1,'myengine::Model'],['../structrend_1_1_model.html',1,'rend::Model']]],
   ['modelrenderer_29',['ModelRenderer',['../structrend_1_1_model_renderer.html',1,'rend']]],
   ['mutex_30',['Mutex',['../structsys_1_1_mutex.html',1,'sys']]]
 ];

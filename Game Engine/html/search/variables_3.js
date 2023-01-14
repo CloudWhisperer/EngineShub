@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['c_0',['c',['../structrend_1_1_face.html#adcc57021b6804776bbadc4dbc87ebc89',1,'rend::Face::c()'],['../structrend_1_1_triangle.html#ae799d7340e33e03c2792bc002fd829e3',1,'rend::Triangle::c()']]],
-  ['c_1',['C',['../structstb__vorbis.html#a24d929ad328049cddb34951233c8ee74',1,'stb_vorbis']]],
+  ['c_0',['C',['../structstb__vorbis.html#a24d929ad328049cddb34951233c8ee74',1,'stb_vorbis']]],
+  ['c_1',['c',['../structrend_1_1_face.html#adcc57021b6804776bbadc4dbc87ebc89',1,'rend::Face::c()'],['../structrend_1_1_triangle.html#ae799d7340e33e03c2792bc002fd829e3',1,'rend::Triangle::c()']]],
   ['chan_2',['chan',['../struct_mapping.html#a79ba491724417d271e3bdfbcef30ed3a',1,'Mapping']]],
   ['channel_5fbuffer_5fend_3',['channel_buffer_end',['../structstb__vorbis.html#ab0c6866c39ae3cd00d5ede2dd5ff512c',1,'stb_vorbis']]],
   ['channel_5fbuffer_5fstart_4',['channel_buffer_start',['../structstb__vorbis.html#af0bf960e2d513d207ee6a9f38eefe770',1,'stb_vorbis']]],

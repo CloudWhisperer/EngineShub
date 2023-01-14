@@ -11,6 +11,7 @@ namespace myengine
 	private:
 		rend::Mesh m_mesh;
 		rend::Mesh m_enemy;
+		rend::Mesh m_enemy2;
 		rend::Shader m_shader;
 		void onDisplay();
 	};

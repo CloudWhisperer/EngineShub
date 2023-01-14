@@ -40,12 +40,16 @@ namespace myengine
 		std::shared_ptr<rend::Texture> m_texture;
 	};
 
-	//struct Model : Resource
-	//{
-	//	void onLoad();
-	//private:
-	//	std::shared_ptr<rend::Model> m_model;
-	//};
+	/// @brief Allows the Models to be loaded in game using the resource functions
+	struct Model : Resource
+	{
+		void onLoad()
+		{
+			m_model = std::make_shared<rend::Model>(getPath().c_str());
+		}
+	private:
+		std::shared_ptr<rend::Model> m_model;
+	};
 
 	//struct Shader : Resource
 	//{
@@ -54,9 +58,9 @@ namespace myengine
 	//	std::shared_ptr<rend::Shader> m_shader;
 	//};
 
-	//struct SoundSource : Resource
+	//struct Audio : Resource
 	//{
-	//	void onLoadsound();
+	//	void onLoad();
 	//private:
 	//	std::shared_ptr<myengine::SoundSource> m_soundsource;
 	//};

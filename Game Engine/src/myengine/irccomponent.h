@@ -20,17 +20,27 @@ namespace myengine
 		//irccomponent();//initialise the winsock, and connect ppl
 		//~irccomponent();//close sockets
 
-		//functions for pepping server and stuff
+		/// @brief preps the server
 		void prepserver();
+
+		/// @brief server socket
 		void serversocket();
 
 		//client stuff
+
+		/// @brief prepares the client
 		void prepclient();
+
+		/// @brief connects the client
 		void connectingclient();
 
+		/// @brief ontick function for the server
 		void ontick();
 
+		/// @brief authenticates the player in the network to make sure they are legit
 		void authenticate();
+
+		/// @brief boolean to check if the player is disconnected or not
 		bool disconnected;
 
 	private:

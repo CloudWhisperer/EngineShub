@@ -2,7 +2,7 @@
 #include "Component.h"
 #include "Entity.h"
 #include "Transform.h"
-
+#include <iostream>
 #include <rend/rend.h>
 
 #include <AL/alc.h>
@@ -16,12 +16,14 @@ namespace myengine
     void load_ogg(const std::string& _path, std::vector<unsigned char>& _buffer,
         ALenum& _format, ALsizei& _freq)
     {
+
         int channels = 0;
         int sampleRate = 0;
         short* output = NULL;
 
         size_t samples = stb_vorbis_decode_filename(_path.c_str(),
             &channels, &sampleRate, &output);
+        std::cout << samples << std::endl;
 
         if (samples == -1)
         {
@@ -51,13 +53,15 @@ namespace myengine
 
     SoundSource::SoundSource()
     {
+        //_path == "../Audio/Battletheme2.ogg";
+
         /*************************************************************************
-         * Preparing buffer
-         *************************************************************************/
+        * Preparing buffer
+        *************************************************************************/
         ALenum format = 0;
         ALsizei freq = 0;
         std::vector<unsigned char> bufferData;
-        load_ogg("../dixie_horn.ogg", bufferData, format, freq);
+        load_ogg("../Audio/Battletheme2.ogg", bufferData, format, freq);
 
         ALuint bufferId = 0;
         alGenBuffers(1, &bufferId);
@@ -71,8 +75,8 @@ namespace myengine
         alGenSources(1, &sourceId);
 
         alSourcei(sourceId, AL_BUFFER, bufferId);
-        alSourcef(sourceId, AL_PITCH, 0.7);
-        
+        alSourcef(sourceId, AL_PITCH, 1.1);
+
         //alSourcef(sourceId, AL_GAIN, 10);
 
         /*************************************************************************

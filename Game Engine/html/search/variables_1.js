@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['a_0',['A',['../structstb__vorbis.html#a1dbabeed4f6505a76789914f16772975',1,'stb_vorbis']]],
-  ['a_1',['a',['../structglm_1_1vec_3_014_00_01_t_00_01_q_01_4.html#a2c591708237bac7d2047ff5af383a012',1,'glm::vec&lt; 4, T, Q &gt;::a()'],['../structrend_1_1_face.html#a4ac4a294884d52e63a14d23bbfeb97b2',1,'rend::Face::a()'],['../structrend_1_1_triangle.html#a69fb8f5d5e84aebca1bf8fd5c9b21471',1,'rend::Triangle::a()']]],
+  ['a_0',['a',['../structglm_1_1vec_3_014_00_01_t_00_01_q_01_4.html#a2c591708237bac7d2047ff5af383a012',1,'glm::vec&lt; 4, T, Q &gt;::a()'],['../structrend_1_1_face.html#a4ac4a294884d52e63a14d23bbfeb97b2',1,'rend::Face::a()'],['../structrend_1_1_triangle.html#a69fb8f5d5e84aebca1bf8fd5c9b21471',1,'rend::Triangle::a()']]],
+  ['a_1',['A',['../structstb__vorbis.html#a1dbabeed4f6505a76789914f16772975',1,'stb_vorbis']]],
   ['acc_2',['acc',['../structstb__vorbis.html#a54a0daf5db3dc593cdff97a6df20fc3b',1,'stb_vorbis']]],
   ['alloc_3',['alloc',['../structstb__vorbis.html#a0ecaff11857085f1cc89d7ca6dd8193c',1,'stb_vorbis']]],
   ['alloc_5fbuffer_4',['alloc_buffer',['../structstb__vorbis__alloc.html#a0bb516f56fb154f942d7c8641d33a26e',1,'stb_vorbis_alloc']]],

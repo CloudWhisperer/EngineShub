@@ -10,5 +10,6 @@
 #include "irccomponent.h"
 #include "Boxcollider.h"
 #include "Resources.h"
+#include <iostream>
 
 #endif

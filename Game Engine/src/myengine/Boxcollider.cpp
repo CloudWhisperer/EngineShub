@@ -6,12 +6,12 @@
 
 namespace myengine
 {
-	bool BoxCollider::colliding(const BoxCollider& _other)
+	bool BoxCollider::colliding(const std::shared_ptr<BoxCollider>_other)
 	{
 		rend::vec3 a = getEntity()->getTransform()->getPosition();
-		rend::vec3 b = getEntity()->getTransform()->getPosition(); // deleted the "other." because pointer was broken
+		rend::vec3 b = _other->getEntity()->getTransform()->getPosition(); // deleted the "_other." because pointer was broken
 		rend::vec3 ahs = m_size / 2.0f;
-		rend::vec3 bhs = _other.m_size / 2.0f;
+		rend::vec3 bhs = _other->m_size / 2.0f;
 
 		//--x axis--
 		if (a.x > b.x)
